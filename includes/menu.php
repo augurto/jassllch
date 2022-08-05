@@ -41,7 +41,7 @@ $username2=$dos['username'];
           <a class="nav-link" href="../datos_personales.php">Actualizar Datos</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Reportes
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -66,16 +66,7 @@ $username2=$dos['username'];
           </ul>
         </li>
           <?php } ?>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Cambiar Rol
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../includes/process/actualizar/cambiar_rol_1.php?codigo=<?php echo $id_usuario;?>">Cambiar a administrador</a></li>
-            <li><a class="dropdown-item" href="../includes/process/actualizar/cambiar_rol_0.php?codigo=<?php echo $id_usuario;?>">Cambiar a Colaborador</a></li>
-            <!-- <li><a class="dropdown-item" href="#">Elemento 3</a></li> -->
-          </ul>
-        </li>
+      
         <li class="nav-item">
           <a class="nav-link" href="../login/logout.php">Salir</a>
         </li>
