@@ -123,7 +123,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="col-md-8">
               <div class="mb-4">
               <h3>Iniciar Sesion en  <strong>Jass</strong></h3>
-              <p class="mb-4">Mide la produccion de tu equipo de una manera simple y eficiente</p>
+              <p class="mb-4">Llantuyhuanca Chaccamarca.</p>
             </div>
             <?php 
               if(!empty($login_err)){
