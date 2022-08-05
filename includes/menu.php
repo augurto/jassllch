@@ -7,7 +7,7 @@ $username2=$dos['username'];
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-  <!-- <a class="navbar-brand" href="#">Logo Mantiz</a> -->
+  <!-- <a class="navbar-brand" href="#">Logo Jass</a> -->
   <!-- sigiueinte l;inea va el logo -->
   <!-- <img src="../img/logo.png" alt="" width="40px" height="40px"> -->
   <!-- <a class="navbar-brand" href="#">Bienvenido </a> -->

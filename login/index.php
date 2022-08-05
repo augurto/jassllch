@@ -158,7 +158,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <span class="ml-auto"><a href="#" class="forgot-pass">Has olvidado tu contraseña </a></span> 
               <br>
               <input type="submit" class="btn btn-primary" value="Login">
-              <p>No tienes cuenta? <a href="registro.php">Registrate</a>.</p>
+              <!-- <p>No tienes cuenta? <a href="registro.php">Registrate</a>.</p> -->
 
              <!--  inicio de sesion con redes sociales
               <span class="d-block text-left my-4 text-muted"> or sign in with</span>
