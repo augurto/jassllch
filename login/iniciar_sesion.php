@@ -106,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Mantiz</title>
+    <title>Jass</title>
   </head>
   <body>
   
@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
-              <h3>Iniciar Sesion en  <strong>Mantiz</strong></h3>
+              <h3>Iniciar Sesion en  <strong>Jass</strong></h3>
               <p class="mb-4">Floro para nuestro sensual software.</p>
             </div>
             <?php 
