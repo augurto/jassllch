@@ -74,7 +74,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Inicio de Graficas -->
 
     <?php include 'includes/parts/graficas.php'; ?>
-    <?php include 'pagos.php'; ?>
+   
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
