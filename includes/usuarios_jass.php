@@ -11,7 +11,8 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Usuario</th>
-                                    <th>Apellido</th>
+                                    <th>A. Paterno</th>
+                                    <th>A. Materno</th>
                                     <th>DNI</th>
                                     <th>Estado</th>
                                     <th>Accion</th>
@@ -26,6 +27,7 @@
                         $id_obra=$row['id_jass'];
                         $nombre=$row['nombres'];
                         $ap_paterno=$row['ap_paterno'];
+                        $ap_materno=$row['ap_materno'];
                         $dni=$row['dni_usuario_jass'];
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
@@ -45,6 +47,7 @@
                             <td><?php echo $count++; ?></td>
                             <td><a href="../../nombre.php?id_obra=<?php echo $id_obra; ?>"><?php echo $nombre; ?></a></td>
                             <td><?php echo $ap_paterno ?></td>
+                            <td><?php echo $ap_materno ?></td>
                             <td><?php echo $dni ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
