@@ -45,7 +45,7 @@
                             <td><?php echo $fecha_agregada ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
-                                echo 'Oficina';
+                                echo 'Activo';
                             } elseif ($estado==1) {
                                 # code...
                                 echo 'Terminado';
