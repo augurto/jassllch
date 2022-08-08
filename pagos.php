@@ -1,38 +1,21 @@
-<html>
-  <head>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
-  </head>
-  <?php include 'includes/menu.php';?>
-    <div style="height:50px"></div>
-  <div class="container">
-    <div class="row">
-      
-      <hr />
-    
-    <div class="row-fluid">
-      <select class="selectpicker" data-show-subtext="true" data-live-search="true">
-
-<?php 
-include "select_buscador/db.php";
-$con = connect();
-if (!$con->set_charset("utf8")) {//asignamos la codificación comprobando que no falle
-       die("Error cargando el conjunto de caracteres utf8");
-}
-$consulta = "SELECT * FROM usuarios_jass";
-$resultado = mysqli_query($con , $consulta);
-$contador=0;
-
-while($misdatos = mysqli_fetch_assoc($resultado)){ $contador++;?>
-<option data-subtext="<?php echo $misdatos["id_jass"]; ?>"><?php echo $misdatos["nombres"]; ?></option>
-<?php }?>          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+  <option value="AL">Alabama</option>
+ 
+  <option value="WY">Wyoming</option>
 </select>
-
-    </div><hr />
-    </div> 
-     
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+</body>
 </html>
