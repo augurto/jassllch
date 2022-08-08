@@ -9,7 +9,7 @@
                         
                         <thead>
                                 <tr>
-                                    
+                                    <th>Id</th>
                                     <th>Usuario</th>
                                     <th>Apellido</th>
                                     <th>Estado</th>
@@ -17,7 +17,10 @@
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT * from usuarios_jass') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                             
+                        <?php 
+                           $count=1;
+                        foreach ($link->query('SELECT * from usuarios_jass') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_obra=$row['id_jass'];
                         $nombre_obra=$row['nombres'];
@@ -37,7 +40,7 @@
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                             
-                            
+                            <td><?php echo $count++; ?></td>
                             <td><a href="../../ver_obra.php?id_obra=<?php echo $id_obra; ?>"><?php echo $nombre_obra; ?></a></td>
                             <td><?php echo $fecha_agregada ?></td>
                             <td><?php if ($estado==0) {
