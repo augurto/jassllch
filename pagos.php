@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +14,10 @@
  
   <option value="WY">Wyoming</option>
 </select>
+<script>
 $(document).ready(function() {
     $('.js-example-basic-multiple').select2();
 });
+</script>
 </body>
 </html>
