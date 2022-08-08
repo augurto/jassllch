@@ -34,7 +34,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <link rel="stylesheet" href="css/style.css">
 
     <!-- inicio datatables -->
-
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- CSS personalizado --> 
@@ -114,12 +115,12 @@ $con = connect();
 if (!$con->set_charset("utf8")) {//asignamos la codificación comprobando que no falle
        die("Error cargando el conjunto de caracteres utf8");
 }
-$consulta = "SELECT * FROM lista_paises";
+$consulta = "SELECT * FROM usuarios_jass";
 $resultado = mysqli_query($con , $consulta);
 $contador=0;
 
 while($misdatos = mysqli_fetch_assoc($resultado)){ $contador++;?>
-<option data-subtext="<?php echo $misdatos["iso"]; ?>"><?php echo $misdatos["nombre_pais"]; ?></option>
+<option data-subtext="<?php echo $misdatos["id_jass"]; ?>"><?php echo $misdatos["nombres"]; ?></option>
 <?php }?>          
 </select>
 
