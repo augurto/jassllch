@@ -64,7 +64,7 @@
                                         <i class="fa fa-edit"></i>
                                         </button>
                          
-                                         <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $id_jass; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $ap_paterno;?>" data-estado="<?php echo $ap_materno;  ?>" data-sub2="<?php echo $dni;  ?>" >
+                                         <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $id_jass; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $ap_paterno;?>" data-estado="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
                                          <i class="fa fa-plus"></i>
                                         
                                         </button>
