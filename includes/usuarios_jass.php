@@ -62,7 +62,7 @@
                                         </button>
                          
                                          <button type="button" id="btnmodal" class="btn btn-warning" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
-                                        <i class="fa fa-money"></i>
+                                         <i class="fa fa-money" aria-hidden="true"></i>
                                         </button>
                             </td>
                         </tr>
