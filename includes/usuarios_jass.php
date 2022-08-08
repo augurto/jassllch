@@ -62,8 +62,8 @@
                                         </button>
                          
                                          <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
-                                         <i class="fa fa-edit"></i>
-                                         <i class="fa fa-usd"></i>
+                                         <i class="fa fa-plus"></i>
+                                        
                                         </button>
                             </td>
                         </tr>
