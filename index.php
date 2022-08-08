@@ -55,7 +55,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <title>Jass</title>
+    <title>Mantiz</title>
 </head>
 <body>
   <!-- datos de sesion -->
@@ -65,30 +65,28 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- procesos de modal -->
     
     <?php include 'includes/modal-eliminar/eliminar_proyecto.php'; ?>
-    
+    <?php include 'includes/modal-editar/editar_proyecto.php'; ?>
     
     <!-- fin de procesos de modal -->
 
-    <?php include 'includes/menu.php';?>
+    <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
 
-  
-   
+    <?php include 'includes/parts/graficas.php'; ?>
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
     <div class="row">
         <div class="col-sm-12 text-center">
                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
-                     <i class="fa fa-plus" aria-hidden="true"></i> Pago
+                     <i class="fa fa-plus" aria-hidden="true"></i> Nuevo Proyecto
                       </button>
                       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
-                      <i class="fa fa-plus" aria-hidden="true"></i> Usuario
+                      <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
                       </button>
         </div>
     </div>
-    <?php include 'includes/usuarios_jass.php'; ?>
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
     <?php include 'includes/parts/agregar_variante_tipo.php' ?>
@@ -97,7 +95,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin Boton agregar proyecto -->
     <br>
     <!-- Contenido de la tabla -->
-    <?php include 'includes/parts/tabla-inicio.php'; ?>
+    <?php include 'includes/usuarios_jass.php'; ?>
     <!-- Fin del contenido de la tabla -->
 
   
