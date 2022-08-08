@@ -110,7 +110,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       <select class="selectpicker" data-show-subtext="true" data-live-search="true">
 
 <?php
-include "db.php";
+include "select_buscador/db.php";
 $con = connect();
 if (!$con->set_charset("utf8")) {//asignamos la codificación comprobando que no falle
        die("Error cargando el conjunto de caracteres utf8");
