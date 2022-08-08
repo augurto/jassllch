@@ -12,6 +12,7 @@
                                     <th>Id</th>
                                     <th>Usuario</th>
                                     <th>Apellido</th>
+                                    <th>DNI</th>
                                     <th>Estado</th>
                                     <th>Accion</th>
                                     
@@ -23,8 +24,9 @@
                         foreach ($link->query('SELECT * from usuarios_jass') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_obra=$row['id_jass'];
-                        $nombre_obra=$row['nombres'];
-                        $fecha_agregada=$row['ap_paterno'];
+                        $nombre=$row['nombres'];
+                        $ap_paterno=$row['ap_paterno'];
+                        $dni=$row['dni_usuario_jass'];
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
@@ -41,8 +43,9 @@
                              <?php }?>   
                             
                             <td><?php echo $count++; ?></td>
-                            <td><a href="../../ver_obra.php?id_obra=<?php echo $id_obra; ?>"><?php echo $nombre_obra; ?></a></td>
-                            <td><?php echo $fecha_agregada ?></td>
+                            <td><a href="../../nombre.php?id_obra=<?php echo $id_obra; ?>"><?php echo $nombre; ?></a></td>
+                            <td><?php echo $ap_paterno ?></td>
+                            <td><?php echo $dni ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Activo';
