@@ -11,10 +11,9 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Usuario</th>
-                                    <th>A. Paterno</th>
-                                    <th>A. Materno</th>
-                                    <th>DNI</th>
-                                    <th>Estado</th>
+                                    <th>Fecha Pago</th>
+                                    <th>Cajero</th>
+                                    <th>Pago mes</th>
                                     <th>Accion</th>
                                     
                                 </tr>
@@ -27,9 +26,9 @@
                         $id_jass=$row['id_pagos'];
                         $dni_jass=$row['dni_usuario_jass'];
                         $nombre=$row['datos_pago'];
-                        $ap_paterno=$row['ap_paterno'];
-                        $ap_materno=$row['ap_materno'];
-                        $dni=$row['dni_usuario_jass'];
+                        $pago_hoy=$row['pago_hoy'];
+                        $name_user=$row['name_user'];
+                        $pago_mes=$row['pago_mes'];
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
@@ -47,9 +46,9 @@
                             
                             <td><?php echo $count++; ?></td>
                             <td><a href="../../usuario_jass.php?dni=<?php echo $dni_jass; ?>"><?php echo $nombre; ?></a></td>
-                            <td><?php echo $ap_paterno ?></td>
-                            <td><?php echo $ap_materno ?></td>
-                            <td><?php echo $dni ?></td>
+                            <td><?php echo $pago_hoy ?></td>
+                            <td><?php echo $name_user ?></td>
+                            <td><?php echo $pago_mes ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Activo';
@@ -66,7 +65,7 @@
                                         </button>
                          
                                          <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-jass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
-                                         <i class="fa fa-plus"></i>
+                                         <i class="fa fa-print"></i>
                                          
                                         </button>
                             </td>
