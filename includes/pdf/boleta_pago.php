@@ -19,7 +19,7 @@ $textypos = 5;
 $pdf->setY(2);
 $pdf->setX(10);
 // Agregamos los datos de la empresa
-$pdf->Cell(5,$textypos,"NOMBRE DE LA EMPRESA");
+$pdf->Cell(5,$textypos,"Jass");
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"DE:");
@@ -39,13 +39,13 @@ $pdf->setY(10);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"PARA:");
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(75);
-$pdf->Cell(5,$textypos,"Nombre del cliente");
-$pdf->setY(20);$pdf->setX(75);
+$pdf->Cell(5,$textypos,$datos);
+/* $pdf->setY(20);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"Direccion del cliente");
 $pdf->setY(25);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"Telefono del cliente");
 $pdf->setY(30);$pdf->setX(75);
-$pdf->Cell(5,$textypos,"Email del cliente");
+$pdf->Cell(5,$textypos,"Email del cliente"); */
 
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
@@ -66,14 +66,14 @@ $pdf->setY(40);$pdf->setX(135);
     $pdf->Ln();
 /////////////////////////////
 //// Array de Cabecera
-$header = array("Cod.", "Descripcion","Cant.","Precio","Total");
+$header = array("Nro", "Concepto","Cant.","Precio","Total");
 //// Arrar de Productos
 $products = array(
-	array("0010", "Producto 1",2,120,0),
-	array("0024", "Producto 2",5,80,0),
+	array("01", "Agua",1,$monto_usuario,0),
+	/* array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
-	array("0001", "Producto 3",5,80,0),
-	/* array("0001", "Producto 3",4,30,0),
+	array("0001", "Producto 3",5,80,0), 
+    array("0001", "Producto 3",4,30,0),
 	array("0001", "Producto 3",7,80,0), */
 );
     // Column widths
