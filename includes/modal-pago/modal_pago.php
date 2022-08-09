@@ -51,7 +51,7 @@
                         <?php 
                         $mes_actual =strtotime(date("m"));
                         ?>
-                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" >
+                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo '$mes_actual';?>" >
                        
                         </div>
                         <div class="input-group mb-3">
@@ -80,13 +80,25 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Actividad</span>
                         
-                        
+                        <!-- 
                             <select class="form-select" aria-label="Default select example" name="estado" id="estado">
                             <option selected>Seleciona Estado</option>
                             <option value="0">Pendiente</option>
                             <option value="1" selected>Terminado</option>
                             <option value="2">Inactivo</option>
-                            </select>
+                            </select> -->
+                            <select name="" class="">
+                                <?php
+                                    $mes=date("n"); 
+                                    $rango=11; 
+                                    for ($i=$mes;$i<=$mes+$rango;$i++){ 
+                                        $mesano=date('Y-n', mktime(0, 0, 0, $i, 1, date("Y") ) );
+                                        $meses=date('F', mktime(0, 0, 0, $i, 1, date("Y") ) );
+                                        $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
+                                        echo "<option value='$mesano'>$meses/$ano</option>"; 
+                                    } 
+                                ?> 
+                                </select>
                         </div>
                                           
                         </div>
