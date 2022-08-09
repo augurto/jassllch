@@ -42,8 +42,8 @@
                         var ingreso2 = document.calculadora.ingreso2.value;
                         try{
                             //Calculamos el número escrito:
-                            ingreso1 = (isNaN(parseInt(ingreso1)))? 0 : parseInt(ingreso1);
-                            ingreso2 = (isNaN(parseInt(ingreso2)))? 0 : parseInt(ingreso2);
+                            ingreso1 = (isNaN(parseFloat(ingreso1)))? 0 : parseFloat(ingreso1);
+                            ingreso2 = (isNaN(parseFloat(ingreso2)))? 0 : parseFloat(ingreso2);
                             document.calculadora.resultado.value = ingreso1-ingreso2;
                         }
                         //Si se produce un error no hacemos nada
