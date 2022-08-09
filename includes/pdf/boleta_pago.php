@@ -73,8 +73,8 @@ $products = array(
 	array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
 	array("0001", "Producto 3",5,80,0),
-	array("0001", "Producto 3",4,30,0),
-	array("0001", "Producto 3",7,80,0),
+	/* array("0001", "Producto 3",4,30,0),
+	array("0001", "Producto 3",7,80,0), */
 );
     // Column widths
     $w = array(20, 95, 20, 25, 25);
@@ -98,7 +98,7 @@ $products = array(
     }
 /////////////////////////////
 //// Apartir de aqui esta la tabla con los subtotales y totales
-$yposdinamic = 60 + (count($products)*10);
+$yposdinamic = 40 + (count($products)*10);
 
 $pdf->setY($yposdinamic);
 $pdf->setX(235);
