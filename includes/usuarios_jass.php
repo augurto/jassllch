@@ -25,6 +25,7 @@
                         foreach ($link->query('SELECT * from usuarios_jass') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_jass=$row['id_jass'];
+                        $dni_jass=$row['dni_usuario_jass'];
                         $nombre=$row['nombres'];
                         $ap_paterno=$row['ap_paterno'];
                         $ap_materno=$row['ap_materno'];
@@ -45,7 +46,7 @@
                              <?php }?>   
                             
                             <td><?php echo $count++; ?></td>
-                            <td><a href="../../usuario_jass.php?dni=<?php echo $id_jass; ?>"><?php echo $nombre; ?></a></td>
+                            <td><a href="../../usuario_jass.php?dni=<?php echo $dni_jass; ?>"><?php echo $nombre; ?></a></td>
                             <td><?php echo $ap_paterno ?></td>
                             <td><?php echo $ap_materno ?></td>
                             <td><?php echo $dni ?></td>
