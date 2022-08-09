@@ -45,7 +45,7 @@
                              <?php }?>   
                             
                             <td><?php echo $count++; ?></td>
-                            <td><a href="../../nombre.php?id_obra=<?php echo $id_jass; ?>"><?php echo $nombre; ?></a></td>
+                            <td><a href="../../usuario_jass.php?dni=<?php echo $id_jass; ?>"><?php echo $nombre; ?></a></td>
                             <td><?php echo $ap_paterno ?></td>
                             <td><?php echo $ap_materno ?></td>
                             <td><?php echo $dni ?></td>
