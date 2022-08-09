@@ -12,13 +12,9 @@ $f_vuelto=money_format('%.2n', $monto_mes);
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
-
-
-
-$pdf->AddPage();
-$pdf->SetFont('Arial','B',20);    
+$pdf->SetFont('Arial','B',16);    
 $textypos = 5;
-$pdf->setY(12);
+$pdf->setY(2);
 $pdf->setX(10);
 // Agregamos los datos de la empresa
 $pdf->Cell(5,$textypos,"NOMBRE DE LA EMPRESA");
