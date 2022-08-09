@@ -3,15 +3,15 @@
                                         
                                               var nombre =$(this).data('nom');
                                               var nombre_proyecto =$(this).data('nom2');
-                                              var apellido =$(this).data('ape')
-                                              var estado =$(this).data('estado');
+                                              var ap_paterno =$(this).data('ap_paterno')
+                                              var ap_materno =$(this).data('ap_materno');
                                               var dni =$(this).data('dni');
 
                                         $("#nombre").val(nombre);
                                         $("#nombre2").val(nombre_proyecto);
 
-                                        $("#apellido").val(apellido);
-                                        $("#estado").val(estado);
+                                        $("#ap_paterno").val(ap_paterno);
+                                        $("#ap_materno").val(ap_materno);
                                         $("#dni").val(dni);
                           
                                       })
@@ -63,18 +63,26 @@
                         <input type="text" class="form-control" id="dni" name="dni" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Apellidos</span>
+                        <input type="number" class="form-control" id="ap_paterno" name="ap_paterno" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="number" class="form-control" id="ap_materno" name="ap_materno" aria-label="Username" aria-describedby="basic-addon1">
+                        
+                        </div>
+                        <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         <?php 
                         $mes_actual =date("m");
+                        $year_actual =date("y");
                         ?>
                         <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" >
-                       
+                        <span class="input-group-text" id="basic-addon1">Año</span>
+                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>" >
                         </div>
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Año</span>
-                      
-                        <input type="text" class="form-control" id="id_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>" >
+                        <span class="input-group-text" id="basic-addon1">Usuario</span>
                         <input type="text" class="form-control" id="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>" >
+                        <input type="text" class="form-control" id="id_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>" >
+                       
                        
                         </div>
                         <div class="input-group mb-3">
@@ -89,14 +97,10 @@
                                 <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" name="resultado" readonly >
                                         
                         </div>                  
-                        <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Presupuesto</span>
-                        <input type="number" class="form-control" id="apellido" name="presupuesto" aria-label="Username" aria-describedby="basic-addon1">
                         
-                        </div>
 
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Meses</span>
+                        <span class="input-group-text" id="basic-addon1">Pago del Mes</span>
                         
                         <!-- 
                             <select class="form-select" aria-label="Default select example" name="estado" id="estado">
