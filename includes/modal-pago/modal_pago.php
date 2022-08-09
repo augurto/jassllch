@@ -49,9 +49,15 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         <?php 
-                        $mes_actual =strtotime(date("m"));
+                        $mes_actual =date("m");
                         ?>
-                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo '$mes_actual';?>" >
+                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" >
+                       
+                        </div>
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Año</span>
+                      
+                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>" >
                        
                         </div>
                         <div class="input-group mb-3">
@@ -78,7 +84,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Actividad</span>
+                        <span class="input-group-text" id="basic-addon1">Meses</span>
                         
                         <!-- 
                             <select class="form-select" aria-label="Default select example" name="estado" id="estado">
@@ -107,7 +113,7 @@
                                         if ($meses=="November") $meses="Noviembre";
                                         if ($meses=="December") $meses="Diciembre";
                                         $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                        echo "<option value='$mesano'>$meses/$ano</option>"; 
+                                        echo "<option value='$meses'>$meses</option>"; 
                                     } 
                                 ?> 
                                 </select>
