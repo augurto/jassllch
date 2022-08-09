@@ -64,8 +64,8 @@
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Apellidos</span>
-                        <input type="number" class="form-control" id="paterno" name="paterno" aria-label="Username" aria-describedby="basic-addon1">
-                        <input type="number" class="form-control" id="materno" name="materno" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="paterno" name="paterno" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="materno" name="materno" aria-label="Username" aria-describedby="basic-addon1">
                         
                         </div>
                         <div class="input-group mb-3">
