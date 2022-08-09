@@ -87,13 +87,25 @@
                             <option value="1" selected>Terminado</option>
                             <option value="2">Inactivo</option>
                             </select> -->
-                            <select name="" class="">
+                            <select name="" class="form-select">
                                 <?php
                                     $mes=date("n"); 
                                     $rango=11; 
                                     for ($i=$mes;$i<=$mes+$rango;$i++){ 
                                         $mesano=date('Y-n', mktime(0, 0, 0, $i, 1, date("Y") ) );
                                         $meses=date('F', mktime(0, 0, 0, $i, 1, date("Y") ) );
+                                        if ($meses=="January") $meses="Enero";
+                                        if ($meses=="February") $meses="Febrero";
+                                        if ($meses=="March") $meses="Marzo";
+                                        if ($meses=="April") $meses="Abril";
+                                        if ($meses=="May") $meses="Mayo";
+                                        if ($meses=="June") $meses="Junio";
+                                        if ($meses=="July") $meses="Julio";
+                                        if ($meses=="August") $meses="Agosto";
+                                        if ($meses=="September") $meses="Septiembre";
+                                        if ($meses=="October") $meses="Octubre";
+                                        if ($meses=="November") $meses="Noviembre";
+                                        if ($meses=="December") $meses="Diciembre";
                                         $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
                                         echo "<option value='$mesano'>$meses/$ano</option>"; 
                                     } 
