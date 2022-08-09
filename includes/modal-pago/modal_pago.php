@@ -53,7 +53,7 @@
                         }
                         </script>
 
-                    <form action="../../includes/process/actualizar/actualizar_proyecto.php" name="calculadora">
+                    <form action="../../includes/process/nuevo_pago.php" name="calculadora">
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cod Usuario</span>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Hoy</span>
-                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
+                        <input type="text" class="form-control" id="hoy" name="hoy"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
                                                
                         </div>
                         <div class="input-group mb-3">
@@ -85,9 +85,9 @@
                         
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         
-                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
+                        <input type="text" class="form-control" id="mes_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
                         <span class="input-group-text" id="basic-addon1">Año</span>
-                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
+                        <input type="text" class="form-control" id="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
                         
                         </div>
                         <div class="input-group mb-3">
@@ -99,14 +99,14 @@
                         </div>
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
-                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" name="ingreso1" onKeyUp="Suma()"  >
+                                <input type="text" class="form-control" id="monto_pago" name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1" name="ingreso1" onKeyUp="Suma()"  >
                                         
                         </div>   
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
-                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  name="ingreso2" onKeyUp="Suma()">
+                                <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1"  name="ingreso2" onKeyUp="Suma()">
                                 <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
-                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" name="resultado" readonly >
+                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" name="resultado" readonly >
                                         
                         </div>                  
                         
@@ -121,7 +121,7 @@
                             <option value="1" selected>Terminado</option>
                             <option value="2">Inactivo</option>
                             </select> -->
-                            <select name="" class="form-select">
+                            <select name="mes_pago" id="mes_pago" class="form-select">
                                 <?php
                                     $mes=date("n"); 
                                     $rango=11; 

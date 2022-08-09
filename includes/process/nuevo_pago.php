@@ -1,0 +1,45 @@
+<?php
+$servername = "localhost";
+$database = "u415020159_jass";
+$username = "u415020159_jass";
+$password = "JassJass*#17";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+
+$jass=$_GET["jass"];
+$dni=$_GET["dni"];
+$datos=$_GET["datos"];
+$hoy=$_GET["hoy"];
+$mes_actual=$_GET["mes_actual"];
+$year_actual=$_GET["year_actual"];
+$name_user=$_GET["name_user"];
+$id_user=$_GET["id_user"];
+$monto_pago=$_GET["monto_pago"];
+$deuda=$_GET["deuda"];
+$vuelto=$_GET["vuelto"];
+$mes_pago=$_GET["mes_pago"];
+
+date_default_timezone_set("America/Lima");
+$hoy2 = date("Y-m-d H:i:s");
+
+if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+}
+ 
+echo "Connected successfully";
+ 
+$sql = "INSERT INTO pagos (id_jass, dni_usuario_jass, datos_pago, pago_hoy, mes_actual_pago,year_actual_pago,name_user,id_user, monto_pago, deuda, vuelto, pago_mes) 
+
+VALUES ('$jass','$dni', '$datos', '$hoy','$mes_actual', '$year_actual', '$name_user', '$id_user', '$monto_pago', '$deuda', '$vuelto', '$mes_pago')";
+if (mysqli_query($conn, $sql)) {
+    echo"<script language ='JavaScript'>";
+      echo "location='../../../usuario_jass.php?dni=$dni'";
+    echo "</script>";
+} else {
+      echo"<script language ='JavaScript'>";
+      echo "location='../../../usuario_jass.php?dni=$dni&mensaje=1'";
+    echo "</script>";
+}
+mysqli_close($conn);
+?>
