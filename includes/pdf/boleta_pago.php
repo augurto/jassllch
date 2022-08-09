@@ -126,22 +126,6 @@ $pdf->setX(115);
         $pdf->Ln();
     }
 /////////////////////////////
-
-$yposdinamic += (count($data2)*10);
-$pdf->SetFont('Arial','B',10);    
-
-$pdf->setY($yposdinamic);
-$pdf->setX(10);
-$pdf->Cell(5,$textypos,"TERMINOS Y CONDICIONES");
-$pdf->SetFont('Arial','',10);    
-
-$pdf->setY($yposdinamic+10);
-$pdf->setX(10);
-$pdf->Cell(5,$textypos,"El cliente se compromete a pagar la factura.");
-$pdf->setY($yposdinamic+20);
-$pdf->setX(10);
-$pdf->Cell(5,$textypos,"Powered by Evilnapsis");
-
-
+a
 $pdf->output();
 ?>
