@@ -36,7 +36,7 @@ $pdf->Ln();
 $pdf->Cell(0,10,'Vuelto : S/ '.money_format('%.2n',$vuelto));
 $pdf->Ln();
 
-$pdf->Image('../../img/logo1.jpeg', 80 ,90, 60 , 42);
+$pdf->Image('../../img/logo1.jpeg', 80 ,95, 60 , 42);
 
 $pdf->Output();
 ?>
