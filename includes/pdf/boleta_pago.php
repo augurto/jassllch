@@ -12,7 +12,7 @@ $pdf->SetFont('Arial','B',16);
 // Insert a logo in the top-left corner at 300 dpi
 
 // Insert a dynamic image from a URL
-$pdf->Cell(10,5,'Usuario : '.$datos);
+$pdf->Cell(10,0,'Usuario : '.$datos);
 $pdf->Cell(10,10,'Dni : '.$valor1);
 
 $pdf->Cell(10,30,'Fecha de pago : '.$fecha_pago);
