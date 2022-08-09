@@ -61,16 +61,16 @@
                                 # code...
                                 echo 'Retirado';
                             }?></td>
-                            <td>
-                                         <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-id_jass="<?php echo $codigo; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
+                            <td>        
+                                         <!-- <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-id_jass="<?php echo $codigo; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
                                         <i class="fa fa-edit"></i>
-                                        </button>
-                         
+                                        </button> -->
+                                        <a href="./pdf/boleta_pago.php">
                                          <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-jass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
                                          <i class="fa fa-print"></i>
                                          
                                         </button>
-                                        <a href="./pdf/boleta_pago.php">PDF</a>
+                                        </a>
                             </td>
                         </tr>
                         <?php
