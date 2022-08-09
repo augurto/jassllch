@@ -89,8 +89,8 @@ $products = array(
         $pdf->Cell($w[0],6,$row[0],1);
         $pdf->Cell($w[1],6,$row[1],1);
         $pdf->Cell($w[2],6,number_format($row[2]),'1',0,'R');
-        $pdf->Cell($w[3],6,"$ ".number_format($row[3],2,".",","),'1',0,'R');
-        $pdf->Cell($w[4],6,"$ ".number_format($row[3]*$row[2],2,".",","),'1',0,'R');
+        $pdf->Cell($w[3],6,"S/ ".number_format($row[3],2,".",","),'1',0,'R');
+        $pdf->Cell($w[4],6,"S/ ".number_format($row[3]*$row[2],2,".",","),'1',0,'R');
 
         $pdf->Ln();
         $total+=$row[3]*$row[2];
@@ -121,7 +121,7 @@ $data2 = array(
     {
 $pdf->setX(115);
         $pdf->Cell($w2[0],6,$row[0],1);
-        $pdf->Cell($w2[1],6,"$ ".number_format($row[1], 2, ".",","),'1',0,'R');
+        $pdf->Cell($w2[1],6,"S/ ".number_format($row[1], 2, ".",","),'1',0,'R');
 
         $pdf->Ln();
     }
