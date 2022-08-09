@@ -68,7 +68,12 @@
                         <span class="input-group-text" id="basic-addon1">Datos</span>
                         <input type="text" class="form-control" id="datos" name="datos" aria-label="Username" aria-describedby="basic-addon1">
                         
-                        
+                        <?php 
+                        $mes_actual =date("m");
+                        $year_actual =date("y");
+                        date_default_timezone_set("America/Lima");
+                        $hoy = date("Y-m-d H:i:s");     
+                        ?>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Hoy</span>
@@ -76,12 +81,7 @@
                                                
                         </div>
                         <div class="input-group mb-3">
-                        <?php 
-                        $mes_actual =date("m");
-                        $year_actual =date("y");
-                        date_default_timezone_set("America/Lima");
-                        $hoy = date("Y-m-d H:i:s");     
-                        ?>
+                        
                         
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         
