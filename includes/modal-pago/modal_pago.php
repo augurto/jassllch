@@ -1,13 +1,13 @@
 <script >
                                       $(document).on("click", "#btnmodal",function () {
                                         
-                                              var codigo =$(this).data('codigo');
+                                              var id_jass =$(this).data('id_jass');
                                               var nombre =$(this).data('nombre');
                                               var paterno =$(this).data('paterno')
                                               var materno =$(this).data('materno');
                                               var dni =$(this).data('dni');
 
-                                        $("#codigo").val(codigo);
+                                        $("#id_jass").val(id_jass);
                                         $("#nombre").val(nombre);
 
                                         $("#datos").val(nombres+paterno+materno);
