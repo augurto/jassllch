@@ -57,24 +57,19 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Año</span>
                       
-                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>" >
+                        <input type="text" class="form-control" id="id_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>" >
+                        <input type="text" class="form-control" id="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>" >
                        
                         </div>
                         <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Sub Tipo Proyecto</label>
-                                <select class="form-control" name="id_entregable" id="sub2" required="">
-                                            <option disabled="disabled" value="" selected>Clic para ver.</option>
-                                            <?php 
-
-                                            $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
-                                                    while($f=mysqli_fetch_assoc($sss)){    
-
-                                                        echo '<option value="'.$f['variable'].'">'.$f['variable'].'</option>';
-
-                                            }
-                                            
-                                            ?>
-                                </select>
+                                <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
+                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  >
+                                        
+                        </div>   
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
+                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  >
+                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  >
                                         
                         </div>                  
                         <div class="input-group mb-3">
