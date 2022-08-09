@@ -70,6 +70,7 @@
                                          <i class="fa fa-print"></i>
                                          
                                         </button>
+                                        <a href="./pdf/boleta_pago.php">PDF</a>
                             </td>
                         </tr>
                         <?php
