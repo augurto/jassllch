@@ -8,6 +8,7 @@ $pago_mes=$_GET['pago_mes'];
 $monto_mes=$_GET['monto_mes'];
 $monto_usuario=$_GET['monto_usuario'];
 $vuelto=$_GET['vuelto'];
+$f_vuelto=money_format('%.2n', $monto_mes);
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
@@ -28,7 +29,7 @@ $pdf->Cell(0,10,'Atendido por : '.$usuario_atencion);
 $pdf->Ln();
 $pdf->Cell(0,10,'Mes Pagado : '.$pago_mes);
 $pdf->Ln();
-$pdf->Cell(0,10,'Pago con : '.$monto_mes);
+$pdf->Cell(0,10,'Pago con : '.(money_format('%.2n', $monto_mes)));
 $pdf->Ln();
 $pdf->Cell(0,10,'Deuda : '.$monto_usuario);
 $pdf->Ln();
