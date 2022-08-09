@@ -49,7 +49,7 @@
                             <td><?php echo $count++; ?></td>
                             <td><a href="../../usuario_jass.php?dni=<?php echo $dni_jass; ?>"><?php echo $nombre; ?></a></td>
                             <td><?php echo $pago_hoy ?></td>
-                            <td><?php echo $name_user.$dni_url ?></td>
+                            <td><?php echo $name_user ?></td>
                             <td><?php echo $pago_mes ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
