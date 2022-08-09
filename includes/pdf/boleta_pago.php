@@ -15,9 +15,9 @@ $pdf->SetFont('Arial','B',16);
 
 $pdf->Cell(100,10,'Dni : '.$valor1);
 $pdf->Cell(100,20,'Usuario : '.$datos);
-$pdf->Cell(100,20,'Fecha de pago : '.$fecha_pago);
-$pdf->Cell(100,20,'Atendido por : '.$usuario_atencion);
-$pdf->Cell(100,20,'Mes cancelado : '.$pago_mes);
+$pdf->Cell(100,30,'Fecha de pago : '.$fecha_pago);
+$pdf->Cell(100,40,'Atendido por : '.$usuario_atencion);
+$pdf->Cell(105,50,'Mes cancelado : '.$pago_mes);
 
 $pdf->Image('../../img/logo1.jpeg', 65 ,80, 80 , 55);
 
