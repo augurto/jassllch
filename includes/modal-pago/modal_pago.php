@@ -13,7 +13,7 @@
                                         
                                         $("#paterno").val(paterno);
                                         $("#materno").val(materno);
-                                        $("#datos").val(nombre+" "+paterno+materno);
+                                        $("#datos").val(nombre+" "+paterno+" "+materno);
                                         $("#dni").val(dni);
                           
                                       })
@@ -71,14 +71,18 @@
                         
                         </div>
                         <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Hoy</span>
+                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $hoy;?>" >
+                                               
+                        </div>
+                        <div class="input-group mb-3">
                         <?php 
                         $mes_actual =date("m");
                         $year_actual =date("y");
                         date_default_timezone_set("America/Lima");
                         $hoy = date("Y-m-d H:i:s");     
                         ?>
-                        <span class="input-group-text" id="basic-addon1">Hoy</span>
-                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $hoy;?>" >
+                        
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         
                         <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" >
