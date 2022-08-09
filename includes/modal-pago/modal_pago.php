@@ -10,7 +10,7 @@
                                         $("#codigo").val(codigo);
                                         $("#nombre").val(nombre);
 
-                                        $("#datos").val(nombres+" "+paterno+" "+materno);
+                                        $("#datos").val(nombres+paterno+materno);
                                         $("#paterno").val(paterno);
                                         $("#materno").val(materno);
                                         $("#dni").val(dni);
@@ -56,7 +56,7 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cod Usuario</span>
-                        <input type="text" class="form-control" id="nombre" name="codigo" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" id="codigo" name="codigo" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
