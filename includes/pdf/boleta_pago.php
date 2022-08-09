@@ -16,7 +16,7 @@ $pdf->Ln(5);
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(0,10,'Usuario : ');
 $pdf->SetFont('Arial','',12);
-$pdf->Cell(0,10,$datos);
+$pdf->Cell(0,10,utf8_decode($datos));
 $pdf->Ln();
 $pdf->Cell(0,10,'Dni : '.$valor1);
 $pdf->Ln();
