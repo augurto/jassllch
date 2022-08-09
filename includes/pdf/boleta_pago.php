@@ -10,5 +10,8 @@ $pdf->Image('../../img/logo1.jpeg',10,10,-300);
 // Insert a dynamic image from a URL
 
 $pdf->Cell(40,10,'Hello World!');
+$pdf->Cell(80,20,$valor1);
+$pdf->SetFont('Arial','B',12);
+$pdf->SetY('Prueba texto');
 $pdf->Output();
 ?>
