@@ -10,9 +10,10 @@
                                         $("#jass").val(jass);
                                         $("#nombre").val(nombre);
 
-                                        $("#datos").val(nombres+paterno+materno);
+                                        
                                         $("#paterno").val(paterno);
                                         $("#materno").val(materno);
+                                        $("#datos").val(nombre+paterno+materno);
                                         $("#dni").val(dni);
                           
                                       })
