@@ -65,9 +65,9 @@
                         <input type="text" class="form-control" id="dni" name="dni" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Apellidos</span>
+                        <span class="input-group-text" id="basic-addon1">Datos</span>
                         <input type="text" class="form-control" id="datos" name="datos" aria-label="Username" aria-describedby="basic-addon1">
-                        <input type="text" class="form-control" id="materno" name="materno" aria-label="Username" aria-describedby="basic-addon1">
+                        
                         
                         </div>
                         <div class="input-group mb-3">
@@ -75,10 +75,13 @@
                         <?php 
                         $mes_actual =date("m");
                         $year_actual =date("y");
+                        $hoy = date("Y-m-d H:i:s");     
                         ?>
                         <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" >
                         <span class="input-group-text" id="basic-addon1">Año</span>
                         <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>" >
+                        <span class="input-group-text" id="basic-addon1">Hoy</span>
+                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $hoy;?>" >
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Usuario</span>
