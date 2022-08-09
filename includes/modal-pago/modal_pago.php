@@ -44,22 +44,14 @@
                             //Calculamos el número escrito:
                             ingreso1 = (isNaN(parseInt(ingreso1)))? 0 : parseInt(ingreso1);
                             ingreso2 = (isNaN(parseInt(ingreso2)))? 0 : parseInt(ingreso2);
-                            document.calculadora.resultado.value = ingreso1+ingreso2;
+                            document.calculadora.resultado.value = ingreso1-ingreso2;
                         }
                         //Si se produce un error no hacemos nada
                         catch(e) {}
                         }
                         </script>
 
-                        El evento onKeyUp se realiza cuando sueltas la tecla. Entonces es cuando se llama a la función Suma
-                        <form name="calculadora">
-                        Ingrese números:<br>
-                        <input type="text" name="ingreso1" onKeyUp="Suma()"><br><br>
-                        <input type="text" name="ingreso2" onKeyUp="Suma()"><br><br>
-                        El resultado es:<br>
-                        <input type="text" name="resultado" disabled><br>
-                        </form>
-                    <form action="../../includes/process/actualizar/actualizar_proyecto.php">
+                    <form action="../../includes/process/actualizar/actualizar_proyecto.php" name="calculadora">
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cod Usuario</span>
@@ -87,13 +79,13 @@
                         </div>
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
-                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  >
+                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" name="ingreso1" onKeyUp="Suma()"  >
                                         
                         </div>   
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
-                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  >
-                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  >
+                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  name="ingreso2" onKeyUp="Suma()">
+                                <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" name="resultado" readonly >
                                         
                         </div>                  
                         <div class="input-group mb-3">
