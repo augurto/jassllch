@@ -1,13 +1,13 @@
 <script >
                                       $(document).on("click", "#btnmodal",function () {
                                         
-                                              var id_jass =$(this).data('id_jass');
+                                              var jass =$(this).data('jass');
                                               var nombre =$(this).data('nombre');
                                               var paterno =$(this).data('paterno')
                                               var materno =$(this).data('materno');
                                               var dni =$(this).data('dni');
 
-                                        $("#id_jass").val(id_jass);
+                                        $("#jass").val(jass);
                                         $("#nombre").val(nombre);
 
                                         $("#datos").val(nombres+paterno+materno);
@@ -56,7 +56,7 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cod Usuario</span>
-                        <input type="text" class="form-control" id="codigo" name="codigo" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" id="jass" name="jass" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
