@@ -16,9 +16,12 @@ $pdf->Cell(10,0,'Usuario : '.$datos);
 $pdf->Ln();
 $pdf->Cell(0,10,'Dni : '.$valor1);
 $pdf->Ln();
-$pdf->Cell(0,30,'Fecha de pago : '.$fecha_pago);
-$pdf->Cell(10,40,'Atendido por : '.$usuario_atencion);
-$pdf->Cell(10,50,'Mes cancelado : '.$pago_mes);
+$pdf->Cell(0,10,'Fecha de Pago : '.$fecha_pago);
+$pdf->Ln();
+$pdf->Cell(0,10,'Atendido por : '.$usuario_atencion);
+$pdf->Ln();
+$pdf->Cell(0,10,'Mes Pagado : '.$pago_mes);
+$pdf->Ln();
 
 $pdf->Image('../../img/logo1.jpeg', 65 ,80, 80 , 55);
 
