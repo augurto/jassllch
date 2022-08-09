@@ -87,13 +87,13 @@
                         
                         <input type="text" class="form-control" id="mes_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
                         <span class="input-group-text" id="basic-addon1">Año</span>
-                        <input type="text" class="form-control" id="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
+                        <input type="text" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
                         
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Usuario</span>
-                        <input type="text" class="form-control" id="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>"  readonly>
-                        <input type="text" class="form-control" id="id_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>"  readonly>
+                        <input type="text" class="form-control" id="name_user" name="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>"  readonly>
+                        <input type="text" class="form-control" id="id_user" name="id_user" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>"  readonly>
                        
                        
                         </div>
