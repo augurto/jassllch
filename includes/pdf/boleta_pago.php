@@ -13,9 +13,9 @@ $pdf->SetFont('Arial','B',16);
 
 // Insert a dynamic image from a URL
 $pdf->Cell(10,0,'Usuario : '.$datos);
-$pdf->Cell(10,10,'Dni : '.$valor1);
+$pdf->Cell(0,10,'Dni : '.$valor1);
 
-$pdf->Cell(10,30,'Fecha de pago : '.$fecha_pago);
+$pdf->Cell(0,30,'Fecha de pago : '.$fecha_pago);
 $pdf->Cell(10,40,'Atendido por : '.$usuario_atencion);
 $pdf->Cell(10,50,'Mes cancelado : '.$pago_mes);
 
