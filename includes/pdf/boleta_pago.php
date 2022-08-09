@@ -1,5 +1,7 @@
 <?php
 require('../../fpdf/fpdf.php');
+
+$id_pago=$_GET['id_pago'];
 $valor1=$_GET['dni'];
 $datos=$_GET['datos'];
 $fecha_pago=$_GET['fecha_pago'];
@@ -19,7 +21,7 @@ $pdf->setX(10);
 // Agregamos los datos de la empresa
 $pdf->Cell(5,$textypos,"NOMBRE DE LA EMPRESA");
 $pdf->SetFont('Arial','B',10);    
-$pdf->setY(30);$pdf->setX(10);
+$pdf->setY(10);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"DE:");
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(35);$pdf->setX(10);
@@ -48,13 +50,13 @@ $pdf->Cell(5,$textypos,"Email del cliente");
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(30);$pdf->setX(135);
-$pdf->Cell(5,$textypos,"FACTURA #12345");
+$pdf->Cell(5,$textypos,"BOLETA NRO : ".$id_pago);
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(35);$pdf->setX(135);
-$pdf->Cell(5,$textypos,"Fecha: 11/DIC/2019");
+$pdf->Cell(5,$textypos,"Fecha : ".$fecha_pago);
 $pdf->setY(40);$pdf->setX(135);
-$pdf->Cell(5,$textypos,"Vencimiento: 11/ENE/2020");
-$pdf->setY(45);$pdf->setX(135);
+/* $pdf->Cell(5,$textypos,"Vencimiento: 11/ENE/2020");
+$pdf->setY(45);$pdf->setX(135); */
 $pdf->Cell(5,$textypos,"");
 $pdf->setY(50);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"");
