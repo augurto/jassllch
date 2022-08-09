@@ -40,13 +40,13 @@
                     <script>
                         //Función que realiza la suma
                         function Suma() {
-                        var ingreso1 = document.calculadora.ingreso1.value;
-                        var ingreso2 = document.calculadora.ingreso2.value;
+                        var monto_pago = document.calculadora.monto_pago.value;
+                        var deuda = document.calculadora.deuda.value;
                         try{
                             //Calculamos el número escrito:
-                            ingreso1 = (isNaN(parseFloat(ingreso1)))? 0 : parseFloat(ingreso1);
-                            ingreso2 = (isNaN(parseFloat(ingreso2)))? 0 : parseFloat(ingreso2);
-                            document.calculadora.resultado.value = ingreso1-ingreso2;
+                            monto_pago = (isNaN(parseFloat(monto_pago)))? 0 : parseFloat(monto_pago);
+                            deuda = (isNaN(parseFloat(deuda)))? 0 : parseFloat(deuda);
+                            document.calculadora.vuelto.value = monto_pago-deuda;
                         }
                         //Si se produce un error no hacemos nada
                         catch(e) {}
@@ -99,14 +99,14 @@
                         </div>
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
-                                <input type="text" class="form-control" id="monto_pago" name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1" name="ingreso1" onKeyUp="Suma()"  >
+                                <input type="text" class="form-control" id="monto_pago" name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1" name="ingreso1" onKeyUp="Suma()" required >
                                         
                         </div>   
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
-                                <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1"  name="ingreso2" onKeyUp="Suma()">
+                                <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1"  name="ingreso2" onKeyUp="Suma()" required>
                                 <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
-                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" name="resultado" readonly >
+                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                                         
                         </div>                  
                         
@@ -121,7 +121,7 @@
                             <option value="1" selected>Terminado</option>
                             <option value="2">Inactivo</option>
                             </select> -->
-                            <select name="mes_pago" id="mes_pago" class="form-select">
+                            <select name="mes_pago" id="mes_pago" class="form-select" required>
                                 <?php
                                     $mes=date("n"); 
                                     $rango=11; 
