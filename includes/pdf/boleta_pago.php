@@ -35,30 +35,30 @@ $pdf->Cell(5,$textypos,"Email de la empresa");
 
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
-$pdf->setY(30);$pdf->setX(75);
+$pdf->setY(10);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"PARA:");
 $pdf->SetFont('Arial','',10);    
-$pdf->setY(35);$pdf->setX(75);
+$pdf->setY(15);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"Nombre del cliente");
-$pdf->setY(40);$pdf->setX(75);
+$pdf->setY(20);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"Direccion del cliente");
-$pdf->setY(45);$pdf->setX(75);
+$pdf->setY(25);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"Telefono del cliente");
-$pdf->setY(50);$pdf->setX(75);
+$pdf->setY(30);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"Email del cliente");
 
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
-$pdf->setY(30);$pdf->setX(135);
+$pdf->setY(10);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"BOLETA NRO : ".$id_pago);
 $pdf->SetFont('Arial','',10);    
-$pdf->setY(35);$pdf->setX(135);
+$pdf->setY(15);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"Fecha : ".$fecha_pago);
-$pdf->setY(40);$pdf->setX(135);
+$pdf->setY(20);$pdf->setX(135);
 /* $pdf->Cell(5,$textypos,"Vencimiento: 11/ENE/2020");
 $pdf->setY(45);$pdf->setX(135); */
 $pdf->Cell(5,$textypos,"");
-$pdf->setY(50);$pdf->setX(135);
+$pdf->setY(30);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"");
 
 /// Apartir de aqui empezamos con la tabla de productos
