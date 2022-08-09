@@ -44,7 +44,7 @@
                             //Calculamos el número escrito:
                             ingreso1 = (isNaN(parseFloat(ingreso1)))? 0 : parseFloat(ingreso1);
                             ingreso2 = (isNaN(parseFloat(ingreso2)))? 0 : parseFloat(ingreso2);
-                            document.calculadora.resultado.value = Math.round(ingreso1-ingreso2,-2);
+                            document.calculadora.resultado.value = ingreso1-ingreso2;
                         }
                         //Si se produce un error no hacemos nada
                         catch(e) {}
@@ -83,8 +83,9 @@
                                         
                         </div>   
                         <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
+                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
                                 <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1"  name="ingreso2" onKeyUp="Suma()">
+                                <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
                                 <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" name="resultado" readonly >
                                         
                         </div>                  
