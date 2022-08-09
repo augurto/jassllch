@@ -53,7 +53,7 @@
                             <td><?php echo $pago_mes ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
-                                echo 'Activo';
+                                echo 'Pagado';
                             } elseif ($estado==1) {
                                 # code...
                                 echo 'Terminado';
