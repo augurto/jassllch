@@ -11,7 +11,7 @@ $pdf->SetFont('Arial','B',16);
 
 $pdf->Cell(100,10,'Dni :'.$valor1);
 $pdf->Cell(110,10,$valor1);
-$pdf->Image('../../img/logo1.jpeg', 80 ,88, 80 , 38);
+$pdf->Image('../../img/logo1.jpeg', 80 ,80, 80 , 50);
 
 $pdf->Output();
 ?>
