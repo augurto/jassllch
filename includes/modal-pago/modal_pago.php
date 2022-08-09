@@ -13,7 +13,7 @@
                                         
                                         $("#paterno").val(paterno);
                                         $("#materno").val(materno);
-                                        $("#datos").val(nombre+paterno+materno);
+                                        $("#datos").val(nombre+" "+paterno+materno);
                                         $("#dni").val(dni);
                           
                                       })
