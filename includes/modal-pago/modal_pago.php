@@ -1,16 +1,16 @@
 <script >
                                       $(document).on("click", "#btnmodal",function () {
                                         
-                                              var nombre =$(this).data('nom');
-                                              var nombre_proyecto =$(this).data('nom2');
+                                              var codigo =$(this).data('codigo');
+                                              var nombre =$(this).data('nombre');
                                               var paterno =$(this).data('paterno')
                                               var materno =$(this).data('materno');
                                               var dni =$(this).data('dni');
 
+                                        $("#codigo").val(codigo);
                                         $("#nombre").val(nombre);
-                                        $("#nombre2").val(nombre_proyecto);
 
-                                        $("#datos").val(paterno+materno);
+                                        $("#datos").val(nombres+" "+paterno+" "+materno);
                                         $("#paterno").val(paterno);
                                         $("#materno").val(materno);
                                         $("#dni").val(dni);
