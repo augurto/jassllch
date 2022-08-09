@@ -1,6 +1,6 @@
 <?php
 require('../../fpdf/fpdf.php');
-
+$valor1=$_GET['dni'];
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
