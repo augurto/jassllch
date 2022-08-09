@@ -3,15 +3,15 @@
                                         
                                               var nombre =$(this).data('nom');
                                               var nombre_proyecto =$(this).data('nom2');
-                                              var ap_paterno =$(this).data('ap_paterno')
-                                              var ap_materno =$(this).data('ap_materno');
+                                              var paterno =$(this).data('paterno')
+                                              var materno =$(this).data('materno');
                                               var dni =$(this).data('dni');
 
                                         $("#nombre").val(nombre);
                                         $("#nombre2").val(nombre_proyecto);
 
-                                        $("#ap_paterno").val(ap_paterno);
-                                        $("#ap_materno").val(ap_materno);
+                                        $("#paterno").val(paterno);
+                                        $("#materno").val(materno);
                                         $("#dni").val(dni);
                           
                                       })
@@ -64,8 +64,8 @@
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Apellidos</span>
-                        <input type="number" class="form-control" id="ap_paterno" name="ap_paterno" aria-label="Username" aria-describedby="basic-addon1">
-                        <input type="number" class="form-control" id="ap_materno" name="ap_materno" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="number" class="form-control" id="paterno" name="paterno" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="number" class="form-control" id="materno" name="materno" aria-label="Username" aria-describedby="basic-addon1">
                         
                         </div>
                         <div class="input-group mb-3">
