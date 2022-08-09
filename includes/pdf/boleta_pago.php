@@ -29,11 +29,11 @@ $pdf->Cell(0,10,'Atendido por : '.$usuario_atencion);
 $pdf->Ln();
 $pdf->Cell(0,10,'Mes Pagado : '.$pago_mes);
 $pdf->Ln();
-$pdf->Cell(0,10,'Pago con : '.(money_format('%.2n', $monto_mes)));
+$pdf->Cell(0,10,'Pago con : S/ '.(money_format('%.2n', $monto_mes)));
 $pdf->Ln();
-$pdf->Cell(0,10,'Deuda : '.$monto_usuario);
+$pdf->Cell(0,10,'Deuda : S/ '.money_format('%.2n',$monto_usuario));
 $pdf->Ln();
-$pdf->Cell(0,10,'Vuelto : '.$vuelto);
+$pdf->Cell(0,10,'Vuelto : S/ '.money_format('%.2n',$vuelto));
 $pdf->Ln();
 
 $pdf->Image('../../img/logo1.jpeg', 65 ,80, 80 , 55);
