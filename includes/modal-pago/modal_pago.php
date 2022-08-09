@@ -46,6 +46,10 @@
                         <input type="text" class="form-control" id="dni" name="dni" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Mes</span>
+                        <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo date("m");?>" >
+                        </div>
+                        <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Sub Tipo Proyecto</label>
                                 <select class="form-control" name="id_entregable" id="sub2" required="">
                                             <option disabled="disabled" value="" selected>Clic para ver.</option>
@@ -69,7 +73,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Estado</span>
+                        <span class="input-group-text" id="basic-addon1">Actividad</span>
                         
                         
                             <select class="form-select" aria-label="Default select example" name="estado" id="estado">
