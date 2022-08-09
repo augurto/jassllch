@@ -43,11 +43,19 @@
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
+                        
                         <input type="text" class="form-control" id="dni" name="dni" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         <input type="text" class="form-control" id="mes"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo date("m");?>" >
+                        <select>
+                        <option value="January"<?php if (date("m") == 07) echo ' selected="selected"'; ?>>Julio</option>
+                        <option value="January"<?php if (date("m") == 08) echo ' selected="selected"'; ?>>Agosto</option>
+                        <option value="January"<?php if (date("m") == 09) echo ' selected="selected"'; ?>>Setiembre</option>
+                        <option value="January"<?php if (date("m") == 10) echo ' selected="selected"'; ?>>Octubre</option>
+                           
+                        </select>
                         </div>
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Sub Tipo Proyecto</label>
