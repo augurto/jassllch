@@ -10,6 +10,7 @@
                                         $("#nombre").val(nombre);
                                         $("#nombre2").val(nombre_proyecto);
 
+                                        $("#datos").val(paterno+materno);
                                         $("#paterno").val(paterno);
                                         $("#materno").val(materno);
                                         $("#dni").val(dni);
@@ -64,7 +65,7 @@
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Apellidos</span>
-                        <input type="text" class="form-control" id="paterno" name="paterno" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="datos" name="datos" aria-label="Username" aria-describedby="basic-addon1">
                         <input type="text" class="form-control" id="materno" name="materno" aria-label="Username" aria-describedby="basic-addon1">
                         
                         </div>
