@@ -44,7 +44,7 @@
                             //Calculamos el número escrito:
                             ingreso1 = (isNaN(parseFloat(ingreso1)))? 0 : parseFloat(ingreso1);
                             ingreso2 = (isNaN(parseFloat(ingreso2)))? 0 : parseFloat(ingreso2);
-                            document.calculadora.resultado.value = ingreso1-ingreso2;
+                            document.calculadora.resultado.value = Math.round(ingreso1-ingreso2,-2);
                         }
                         //Si se produce un error no hacemos nada
                         catch(e) {}
