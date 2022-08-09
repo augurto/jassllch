@@ -9,8 +9,8 @@ $pdf->SetFont('Arial','B',16);
 $pdf->Image('../../img/logo1.jpeg',10,10,-300);
 // Insert a dynamic image from a URL
 
-$pdf->Cell(140,10,'Dni :');
-$pdf->Cell(180,20,$valor1);
+$pdf->Cell(100,10,'Dni :');
+$pdf->Cell(130,20,$valor1);
 
 $pdf->Output();
 ?>
