@@ -5,6 +5,9 @@ $datos=$_GET['datos'];
 $fecha_pago=$_GET['fecha_pago'];
 $usuario_atencion=$_GET['usuario_atencion'];
 $pago_mes=$_GET['pago_mes'];
+$monto_mes=$_GET['monto_mes'];
+$monto_usuario=$_GET['monto_usuario'];
+$vuelto=$_GET['vuelto'];
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
@@ -24,6 +27,12 @@ $pdf->Ln();
 $pdf->Cell(0,10,'Atendido por : '.$usuario_atencion);
 $pdf->Ln();
 $pdf->Cell(0,10,'Mes Pagado : '.$pago_mes);
+$pdf->Ln();
+$pdf->Cell(0,10,'Pago con : '.$monto_mes);
+$pdf->Ln();
+$pdf->Cell(0,10,'Deuda : '.$monto_usuario);
+$pdf->Ln();
+$pdf->Cell(0,10,'Vuelto : '.$vuelto);
 $pdf->Ln();
 
 $pdf->Image('../../img/logo1.jpeg', 65 ,80, 80 , 55);
