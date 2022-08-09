@@ -62,7 +62,7 @@ $pdf->setY(30);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"");
 
 /// Apartir de aqui empezamos con la tabla de productos
-$pdf->setY(60);$pdf->setX(135);
+$pdf->setY(40);$pdf->setX(135);
     $pdf->Ln();
 /////////////////////////////
 //// Array de Cabecera
