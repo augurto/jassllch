@@ -24,13 +24,13 @@ $pdf->SetFont('Arial','B',10);
 $pdf->setY(10);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"DE:");
 $pdf->SetFont('Arial','',10);    
-$pdf->setY(35);$pdf->setX(10);
+$pdf->setY(15);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"Nombre de la empresa");
-$pdf->setY(40);$pdf->setX(10);
+$pdf->setY(20);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"Direccion de la empresa");
-$pdf->setY(45);$pdf->setX(10);
+$pdf->setY(25);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"Telefono de la empresa");
-$pdf->setY(50);$pdf->setX(10);
+$pdf->setY(30);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"Email de la empresa");
 
 // Agregamos los datos del cliente
