@@ -70,14 +70,14 @@
                         
                         <?php 
                         $mes_actual =date("m");
-                        $year_actual =date("y");
+                        $year_actual =date("Y");
                         date_default_timezone_set("America/Lima");
                         $hoy = date("Y-m-d H:i:s");     
                         ?>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Hoy</span>
-                        <input type="text" class="form-control" id="hoy" name="hoy"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
+                        <input type="text" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
                                                
                         </div>
                         <div class="input-group mb-3">
@@ -85,7 +85,7 @@
                         
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         
-                        <input type="text" class="form-control" id="mes_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
+                        <input type="text" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
                         <span class="input-group-text" id="basic-addon1">Año</span>
                         <input type="text" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
                         
