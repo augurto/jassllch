@@ -7,7 +7,7 @@ $password = "JassJass*#17";
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
-$jass=$_GET["jass"];
+$jass=$_GET["idjass"];
 $dni=$_GET["dnijass"];
 $datos=$_GET["datos"];
 $hoy=$_GET["hoy"];
@@ -29,9 +29,9 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO pagos (id_jass, dni_usuario_jass, datos_pago, pago_hoy, mes_actual_pago,year_actual_pago,name_user,id_user, monto_pago, deuda, vuelto, pago_mes) 
+$sql = "INSERT INTO pagos (id_jass, dni_usuario_jass, datos_pago, pago_hoy, mes_actual_pago,year_actual_pago,name_user,id_user, monto_pago, deuda, vuelto, pago_mes, estado_pago) 
 
-VALUES ('$jass','$dni', '$datos', '$hoy2','$mes_actual', '$year_actual', '$name_user', '$id_user', '$monto_pago', '$deuda', '$vuelto', '$mes_pago')";
+VALUES ('$jass','$dni', '$datos', '$hoy2','$mes_actual', '$year_actual', '$name_user', '$id_user', '$monto_pago', '$deuda', '$vuelto', '$mes_pago', '0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../usuario_jass.php?dni=$dni'";
