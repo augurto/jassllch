@@ -14,14 +14,14 @@ $vuelto=$_GET['vuelto'];
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
-$pdf->Image("../../img/fondo2.png", 0,0,200,100,'PNG' );
+$pdf->Image("../../img/fondo2.png", 0,0,180,100,'PNG' );
 $pdf->SetFont('Arial','B',16);    
 $textypos = 5;
 $pdf->setY(2);
 $pdf->setX(10);
 // Agregamos los datos de la empresa
-$pdf->Cell(5,$textypos,"Jass");
-$pdf->Image("../../img/logo2.jpeg", 10,10,20,20,'JPEG' );
+/* $pdf->Cell(5,$textypos,"Jass"); */
+$pdf->Image("../../img/logo2.jpeg", 10,10,30,30,'JPEG' );
 
 /* $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(10);
@@ -39,7 +39,7 @@ $pdf->Cell(5,$textypos,"Email de la empresa"); */
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(55);
-$pdf->Cell(5,$textypos,"PARA:");
+$pdf->Cell(5,$textypos,"Usuario:");
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(55);
 $pdf->Cell(5,$textypos,$datos);
