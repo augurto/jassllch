@@ -1,6 +1,6 @@
 <?php
 
-     $tp=mysqli_query($con,"SELECT count(*) as tp FROM proyecto where estado='0'");
+     $tp=mysqli_query($con,"SELECT count(*) as tp FROM usuarios_jass where estado='0'");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
@@ -12,7 +12,7 @@
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
-      $sol=mysqli_query($con,"SELECT sum(presupuesto) sol FROM proyecto  where estado='1'");
+      $sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado='0'");
       $sole=mysqli_fetch_array($sol);
       $soles=$sole["sol"];
 
@@ -47,7 +47,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Proyectos Pendientes</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Usuarios</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps;?></div>
                     </div>
                     <div class="col-auto">
@@ -68,7 +68,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Proyectos   Terminados </div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pendiente 1 </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tes;?></div>
                     </div>
                     <div class="col-auto">
@@ -89,7 +89,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Proyectos Inactivos</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pendiente 2</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tin;?></div>
                     </div>
                     <div class="col-auto">
