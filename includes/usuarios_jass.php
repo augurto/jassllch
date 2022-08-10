@@ -25,11 +25,11 @@
                         foreach ($link->query('SELECT * from usuarios_jass') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_jass=$row['id_jass'];
-                        /* $dni_jass=$row['dni_usuario_jass']; */
+                        $dni_jass=$row['dni_usuario_jass'];
                         $nombre=$row['nombres'];
                         $ap_paterno=$row['ap_paterno'];
                         $ap_materno=$row['ap_materno'];
-                        $dni=$row['dni_usuario_jass'];
+                        
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
@@ -65,7 +65,7 @@
                                         <i class="fa fa-edit"></i>
                                         </button>
                          
-                                         <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
+                                         <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni_jass;  ?>" >
                                          <i class="fa fa-plus"></i>
                                          
                                         </button>
