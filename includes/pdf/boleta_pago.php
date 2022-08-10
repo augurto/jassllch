@@ -21,8 +21,8 @@ $pdf->setX(10);
 // Agregamos los datos de la empresa
 $pdf->Cell(5,$textypos,"Jass");
 $pdf->Image("../../img/logo2.jpeg", 10,10,20,20,'JPEG' );
-$pdf->Image("../../img/fondo3.png", 0,10,200,200,'PNG' );
-$pdf->SetFont('Arial','B',10);    
+$pdf->Image("../../img/fondo3.png", 0,10,150,150,'PNG' );
+/* $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"DE:");
 $pdf->SetFont('Arial','',10);    
@@ -33,14 +33,14 @@ $pdf->Cell(5,$textypos,"Direccion de la empresa");
 $pdf->setY(25);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"Telefono de la empresa");
 $pdf->setY(30);$pdf->setX(10);
-$pdf->Cell(5,$textypos,"Email de la empresa");
+$pdf->Cell(5,$textypos,"Email de la empresa"); */
 
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
-$pdf->setY(10);$pdf->setX(75);
+$pdf->setY(10);$pdf->setX(55);
 $pdf->Cell(5,$textypos,"PARA:");
 $pdf->SetFont('Arial','',10);    
-$pdf->setY(15);$pdf->setX(75);
+$pdf->setY(15);$pdf->setX(55);
 $pdf->Cell(5,$textypos,$datos);
 /* $pdf->setY(20);$pdf->setX(75);
 $pdf->Cell(5,$textypos,"Direccion del cliente");
