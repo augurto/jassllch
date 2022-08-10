@@ -11,6 +11,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Usuario</th>
+                                    <th>Nro Boleta</th>
                                     <th>Fecha Pago</th>
                                     <th>Cajero</th>
                                     <th>Pago mes</th>
@@ -50,7 +51,8 @@
                              <?php }?>   
                             
                             <td><?php echo $count++; ?></td>
-                            <td><?php echo $nombre; ?></a></td>
+                            <td><?php echo $nombre; ?></td>
+                            <td><?php echo 'BL-'.$id_jass; ?></td>
                             <td><?php echo $pago_hoy ?></td>
                             <td><?php echo $name_user ?></td>
                             <td><?php echo $pago_mes ?></td>
