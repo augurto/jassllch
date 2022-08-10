@@ -64,7 +64,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <!-- fin de datos sesion -->
     <!-- procesos de modal -->
     
-    <?php include 'includes/modal-eliminar/eliminar_proyecto.php'; ?>
+    <?php include 'includes/agregar/nuevo_usuario.php'; ?>
     <?php include 'includes/modal-pago/modal_pago.php'; ?>
     
     <!-- fin de procesos de modal -->
@@ -73,19 +73,19 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
 
-    <?php include 'includes/parts/graficas.php'; ?>
+    <?php include 'includes/graficas/graficas_inicio.php'; ?>
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
     <div class="row">
-        <!-- <div class="col-sm-12 text-center">
+        <div class="col-sm-12 text-center">
                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
-                     <i class="fa fa-plus" aria-hidden="true"></i> Nuevo Proyecto
+                     <i class="fa fa-plus" aria-hidden="true"></i> Nuevo Usuario
                       </button>
-                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
+                      <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
                       <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
-                      </button>
-        </div> -->
+                      </button> -->
+        </div>
     </div>
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
