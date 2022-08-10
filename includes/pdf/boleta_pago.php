@@ -10,7 +10,7 @@ $pago_mes=$_GET['pago_mes'];
 $monto_mes=$_GET['monto_mes'];
 $monto_usuario=$_GET['monto_usuario'];
 $vuelto=$_GET['vuelto'];
-$f_vuelto=money_format('%.2n', $monto_mes);
+
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
@@ -20,6 +20,7 @@ $pdf->setY(2);
 $pdf->setX(10);
 // Agregamos los datos de la empresa
 $pdf->Cell(5,$textypos,"Jass");
+$pdf->Image("../../img/logo2.jpeg", 75,10,50,50,'JPEG' );
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"DE:");
