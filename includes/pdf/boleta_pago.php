@@ -21,7 +21,7 @@ $pdf->setX(10);
 // Agregamos los datos de la empresa
 $pdf->Cell(5,$textypos,"Jass");
 $pdf->Image("../../img/logo2.jpeg", 10,10,20,20,'JPEG' );
-$pdf->Image("../../img/fondo3.png", 10,10,500,500,'PNG' );
+$pdf->Image("../../img/fondo3.png", 0,10,200,200,'PNG' );
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"DE:");
