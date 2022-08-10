@@ -28,7 +28,7 @@ echo "Connected successfully";
  
 $sql = "INSERT INTO usuarios_jass (nombres,ap_paterno,ap_materno,fecha_nacimiento, id_natural, direccion_actual,ocupacion,grado_instruccion, estado_civil, dni_usuario_jass, esposa_conviviente, sector_jass, cantidad_miembros, estado_usuario_jass) 
 
-VALUES ('$nombre','$apellido_paterno','$apellido_materno','$apellido_materno','$fecha_nacimiento','$natural_lugar','$ocupacion','$grado_instruccion','$estado_civil','$esposa_conviviente','$sector','$c_miembros', '0')";
+VALUES ('$nombre','$apellido_paterno','$apellido_materno','$fecha_nacimiento','$natural_lugar','$ocupacion','$grado_instruccion','$estado_civil','$esposa_conviviente','$sector','$c_miembros', '0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
