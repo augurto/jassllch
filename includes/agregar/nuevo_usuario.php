@@ -22,6 +22,17 @@
                           </button>
                         </div>
                         <div class="modal-body">
+                        <label for="inputProyec">DNI</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="number" class="form-control" placeholder="Ingrese el Nro de DNI" id="dni" name="dni" required >
+                          
+                          
+                        </div>
                         <label for="inputProyec">Nombres</label>
                         <div class="input-group mb-3">
                           
@@ -82,7 +93,7 @@
                                             $sss=mysqli_query($con,"SELECT * FROM natural_usuario");
                                                     while($f=mysqli_fetch_assoc($sss)){    
 
-                                                        echo '<option value="'.$f['id_natural'].'">'.$f['nombre_lugar'].' '.$f['otro_natural'].' '.$f['distrito_natural'].' '.$f['provincia_natural'].'</option>';
+                                                        echo '<option value="'.$f['id_natural'].'">'.$f['nombre_lugar'].'-'.$f['otro_natural'].'-'.$f['distrito_natural'].'</option>';
 
                                             }
                                             
@@ -92,58 +103,76 @@
                           
                           
                         </div>
-                        <label for="inputProyec">Nombres</label>
+                        <label for="inputProyec">Ocupacion</label>
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          <input type="text" class="form-control" placeholder="Que ocupacion tiene" id="ocupacion" name="ocupacion" required >
                           
                           
                         </div>
-                        <label for="inputProyec">Nombres</label>
+                        <label for="inputProyec">Grado instruccion</label>
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Clic para ver</option>
+                            <option value="Primaria">Primaria</option>
+                            <option value="Secundaria">Secundaria</option>
+                            <option value="Superior">Superior</option>
+                            <option value="Superior Tecnico">Superior Tecnico</option>
+                            <option value="Analfabeto">Analfabeto</option>
+                            <option value="Secundaria Incompleta">Secundaria Incompleta</option>
+                            <option value="Primaria Incompleta">Primaria Incompleta</option>
+                            <option value="Otro">Otro</option>
+                        </select>
                           
                           
                         </div>
-                        <label for="inputProyec">Nombres</label>
+                        <label for="inputProyec">Estado Civil</label>
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Clic para ver</option>
+                            <option value="Casado/a">Casado/a</option>
+                            <option value="Soltero/a">Soltero/a</option>
+                            <option value="Viudo/a">Viudo/a</option>
+                            <option value="Conviviente">Conviviente</option>
+                            <option value="Divorciado/a">Divorciado/a</option>
+                            <option value="Otro">Otro</option>
+                        </select>
                           
                           
                         </div>
-                        <label for="inputProyec">Nombres</label>
+                        <label for="inputProyec">Esposo/a | Conviviente</label>
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          <input type="text" class="form-control" placeholder="Esposo/a o Conviviente" id="esposa_conviviente" name="esposa_conviviente"  >
                           
                           
                         </div>
-                        <label for="inputProyec">Nombres</label>
+                        <label for="inputProyec">Sector</label>
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          <input type="text" class="form-control" placeholder="Describa el sector" id="sector" name="sector" required >
                           
                           
                         </div>
@@ -151,113 +180,7 @@
                       <!--   mostrar el ultimo codigo de todos los proyectos -->
                       
                        
-
-                      <label for="inputProyec">Codigo del Proyecto</label>
-                        <div class="input-group">
-
-                                <!-- <select class="form-control" id="extension" name="extension" required>
-                                  <option value="0">--Ext. del codigo--</option>
-                                      <?php
-                                        $programas=mysqli_query($con,"select * from codigo_generado_proyecto");
-                                        while ($rw=mysqli_fetch_array($programas)){
-                                          $id=$rw["id_cod_gen_pro "];
-                                          $grupo=$rw["variable"];
-                                          
-                                      ?>
-                                  <option value="<?php echo $id;?>"><?php echo $grupo;?></option>
-                                  <?php
-                                        }
-                                  ?>
-                                </select> -->
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><span class="fa fa-qrcode"></span></span>
-                            </div>
-                   
-
-                              <?php $rs = mysqli_query($con, "SELECT MAX(id) AS id FROM proyecto");
-                              if ($row = mysqli_fetch_row($rs)) {
-                              $codigo_proyecto = trim($row[0]);
-                              $id_codigo=++$codigo_proyecto;
-                              } 
-                              
-                              ?>
-
-                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo $id_codigo ?>" readonly>
-                             
-                       </div>
-                       <br>
-                       <label for="inputProyec">Sub tipo del Proyecto</label>
-                       <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Extension</label>
-                                <select class="form-control" name="id_extension" id="id_extension" required="">
-                                            <option disabled="disabled" value="" selected>Clic para ver.</option>
-                                            <?php 
-
-                                            $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
-                                                    while($f=mysqli_fetch_assoc($sss)){    
-
-                                                        echo '<option value="'.$f['variable'].'">'.$f['variable'].'</option>';
-
-                                            }
-                                            
-                                            ?>
-                                </select>
-                                        
-                        </div>
-                       <label for="inputProyec">Presupuesto</label>
-                       
-                        <div class="input-group mb-3">
-                          
-                          <br>
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">S/.</i></span>
-                          </div>
-                          <input type="number" class="form-control" placeholder="Presupuesto" id="presupuesto" name="presupuesto" >
-                          
-                        </div>
-
-                              <!-- para insertar adelanto -->
-
-                        <!-- <br>
-                       <label for="inputProyec">Adelanto</label>
-                       
-                        <div class="input-group mb-3">
-                          
-                          <br>
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">S/.</i></span>
-                          </div>
-                          <input type="number" class="form-control" placeholder="Platita" >
-                          
-                        </div> -->
-                              <br>
-                            <label>Cronograma</label>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><span class="fas fa-calendar"></span></span>
-                            </div>
-                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio"  value="<?php echo date('d-m-Y'); ?>" required>
-                          </div>
-                          <!-- /input-group -->
-                        </div>
-                        <br>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><span class="fas fa-calendar"></span></span>
-                            </div>
-                            <input type="date" class="form-control" name="fecha_fin"  id="fecha_fin"  title="Fecha fin" required>
-                            <input type="hidden" value="Ego" class="form-control" name="usuario"  id="usuario"  title="usuario" required>
-                          </div>
-                          <!-- /input-group -->
-                        </div>
-                          <br>
-                        <!-- /.col-lg-6 -->
-                      </div>
-                                              
+               
 
 
                         </div>
