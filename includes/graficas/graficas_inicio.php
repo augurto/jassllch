@@ -1,6 +1,6 @@
 <?php
 
-     $tp=mysqli_query($con,"SELECT count(*) as tp FROM usuarios_jass where estado='0'");
+     $tp=mysqli_query($con,"SELECT count(*) as tp FROM usuarios_jass where estado_usuario_jass='0'");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
