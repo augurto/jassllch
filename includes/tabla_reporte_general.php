@@ -15,6 +15,7 @@
                                     <th>Fecha Pago</th>
                                     <th>Cajero</th>
                                     <th>Pago mes</th>
+                                    <th>Monto</th>
                                     <th>Estado</th>
                                     <th>Accion</th>
                                     
@@ -56,6 +57,7 @@
                             <td><?php echo $pago_hoy ?></td>
                             <td><?php echo $name_user ?></td>
                             <td><?php echo $pago_mes ?></td>
+                            <td><?php echo $deuda ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Pagado';
