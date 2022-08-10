@@ -14,7 +14,7 @@ $vuelto=$_GET['vuelto'];
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
-$pdf->Image("../../img/fondo2.png", 0,0,150,300,'PNG' );
+$pdf->Image("../../img/fondo2.png", 0,0,300,150,'PNG' );
 $pdf->SetFont('Arial','B',16);    
 $textypos = 5;
 $pdf->setY(2);
