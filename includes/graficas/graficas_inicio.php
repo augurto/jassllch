@@ -12,7 +12,7 @@
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
-      $sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado='0'");
+      $sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'");
       $sole=mysqli_fetch_array($sol);
       $soles=$sole["sol"];
 
