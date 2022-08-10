@@ -14,6 +14,7 @@ $vuelto=$_GET['vuelto'];
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
+$pdf->Image("../../img/fondo2.png", 0,0,150,300,'PNG' );
 $pdf->SetFont('Arial','B',16);    
 $textypos = 5;
 $pdf->setY(2);
@@ -21,7 +22,7 @@ $pdf->setX(10);
 // Agregamos los datos de la empresa
 $pdf->Cell(5,$textypos,"Jass");
 $pdf->Image("../../img/logo2.jpeg", 10,10,20,20,'JPEG' );
-$pdf->Image("../../img/fondo2.png", 0,0,150,220,'PNG' );
+
 /* $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(10);
 $pdf->Cell(5,$textypos,"DE:");
