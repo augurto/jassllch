@@ -8,7 +8,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
 $jass=$_GET["jass"];
-$dni=$_GET["dni"];
+$dni=$_GET["dnijass"];
 $datos=$_GET["datos"];
 $hoy=$_GET["hoy"];
 $mes_actual=$_GET["mes_actual"];
