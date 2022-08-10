@@ -14,7 +14,7 @@
                   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
-                        <form action="../../includes/process/insert/insertar_proyecto.php">
+                        <form action="../../includes/insertar/insetar_usuario.php">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLongTitle">Agregar Usuario</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -86,7 +86,7 @@
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
                           <!-- <label class="input-group-text" for="inputGroupSelect01">Extension</label> -->
-                                <select class="form-control" name="id_extension" id="id_extension" required="">
+                                <select class="form-control" name="natural_lugar" id="natural_lugar" required="">
                                             <option disabled="disabled" value="" selected>Clic para ver.</option>
                                             <?php 
 
@@ -121,7 +121,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <select class="form-select" aria-label="Default select example">
+                          <select class="form-select" aria-label="Default select example" name="grado_instruccion" id="grado_instruccion">
                             <option selected>Clic para ver</option>
                             <option value="Primaria">Primaria</option>
                             <option value="Secundaria">Secundaria</option>
@@ -142,7 +142,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <select class="form-select" aria-label="Default select example">
+                          <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
                             <option selected>Clic para ver</option>
                             <option value="Casado/a">Casado/a</option>
                             <option value="Soltero/a">Soltero/a</option>
@@ -173,6 +173,18 @@
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Describa el sector" id="sector" name="sector" required >
+                          
+                          
+                        </div>
+
+                        <label for="inputProyec">Cantidad de miembros</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="number" class="form-control" placeholder="Cantidad de miembros" id="c_miembros" name="c_miembros" required >
                           
                           
                         </div>

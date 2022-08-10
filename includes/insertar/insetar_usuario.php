@@ -1,32 +1,34 @@
 <?php
 $servername = "localhost";
-$database = "u415020159_mantizb";
-$username = "u415020159_mantizb";
-$password = "Mantizb*#17";
+$database = "u415020159_jass";
+$username = "u415020159_jass";
+$password = "JassJass*#17";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
-$nombre_proyecto=$_GET["nombre-proyecto"];
+$dni=$_GET["dni"];
+$nombre=$_GET["nombre"];
+$apellido_paterno=$_GET["apellido_paterno"];
+$apellido_materno=$_GET["apellido_materno"];
+$fecha_nacimiento=$_GET["fecha_nacimiento"];
+$natural_lugar=$_GET["natural_lugar"];
+$ocupacion=$_GET["ocupacion"];
+$grado_instruccion=$_GET["grado_instruccion"];
+$estado_civil=$_GET["estado_civil"];
+$esposa_conviviente=$_GET["esposa_conviviente"];
+$sector=$_GET["sector"];
+$c_miembros=$_GET["c_miembros"];
 
-$codigo=$_GET["codigo"];
-
-$nuevo_nombre=$extension.'-'.$nombre_proyecto;
-$presupuesto=$_GET["presupuesto"];
-$ext=$_GET["id_extension"];
-$fecha=date("Y-m-d"); 
-$fecha_ini=$_GET["fecha_ini"];
-$fecha_fin=$_GET["fecha_fin"];
-$usuario=$_GET["usuario"];
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO proyecto (codigo,extencion,nombre_proyecto, presupuesto, estado,usuario_maker, fecha_agregado, fecha_ini, fecha_fin) 
+$sql = "INSERT INTO usuarios_jass (nombres,ap_paterno,ap_materno,fecha_nacimiento, id_natural, direccion_actual,ocupacion,grado_instruccion, estado_civil, dni_usuario_jass, esposa_conviviente, sector_jass, cantidad_miembros, estado_usuario_jass) 
 
-VALUES ('$codigo','$ext', '$nombre_proyecto', '$presupuesto', '0','Ego','$fecha','$fecha_ini','$fecha_fin')";
+VALUES ('$nombre','$apellido_paterno','$apellido_materno','$apellido_materno','$fecha_nacimiento','$natural_lugar','$ocupacion','$grado_instruccion','$estado_civil','$esposa_conviviente','$sector','$c_miembros', '0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
