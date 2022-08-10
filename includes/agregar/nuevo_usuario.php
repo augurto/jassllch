@@ -22,14 +22,128 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                        <label for="inputProyec">Nombre del Proyecto</label>
+                        <label for="inputProyec">Nombres</label>
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-proyecto" name="nombre-proyecto" >
+                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          
+                          
+                        </div>
+
+                        <label for="inputProyec">Apellido Paterno</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Apellido Paterno" id="apellido_paterno" name="apellido_paterno" required >
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Apellido Materno</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Apellido Materno" id="apellido_materno" name="apellido_materno" required >
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Fecha de Nacimiento</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="date" class="form-control"  id="fecha_nacimiento" name="fecha_nacimiento" required >
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Natural de </label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <!-- <label class="input-group-text" for="inputGroupSelect01">Extension</label> -->
+                                <select class="form-control" name="id_extension" id="id_extension" required="">
+                                            <option disabled="disabled" value="" selected>Clic para ver.</option>
+                                            <?php 
+
+                                            $sss=mysqli_query($con,"SELECT * FROM natural_usuario");
+                                                    while($f=mysqli_fetch_assoc($sss)){    
+
+                                                        echo '<option value="'.$f['id_natural'].'">'.$f['nombre_lugar'].' '.$f['otro_natural'].' '.$f['distrito_natural'].' '.$f['provincia_natural'].'</option>';
+
+                                            }
+                                            
+                                            ?>
+                                </select>
+                               
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Nombres</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Nombres</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Nombres</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Nombres</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          
+                          
+                        </div>
+                        <label for="inputProyec">Nombres</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
                           
                           
                         </div>
