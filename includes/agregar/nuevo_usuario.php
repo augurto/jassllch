@@ -78,6 +78,17 @@
                           
                           
                         </div>
+                        <label for="inputProyec">Direccion Actual</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control"  id="direccion_actual" name="direccion_actual" required >
+                          
+                          
+                        </div>
                         <label for="inputProyec">Natural de </label>
                         <div class="input-group mb-3">
                           
