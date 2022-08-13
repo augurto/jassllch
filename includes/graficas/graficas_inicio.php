@@ -43,7 +43,7 @@
             
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
-              <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
+              <button type="button" class="btn btn-light" id="boton_proyecto" data-toggle="modal" data-target="#egreso">
               <!-- <a href="../../index.php"> -->
         
                 <div class="card-body">
