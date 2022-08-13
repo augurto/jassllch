@@ -30,7 +30,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre o Nombres" id="nombre" name="nombre" required >
+                          <input type="text" class="form-control" placeholder="Datos de la Persona" id="nombre" name="nombre" required >
                           
                           
                         </div>
@@ -54,7 +54,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Direccion de domicilio" id="direccion_actual" name="direccion_actual" required >
+                          <input type="text" class="form-control" placeholder="Detalle de pago" id="direccion_actual" name="direccion_actual" required >
                           
                           
                         </div>
@@ -67,7 +67,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="number" class="form-control" placeholder="Cantidad de miembros" id="c_miembros" name="c_miembros" required >
+                          <input type="number" class="form-control" placeholder="Cantidad a pagar" id="c_miembros" name="c_miembros" required >
                           
                           
                         </div>
