@@ -35,18 +35,7 @@
                           
                         </div>
 
-                        
-                        <label for="inputProyec">Fecha de egreso</label>
-                        <div class="input-group mb-3">
-                          
-                          <br>
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                          </div>
-                          <input type="date" class="form-control"  id="fecha_nacimiento" name="fecha_nacimiento" required >
-                          
-                          
-                        </div>
+                       
                         <label for="inputProyec">Concepto</label>
                         <div class="input-group mb-3">
                           
