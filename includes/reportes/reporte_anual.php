@@ -24,7 +24,7 @@ $pdf->Table($link,'select * from pagos order by id_pagos');
 $pdf->AddPage();
 // Second table: specify 3 columns
 $pdf->AddCol('rank',20,'','C');
-$pdf->AddCol('name',40,'Country');
+$pdf->AddCol('name',40,'datos_pagos');
 $pdf->AddCol('pop',40,'Pop (2001)','R');
 $prop = array('HeaderColor'=>array(255,150,100),
             'color1'=>array(210,245,255),
