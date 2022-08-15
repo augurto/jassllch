@@ -106,7 +106,34 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                           } 
                                       ?> 
                                 </select>
-                       <button class="btn btn-outline-secondary" type="button">Reporte</button>
+                       <button class="btn btn-outline-secondary" type="button">Reporte Anual</button>
+        </div>
+        <div class="input-group">
+                                  <select name="mes_pago" id="mes_pago" class="form-select" required>
+                                      <?php
+                                          $mes=date("n"); 
+                                          $rango=11; 
+                                          for ($i=$mes;$i<=$mes+$rango;$i++){ 
+                                              $mesano=date('Y-n', mktime(0, 0, 0, $i, 1, date("Y") ) );
+                                              $meses=date('F', mktime(0, 0, 0, $i, 1, date("Y") ) );
+                                              if ($meses=="January") $meses="Enero";
+                                              if ($meses=="February") $meses="Febrero";
+                                              if ($meses=="March") $meses="Marzo";
+                                              if ($meses=="April") $meses="Abril";
+                                              if ($meses=="May") $meses="Mayo";
+                                              if ($meses=="June") $meses="Junio";
+                                              if ($meses=="July") $meses="Julio";
+                                              if ($meses=="August") $meses="Agosto";
+                                              if ($meses=="September") $meses="Septiembre";
+                                              if ($meses=="October") $meses="Octubre";
+                                              if ($meses=="November") $meses="Noviembre";
+                                              if ($meses=="December") $meses="Diciembre";
+                                              $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
+                                              echo "<option value='$meses'>$meses.$mes</option>"; 
+                                          } 
+                                      ?> 
+                                </select>
+                       <button class="btn btn-outline-secondary" type="button">Reporte Mensual</button>
         </div>
       </div>
         
