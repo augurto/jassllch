@@ -116,7 +116,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                           } 
                                       ?> 
                                 </select>
-                                <button class="btn btn-outline-secondary" type="button">Reporte Mensual</button>
+                                <button class="btn btn-outline-secondary" type="submit">Reporte Mensual</button>
 
         </div>
         </form>
@@ -126,15 +126,18 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Accordion Item #2
+        Reporte Anual
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+    <form action="">
+                      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Digite el año">
+                      <button class="btn btn-outline-secondary" type="submit">Reporte Año</button>
+      </form>
     </div>
   </div>
 
-  <div class="accordion-item">
+  <!-- <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
         Accordion Item #3
@@ -143,42 +146,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
     </div>
-  </div>
+  </div> -->
 </div>
-    <div class="input-group">
-      <form action="#1">
-                                  <select name="mes_pago" id="mes_pago" class="form-select" required>
-                                      <?php
-                                          $mes=date("n"); 
-                                          $rango=11; 
-                                          for ($i=$mes;$i<=$mes+$rango;$i++){ 
-                                              $mesano=date('Y-n', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              $meses=date('F', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              if ($meses=="January") $meses="Enero";
-                                              if ($meses=="February") $meses="Febrero";
-                                              if ($meses=="March") $meses="Marzo";
-                                              if ($meses=="April") $meses="Abril";
-                                              if ($meses=="May") $meses="Mayo";
-                                              if ($meses=="June") $meses="Junio";
-                                              if ($meses=="July") $meses="Julio";
-                                              if ($meses=="August") $meses="Agosto";
-                                              if ($meses=="September") $meses="Septiembre";
-                                              if ($meses=="October") $meses="Octubre";
-                                              if ($meses=="November") $meses="Noviembre";
-                                              if ($meses=="December") $meses="Diciembre";
-                                              $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              echo "<option value='$mes'>$meses</option>"; 
-                                          } 
-                                      ?> 
-                                </select>
-                                <button class="btn btn-outline-secondary" type="button">Reporte Mensual</button>
-      </form>
-                       
-      <form action="">
-                      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Digite el año">
-                      <button class="btn btn-outline-secondary" type="button">Reporte Año</button>
-      </form>
-        </div>
+
         
       </div>
         
