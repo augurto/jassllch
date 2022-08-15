@@ -1,7 +1,7 @@
 <?Php
 require "config.php";//connection to database
 //SQL to get 10 records
-$sql="select * from pagos LIMIT 0,10";
+$sql="select * from pagos";
 require('../../fpdf/fpdf.php');
 $pdf = new FPDF(); 
 $pdf->AddPage();
@@ -14,15 +14,15 @@ $pdf->SetFillColor(193,229,252);
 
 // Header starts /// 
 //First header column //
-$pdf->Cell($width_cell[0],10,'ID',1,0,'C',true);
+$pdf->Cell($width_cell[0],10,'id_pagos',1,0,'C',true);
 //Second header column//
-$pdf->Cell($width_cell[1],10,'NAME',1,0,'C',true);
+$pdf->Cell($width_cell[1],10,'datos_pago',1,0,'C',true);
 //Third header column//
-$pdf->Cell($width_cell[2],10,'CLASS',1,0,'C',true); 
+$pdf->Cell($width_cell[2],10,'name_user',1,0,'C',true); 
 //Fourth header column//
-$pdf->Cell($width_cell[3],10,'MARK',1,0,'C',true);
+$pdf->Cell($width_cell[3],10,'deuda',1,0,'C',true);
 //Third header column//
-$pdf->Cell($width_cell[4],10,'GENDER',1,1,'C',true); 
+$pdf->Cell($width_cell[4],10,'estado_pago',1,1,'C',true); 
 //// header ends ///////
 
 $pdf->SetFont('Arial','',14);
