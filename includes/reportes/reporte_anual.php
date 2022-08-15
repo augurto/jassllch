@@ -8,7 +8,8 @@ WHERE `TABLE_SCHEMA`='blog_samples'
     AND `TABLE_NAME`='pagos'");
 
 require('../../fpdf/fpdf.php');
-$pdf = new FPDF();
+
+$pdf = new FPDF('L','mm','A4');
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',12);		
 foreach($header as $heading) {
