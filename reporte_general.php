@@ -132,7 +132,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
     <form action="#2.1">
     <div class="input-group">
-                      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" value="<?php date("Y") ;?>" >
+                      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" value="<?php echo date("Y") ;?>" >
                       <button class="btn btn-outline-secondary" type="submit">Reporte Año</button>
     </div>
       </form>
