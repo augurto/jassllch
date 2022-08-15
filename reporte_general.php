@@ -82,6 +82,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <div class="container">
     <div class="row">
     <div class="input-group">
+      <form action="#1">
                                   <select name="mes_pago" id="mes_pago" class="form-select" required>
                                       <?php
                                           $mes=date("n"); 
@@ -102,13 +103,17 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                               if ($meses=="November") $meses="Noviembre";
                                               if ($meses=="December") $meses="Diciembre";
                                               $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              echo "<option value='$meses'>$meses.$mes</option>"; 
+                                              echo "<option value='$mes'>$meses</option>"; 
                                           } 
                                       ?> 
                                 </select>
-                       <button class="btn btn-outline-secondary" type="button">Reporte Mensual</button>
-                       <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Digite el año">
-                                <button class="btn btn-outline-secondary" type="button">Reporte Año</button>
+                                <button class="btn btn-outline-secondary" type="submit">Reporte Mensual</button>
+      </form>
+                       
+      <form action="#4">
+                      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Digite el año">
+                      <button class="btn btn-outline-secondary" type="submit">Reporte Año</button>
+      </form>
         </div>
         
       </div>
