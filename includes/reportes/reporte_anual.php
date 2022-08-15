@@ -1,7 +1,7 @@
 <?php
 require_once("./mysql_table.php");
 $db_handle = new DBController();
-$result = $db_handle->runQuery("SELECT * FROM pagos");
+$result = $db_handle->runQuery("SELECT id_pagos, dni_usuarios FROM pagos");
 $header = $db_handle->runQuery("SELECT `COLUMN_NAME` 
 FROM `INFORMATION_SCHEMA`.`COLUMNS` 
 WHERE `TABLE_SCHEMA`='blog_samples' 
