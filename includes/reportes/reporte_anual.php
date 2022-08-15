@@ -19,7 +19,7 @@ foreach($header as $heading) {
 }
 foreach($result1 as $row1) {
 	$pdf->SetFont('Arial','',12);	
-	
+	$pdf->Ln();
 	foreach($row1 as $column1)
 		$pdf->Cell(30,12,$column1,1);
 }
