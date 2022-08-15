@@ -1,5 +1,5 @@
 <?Php
-if(!file_exists('../../fpdf.php')){
+if(!file_exists('../../fpdf/fpdf.php')){
 	
 echo " Place fpdf.php file in this directory before using this page.<br>
 Read the instructions at <a href=https://www.plus2net.com/php_tutorial/pdf-data-student.php>https://www.plus2net.com/php_tutorial/pdf-data-student.php</a> ";
@@ -13,7 +13,7 @@ exit;
 
 require "config.php"; // connection to database 
 $count="select * from pagos LIMIT 0,10"; // SQL to get 10 records 
-require('../../fpdf.php');
+require('../../fpdf/fpdf.php');
 $pdf = new FPDF(); 
 $pdf->AddPage();
 
