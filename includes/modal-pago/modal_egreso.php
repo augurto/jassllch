@@ -22,7 +22,12 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                        
+                        <?php 
+                        $mes_actual =date("m");
+                        $year_actual =date("Y");
+                        date_default_timezone_set("America/Lima");
+                        $hoy = date("Y-m-d H:i:s");     
+                        ?>
                         <label for="inputProyec">Beneficiario</label>
                         <div class="input-group mb-3">
                           
@@ -46,6 +51,9 @@
                           <input type="text" class="form-control" placeholder="Detalle de pago" id="concepto" name="concepto" required >
                           <input type="hidden" class="form-control" id="name_user" name="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>"  readonly>
                         <input type="hidden" class="form-control" id="id_user" name="id_user" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>"  readonly>
+                        <input type="hidden" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
+                       <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
+                        <input type="hidden" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
                           
                         </div>
                 

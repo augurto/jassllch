@@ -12,6 +12,8 @@ $concepto=$_GET["concepto"];
 $monto=$_GET["monto"];
 $id_user=$_GET["id_user"];
 $name_user=$_GET["name_user"];
+$mes_actual=$_GET["mes_actual"];
+$year_actual=$_GET["year_actual"];
 date_default_timezone_set("America/Lima");
 $hoy = date("Y-m-d H:i:s");
 
@@ -21,9 +23,9 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO pagos (datos_pago,pago_hoy,name_user,id_user, monto_pago, estado_pago) 
+$sql = "INSERT INTO pagos (datos_pago,pago_hoy,mes_actual_pago,year_actual_pago,name_user,id_user, deuda, estado_pago) 
 
-VALUES ('$beneficiario','$hoy','$name_user','$id_user','$monto','1')";
+VALUES ('$beneficiario','$hoy','$mes_actual','$year_actual','$name_user','$id_user','$monto','1')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
