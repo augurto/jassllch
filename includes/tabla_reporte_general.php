@@ -131,6 +131,7 @@
                                          <i class="fa fa-print"></i>
                                          
                                         </button> -->
+                                        <i class="fa fa-file" aria-hidden="true"></i>
                                         </a>
                             </td>
                         </tr>
