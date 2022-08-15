@@ -106,10 +106,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                           } 
                                       ?> 
                                 </select>
-                       <button class="btn btn-outline-secondary" type="button">Reporte Anual</button>
-        </div>
-        <div class="input-group">
-                                  <select name="mes_pago" id="mes_pago" class="form-select" required>
+                       <button class="btn btn-outline-secondary" type="button">Reporte Mensual</button>
+                       <select name="mes_pago" id="mes_pago" class="form-select" required>
                                       <?php
                                           $mes=date("n"); 
                                           $rango=11; 
@@ -133,8 +131,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                           } 
                                       ?> 
                                 </select>
-                       <button class="btn btn-outline-secondary" type="button">Reporte Mensual</button>
+                                <button class="btn btn-outline-secondary" type="button">Reporte Year</button>
         </div>
+        
       </div>
         
     </div>
