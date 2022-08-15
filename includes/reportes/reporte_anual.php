@@ -30,6 +30,6 @@ $prop = array('HeaderColor'=>array(255,150,100),
             'color1'=>array(210,245,255),
             'color2'=>array(255,255,210),
             'padding'=>2);
-$pdf->Table($link,'select datos_pagos, format(year_actual_pago,0) as pop, rank from pagos order by rank limit 0,10',$prop);
+$pdf->Table($link,'select datos_pago, format(year_actual_pago,0) as pop, rank from pagos order by rank limit 0,10',$prop);
 $pdf->Output();
 ?>
