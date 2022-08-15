@@ -2,7 +2,7 @@
 require_once("./mysql_table.php");
 $db_handle = new DBController();
 $result = $db_handle->runQuery("SELECT id_pagos, deuda, estado_pago FROM pagos");
-$result1 = $db_handle->runQuery("SELECT datos_pago FROM pagos");
+$result1 = $db_handle->runQuery("SELECT sum(deuda) FROM pagos");
 $header = $db_handle->runQuery("SELECT id_pagos , deuda, estado_pago
 FROM `INFORMATION_SCHEMA`.`COLUMNS` 
 WHERE `TABLE_SCHEMA`='blog_samples' 
@@ -22,8 +22,8 @@ foreach($result as $row) {
 	$pdf->SetFont('Arial','',12);	
 	$pdf->Ln();
 	foreach($row as $column)
-		$pdf->CellFit(30,12,$column,1);
+		$pdf->Cell(30,12,$column,1);
 }
-
+$pdf->Cell(20,20,$result1,1,1,'C');
 $pdf->Output();
 ?>
