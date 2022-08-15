@@ -21,7 +21,7 @@ foreach($result as $row) {
 	$pdf->Ln();
 	foreach($row as $column)
     $pdf->Cell(30,12,$column,1);
-    $pdf->Cell(30,12,$column,1);
+    
 }
 
 $pdf->Output();
