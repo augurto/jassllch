@@ -24,7 +24,7 @@ foreach($result as $row) {
 }
 foreach($result as $row) {
 	$pdf->SetFont('Arial','',12);	
-	$pdf->Ln();
+	
 	foreach($row as $column)
 		$pdf->Cell(30,12,$column,1);
 }
