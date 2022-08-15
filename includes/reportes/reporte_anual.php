@@ -2,7 +2,7 @@
 require_once("./mysql_table.php");
 $db_handle = new DBController();
 $result = $db_handle->runQuery("SELECT id_pagos, deuda, estado_pago FROM pagos");
-$result1 = $db_handle->runQuery("SELECT sum(deuda) FROM pagos");
+$result1 = $db_handle->runQuery("SELECT sum(deuda) as deudas FROM pagos");
 $header = $db_handle->runQuery("SELECT id_pagos , deuda, estado_pago
 FROM `INFORMATION_SCHEMA`.`COLUMNS` 
 WHERE `TABLE_SCHEMA`='blog_samples' 
