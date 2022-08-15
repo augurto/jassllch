@@ -14,7 +14,7 @@
                   <div class="modal fade" id="egreso" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
-                        <form action="../../includes/insertar/insetar_usuario.php">
+                        <form action="../../includes/insertar/insertar_egreso.php">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLongTitle">Agregar Egreso</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -30,7 +30,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Datos de la Persona" id="nombre" name="nombre" required >
+                          <input type="text" class="form-control" placeholder="Datos de la Persona" id="beneficiario" name="beneficiario" required >
                           
                           
                         </div>
@@ -43,8 +43,9 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Detalle de pago" id="direccion_actual" name="direccion_actual" required >
-                          
+                          <input type="text" class="form-control" placeholder="Detalle de pago" id="concepto" name="concepto" required >
+                          <input type="hidden" class="form-control" id="name_user" name="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>"  readonly>
+                        <input type="hidden" class="form-control" id="id_user" name="id_user" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>"  readonly>
                           
                         </div>
                 
@@ -56,7 +57,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="number" class="form-control" placeholder="Cantidad a pagar" id="c_miembros" name="c_miembros" required >
+                          <input type="number" class="form-control" placeholder="Cantidad a pagar" id="monto" name="monto" required >
                           
                           
                         </div>
