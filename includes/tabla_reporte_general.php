@@ -36,7 +36,7 @@
                         $monto_pago=$row['monto_pago'];
                         $deuda=$row['deuda'];
                         $vuelto=$row['vuelto'];
-                        $estado=$row['estado'];
+                        $estado=$row['estado_pago'];
                          if ($estado==0) { ?>
                              
                              <tr style="background-color: #F0FFFF !important;">
@@ -53,20 +53,30 @@
                             
                             <td><?php echo $count++; ?></td>
                             <td><?php echo $nombre; ?></td>
-                            <td><?php echo 'BL-'.$id_jass; ?></td>
+                            <td><?php if ($estado==0) {
+                                # code...
+                                echo 'ING-'.$id_jass;
+                            } elseif ($estado==1) {
+                                # code...
+                                echo 'EGR-'.$id_jass;
+                            } elseif ($estado==2) {
+                                # code...
+                                echo 'Otro';
+                            }?></td>
+                            
                             <td><?php echo $pago_hoy ?></td>
                             <td><?php echo $name_user ?></td>
                             <td><?php echo $pago_mes ?></td>
                             <td><?php echo $deuda ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
-                                echo 'Pagado';
+                                echo 'Ingreso';
                             } elseif ($estado==1) {
                                 # code...
-                                echo 'Terminado';
+                                echo 'Egreso';
                             } elseif ($estado==2) {
                                 # code...
-                                echo 'Retirado';
+                                echo 'Otro';
                             }?></td>
                             <td>        
                                          <!-- <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-id_jass="<?php echo $codigo; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
