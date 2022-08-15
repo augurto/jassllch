@@ -8,7 +8,7 @@
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti FROM proyecto  where estado='2'");
+      $ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1'");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
@@ -16,6 +16,7 @@
       $sole=mysqli_fetch_array($sol);
       $soles=$sole["sol"];
 
+      $total_monto=$soles-$tin;
 		$sql="SELECT * FROM  proyecto order by id desc";
 		$query = mysqli_query($con, $sql);         
 			?>
@@ -29,7 +30,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Saldo</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">S/<?php echo number_format($soles,2);?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">S/<?php echo number_format($total_monto,2);?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dollar-sign  fa-2x text-gray-300"></i>
@@ -50,7 +51,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Registrar Egreso</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps;?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo  number_format($tin,2);?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -93,7 +94,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Registrar Ingreso</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tin;?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($soles,2);?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
