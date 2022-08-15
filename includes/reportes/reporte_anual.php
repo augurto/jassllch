@@ -26,4 +26,5 @@ foreach($result as $row) {
 }
 $pdf->Cell(20,20,$result1,1,1,'C');
 $pdf->Output();
+
 ?>
