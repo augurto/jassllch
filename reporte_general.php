@@ -90,7 +90,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
     
-      <form action="includes/reportes/reporte_mensual.php">
+      <form action="includes/reportes/reporte_mensual.php" target="_blank">
       <div class="input-group">
                                   <select name="mes_pago" id="mes_pago" class="form-select" required>
                                       <?php
@@ -116,7 +116,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                           } 
                                       ?> 
                                 </select>
-                                <button class="btn btn-outline-secondary" type="submit" target="_blank">Reporte Mensual</button>
+                                <button class="btn btn-outline-secondary" type="submit" >Reporte Mensual</button>
 
         </div>
         </form>
@@ -130,10 +130,10 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-    <form action="includes/reportes/reporte_anual.php">
+    <form action="includes/reportes/reporte_anual.php" target="_blank">
     <div class="input-group">
                       <input type="number" class="form-control" aria-label="Text input with segmented dropdown button" value="<?php echo date("Y") ;?>" >
-                      <button class="btn btn-outline-secondary" type="submit" target="_blank">Reporte Año</button>
+                      <button class="btn btn-outline-secondary" type="submit" >Reporte Año</button>
     </div>
       </form>
     </div>
