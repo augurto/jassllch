@@ -1,8 +1,8 @@
 <?php
 require_once("./mysql_table.php");
 $db_handle = new DBController();
-$result = $db_handle->runQuery("SELECT datos_pago FROM pagos");
-$header = $db_handle->runQuery("SELECT datos_pago 
+$result = $db_handle->runQuery("SELECT id_pagos, deuda, estado_pago FROM pagos");
+$header = $db_handle->runQuery("SELECT id_pagos , deuda, estado_pago
 FROM `INFORMATION_SCHEMA`.`COLUMNS` 
 WHERE `TABLE_SCHEMA`='blog_samples' 
     AND `TABLE_NAME`='pagos'");
