@@ -78,65 +78,17 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
-    <div class="container px-4 text-center">
-  <div class="row gx-5">
-    <div class="col">
-     <div class="p-3 border bg-light">Custom column padding</div>
-    </div>
-    <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
-    </div>
-  </div>
-</div>
+  
     <div class="container">
     <div class="row">
-    <div class="container px-4 text-center">
-  <div class="row gx-5">
-    <div class="col">
-
-    <div class="input-group">
-      <form action="#1">
-                                  <select name="mes_pago" id="mes_pago" class="form-select" required>
-                                      <?php
-                                          $mes=date("n"); 
-                                          $rango=11; 
-                                          for ($i=$mes;$i<=$mes+$rango;$i++){ 
-                                              $mesano=date('Y-n', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              $meses=date('F', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              if ($meses=="January") $meses="Enero";
-                                              if ($meses=="February") $meses="Febrero";
-                                              if ($meses=="March") $meses="Marzo";
-                                              if ($meses=="April") $meses="Abril";
-                                              if ($meses=="May") $meses="Mayo";
-                                              if ($meses=="June") $meses="Junio";
-                                              if ($meses=="July") $meses="Julio";
-                                              if ($meses=="August") $meses="Agosto";
-                                              if ($meses=="September") $meses="Septiembre";
-                                              if ($meses=="October") $meses="Octubre";
-                                              if ($meses=="November") $meses="Noviembre";
-                                              if ($meses=="December") $meses="Diciembre";
-                                              $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              echo "<option value='$mes'>$meses</option>"; 
-                                          } 
-                                      ?> 
-                                </select>
-                                <button class="btn btn-outline-secondary" type="submit">Reporte Mensual</button>
-      </form>
-                       
-      <form action="#4">
+      
+    <div class="grid text-center">
+      <div class="g-col-6"><form action="#4">
                       <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Digite el año">
                       <button class="btn btn-outline-secondary" type="submit">Reporte Año</button>
-      </form>
+      </form></div>
+      <div class="g-col-6">.g-col-6</div>
     </div>
-
-
-    
-    </div>
-    <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -173,7 +125,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                       <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Digite el año">
                       <button class="btn btn-outline-secondary" type="submit">Reporte Año</button>
       </form>
-    </div>
+        </div>
         
       </div>
         
