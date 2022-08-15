@@ -79,6 +79,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
     <!-- Boton agregar proyecto -->
     <div class="row">
+    <div class="col-sm-12 text-center">
     <div class="input-group">
                                   <select name="mes_pago" id="mes_pago" class="form-select" required>
                                       <?php
@@ -106,6 +107,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                 </select>
                        <button class="btn btn-outline-secondary" type="button">Reporte</button>
 </div>
+    </div>
         <div class="col-sm-12 text-center">
                                  
                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
