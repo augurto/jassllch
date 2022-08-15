@@ -10,6 +10,7 @@ $pago_mes=$_GET['pago_mes'];
 $monto_mes=$_GET['monto_mes'];
 $monto_usuario=$_GET['monto_usuario'];
 $vuelto=$_GET['vuelto'];
+$estado=$_GET['estado'];
 
 
 $pdf = new FPDF('L','mm','A5');
@@ -53,6 +54,7 @@ $pdf->Cell(5,$textypos,"Email del cliente"); */
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(135);
+
 $pdf->Cell(5,$textypos,"BOLETA NRO : ".$id_pago);
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(135);
@@ -71,8 +73,15 @@ $pdf->setY(40);$pdf->setX(135);
 //// Array de Cabecera
 $header = array("Nro", "Concepto","Cant.","Precio","Total");
 //// Arrar de Productos
+if ($estado=0) {
+    # code...
+    $estado_nuevo='Agua';
+}else{
+    $estado_nuevo='Pago';
+}
 $products = array(
-	array("01", "Agua",1,$monto_usuario,0),
+    
+	array("01", $estado_nuevo,1,$monto_usuario,0),
 	/* array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
 	array("0001", "Producto 3",5,80,0), 
