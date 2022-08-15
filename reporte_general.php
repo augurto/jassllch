@@ -89,8 +89,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-    <div class="input-group">
+    
       <form action="#1">
+      <div class="input-group">
                                   <select name="mes_pago" id="mes_pago" class="form-select" required>
                                       <?php
                                           $mes=date("n"); 
@@ -116,10 +117,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                       ?> 
                                 </select>
                                 <button class="btn btn-outline-secondary" type="button">Reporte Mensual</button>
-      </form>
-                       
-      
+
         </div>
+        </form>
     </div>
   </div>
 
