@@ -1,5 +1,5 @@
 <?Php
-if(!file_exists('fpdf.php')){
+if(!file_exists('../../fpdf.php')){
 	
 echo " Place fpdf.php file in this directory before using this page.<br>
 Read the instructions at <a href=https://www.plus2net.com/php_tutorial/pdf-data-student.php>https://www.plus2net.com/php_tutorial/pdf-data-student.php</a> ";
@@ -12,8 +12,8 @@ exit;
 }
 
 require "config.php"; // connection to database 
-$count="select * from student LIMIT 0,10"; // SQL to get 10 records 
-require('fpdf.php');
+$count="select * from pagos LIMIT 0,10"; // SQL to get 10 records 
+require('../../fpdf.php');
 $pdf = new FPDF(); 
 $pdf->AddPage();
 
@@ -36,11 +36,11 @@ $fill=false; // to give alternate background fill color to rows
 
 /// each record is one row  ///
 foreach ($dbo->query($count) as $row) {
-$pdf->Cell($width_cell[0],10,$row['id'],1,0,'C',$fill);
-$pdf->Cell($width_cell[1],10,$row['name'],1,0,'L',$fill);
-$pdf->Cell($width_cell[2],10,$row['class'],1,0,'C',$fill);
-$pdf->Cell($width_cell[3],10,$row['mark'],1,0,'C',$fill);
-$pdf->Cell($width_cell[4],10,$row['sex'],1,1,'C',$fill);
+$pdf->Cell($width_cell[0],10,$row['datos_pago'],1,0,'C',$fill);
+$pdf->Cell($width_cell[1],10,$row['datos_pago'],1,0,'L',$fill);
+$pdf->Cell($width_cell[2],10,$row['datos_pago'],1,0,'C',$fill);
+$pdf->Cell($width_cell[3],10,$row['datos_pago'],1,0,'C',$fill);
+$pdf->Cell($width_cell[4],10,$row['datos_pago'],1,1,'C',$fill);
 $fill = !$fill; // to give alternate background fill  color to rows
 }
 /// end of records /// 
