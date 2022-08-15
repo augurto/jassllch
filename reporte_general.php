@@ -83,15 +83,19 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <div class="row">
       
     <div class="grid text-center">
-      <div class="g-col-6"><form action="#4">
+      <div class="g-col-6">
+        <form action="#4">
+      <div class="input-group">
                       <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Digite el año">
                       <button class="btn btn-outline-secondary" type="submit">Reporte Año</button>
-      </form></div>
+      </div>
+      </form>
+    </div>
       <div class="g-col-6">.g-col-6</div>
     </div>
 
 
-
+    <form action="#1">
     <div class="input-group">
       <form action="#1">
                                   <select name="mes_pago" id="mes_pago" class="form-select" required>
