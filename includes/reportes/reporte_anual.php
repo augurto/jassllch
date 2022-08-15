@@ -17,17 +17,12 @@ foreach($header as $heading) {
 	foreach($heading as $column_heading)
 		$pdf->Cell(30,12,$column_heading,1);
 }
-foreach($result1 as $row1) {
-	$pdf->SetFont('Arial','',12);	
-	$pdf->Ln();
-	foreach($row1 as $column1)
-		$pdf->Cell(30,12,$column1,1);
-}
+
 foreach($result as $row) {
 	$pdf->SetFont('Arial','',12);	
 	$pdf->Ln();
 	foreach($row as $column)
-		$pdf->Cell(30,12,$column,1);
+		$pdf->CellFit(30,12,$column,1);
 }
 
 $pdf->Output();
