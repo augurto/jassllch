@@ -67,7 +67,10 @@ $pdf->Cell(30,15,$imagen,1,0,'R',0);
 $pdf->Ln(15);
 
 }
+$pdf->SetFont('Arial','B',12);
 
+
+$pdf->Cell(140,6,'SALDO ACTUAL :',1,0,'C');
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
