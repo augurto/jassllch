@@ -17,7 +17,7 @@ foreach($header as $heading) {
 	foreach($heading as $column_heading)
 		$pdf->Cell(30,12,$column_heading,1);
 }
-
+$header = array("Nro", "Concepto","Cant.","Precio","Total");
 foreach($result as $row) {
 	$pdf->SetFont('Arial','',12);	
 	$pdf->Ln();
