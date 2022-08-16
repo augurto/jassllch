@@ -25,7 +25,7 @@ $tin=$rwi["ti"];
 $sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'");
 $sole=mysqli_fetch_array($sol);
 $soles=$sole["sol"];
-
+$resultado_saldo_total=$soles-$tin;
 
 //Instaciamos la clase para genrear el documento pdf
 $pdf=new FPDF();
@@ -54,7 +54,7 @@ $pdf->Cell(125,6,'USUARIO',1,0,'C',1);
 $pdf->Cell(30,6,'NRO bOLETA',1,0,'C',1);
 $pdf->Cell(30,6,'MES',1,0,'C',1);
 
-$pdf->Ln(5);
+$pdf->Ln(6);
 
 //Comienzo a crear las fiulas de productos según la consulta MySQL
 
@@ -80,7 +80,7 @@ $pdf->Ln(15);
 $pdf->SetFont('Arial','B',12);
 
 
-$pdf->Cell(140,6,'SALDO ACTUAL : '.$soles,1,0,'C');
+$pdf->Cell(140,6,'EGRESOS : S/ '.$soles.'INGRESOS : S/'.$tin.'SALDO TOTAL : S/'.$resultado_saldo_total,1,0,'C');
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
