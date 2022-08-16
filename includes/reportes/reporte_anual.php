@@ -12,12 +12,21 @@ require('../../fpdf/fpdf.php');
 
 $pdf = new FPDF('L','mm','A4');
 $pdf->AddPage();
-$pdf->SetFont('Arial','B',12);		
-/* foreach($header as $heading) {
-	foreach($heading as $column_heading)
-		$pdf->Cell(30,12,$column_heading,1);
-} */
-$header = array("Nro", "Concepto","Cant.","Precio","Total");
+class PDF extends FPDF
+{
+function Header()
+{
+    // Select Arial bold 15
+    $this->SetFont('Arial','B',15);
+    // Move to the right
+    $this->Cell(80);
+    // Framed title
+    $this->Cell(30,10,'Title',1,0,'C');
+    // Line break
+    $this->Ln(20);
+}
+}
+
 foreach($result as $row) {
 	$pdf->SetFont('Arial','',12);	
 	$pdf->Ln();
