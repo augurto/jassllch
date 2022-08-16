@@ -33,6 +33,7 @@ $pdf=new FPDF();
 //Agregamos la primera pagina al documento pdf
 $pdf->AddPage();
 $pdf->Image("../../img/fondo2.png", 15,20,180,110,'PNG' );
+$pdf->Image("../../img/logo2.jpeg", 10,10,30,30,'JPEG' );
 //Seteamos el inicio del margen superior en 25 pixeles
 
 $y_axis_initial = 25;

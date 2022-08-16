@@ -35,6 +35,7 @@ $pdf->AddPage();
 
 //Seteamos el inicio del margen superior en 25 pixeles
 $pdf->Image("../../img/fondo2.png", 15,20,180,110,'PNG' );
+$pdf->Image("../../img/logo2.jpeg", 10,10,30,30,'JPEG' );
 $y_axis_initial = 25;
 
 //Seteamos el tiupo de letra y creamos el titulo de la pagina. No es un encabezado no se repetira
