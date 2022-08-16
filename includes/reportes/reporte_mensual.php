@@ -10,10 +10,11 @@ $host_name = "localhost";
 $database = "u415020159_jass"; // Change your database nae
 $username = "u415020159_jass";          // Your database user id 
 $password = "JassJass*#17";    
+$nro_mes=$_GET['mes_pago'];
 $connection=mysqli_connect($host_name,$username,$password,$database);
 $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159_jass");
 //Consulta la tabla productos solicitando todos los productos
-$resultado = $mysqli->query("SELECT * FROM pagos");
+$resultado = $mysqli->query("SELECT * FROM pagos where mes_actual_pago='".$nro_mes."'");
 
 
 
@@ -44,7 +45,7 @@ $pdf->Cell(125,6,'USUARIO',1,0,'C',1);
 $pdf->Cell(30,6,'NRO bOLETA',1,0,'C',1);
 $pdf->Cell(30,6,'MES',1,0,'C',1);
 
-/* $pdf->Ln(10); */
+$pdf->Ln(1);
 
 //Comienzo a crear las fiulas de productos según la consulta MySQL
 
