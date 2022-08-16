@@ -11,10 +11,7 @@ $monto_mes=$_GET['monto_mes'];
 $monto_usuario=$_GET['monto_usuario'];
 $vuelto=$_GET['vuelto'];
 $estado=$_GET['estado'];
-require_once("./mysql_table.php");
-$db_handle = new DBController();
-$result = $db_handle->runQuery("SELECT id_pagos, deuda, estado_pago FROM pagos");
-$result1 = $db_handle->runQuery("SELECT sum(deuda) as deudas FROM pagos");
+
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
@@ -93,13 +90,13 @@ $products = array(
     $pdf->Ln();
     // Data
     $total = 0;
-    foreach($result as $row)
+    foreach($products as $row)
     {
         $pdf->Cell($w[0],6,$row[0],1);
         $pdf->Cell($w[1],6,$row[1],1);
         $pdf->Cell($w[2],6,number_format($row[2]),'1',0,'R');
-        $pdf->Cell($w[1],6,"S/ ".number_format($row[3],2,".",","),'1',0,'R');
-        $pdf->Cell($w[1],6,"S/ ".number_format($row[3]*$row[2],2,".",","),'1',0,'R');
+        $pdf->Cell($w[3],6,"S/ ".number_format($row[3],2,".",","),'1',0,'R');
+        $pdf->Cell($w[4],6,"S/ ".number_format($row[3]*$row[2],2,".",","),'1',0,'R');
 
         $pdf->Ln();
         $total+=$row[3]*$row[2];
@@ -137,4 +134,5 @@ $pdf->setX(115);
 /////////////////////////////
 
 $pdf->output();
+
 ?>
