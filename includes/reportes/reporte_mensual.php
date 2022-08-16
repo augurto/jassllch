@@ -44,7 +44,7 @@ $pdf->Cell(125,6,'USUARIO',1,0,'C',1);
 $pdf->Cell(30,6,'NRO bOLETA',1,0,'C',1);
 $pdf->Cell(30,6,'MES',1,0,'C',1);
 
-$pdf->Ln(10);
+/* $pdf->Ln(10); */
 
 //Comienzo a crear las fiulas de productos según la consulta MySQL
 
