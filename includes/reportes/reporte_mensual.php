@@ -31,7 +31,7 @@ $y_axis_initial = 25;
 $pdf->SetFont('Arial','B',12);
 
 $pdf->Cell(40,6,'',0,0,'C');
-$pdf->Cell(100,6,'LISTA DE PRODUCTOS',1,0,'C');
+$pdf->Cell(100,6,'REPORTE MENSUAL',1,0,'C');
 
 $pdf->Ln(10);
 
@@ -39,10 +39,10 @@ $pdf->Ln(10);
 $pdf->SetFillColor(232,232,232);
 
 $pdf->SetFont('Arial','B',10);
-$pdf->Cell(125,6,'Titulo',1,0,'C',1);
+$pdf->Cell(125,6,'USUARIO',1,0,'C',1);
 
-$pdf->Cell(30,6,'Precio',1,0,'C',1);
-$pdf->Cell(30,6,'Foto',1,0,'C',1);
+$pdf->Cell(30,6,'NRO bOLETA',1,0,'C',1);
+$pdf->Cell(30,6,'MES',1,0,'C',1);
 
 $pdf->Ln(10);
 
@@ -53,8 +53,8 @@ while($fila = mysqli_fetch_array($resultado))
 
 $titulo = $fila['datos_pago'];
 
-$precio = $fila['pago_hoy'];
-$imagen=$fila['dni_usuario_jass'];
+$precio = $fila['id_pagos'];
+$imagen=$fila['mes_actual_pago'];
 
 $pdf->Cell(125,15,$titulo,1,0,'L',0);
 
