@@ -2,6 +2,8 @@
 
 
 <?php error_reporting(0);
+require_once ("../../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+require_once ("../../config/conexion.php");//Contiene funcion que conecta a la base de datos
 
 require('../../fpdf/fpdf.php');
 
@@ -16,7 +18,13 @@ $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159
 //Consulta la tabla productos solicitando todos los productos
 $resultado = $mysqli->query("SELECT * FROM pagos where pago_mes='".$nro_mes."'");
 /* $suma_resultado = $mysqli->query("SELECT sum(deuda) FROM pagos "); */
+$ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1'");
+$rwi=mysqli_fetch_array($ti);
+$tin=$rwi["ti"];
 
+$sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'");
+$sole=mysqli_fetch_array($sol);
+$soles=$sole["sol"];
 
 
 //Instaciamos la clase para genrear el documento pdf
@@ -72,7 +80,7 @@ $pdf->Ln(15);
 $pdf->SetFont('Arial','B',12);
 
 
-$pdf->Cell(140,6,'SALDO ACTUAL :',1,0,'C');
+$pdf->Cell(140,6,'SALDO ACTUAL : '.$soles,1,0,'C');
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
