@@ -44,7 +44,7 @@ $pdf->SetFont('Arial','B',12);
 $pdf->Cell(40,6,'',0,0,'C');
 $pdf->Cell(100,6,'REPORTE MENSUAL : '.strtoupper($nro_mes),1,0,'C');
 
-$pdf->Ln(10);
+$pdf->Ln(40);
 
 //Creamos las celdas para los titulo de cada columna y le asignamos un fondo gris y el tipo de letra
 $pdf->SetFillColor(232,232,232);
