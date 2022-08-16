@@ -112,7 +112,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                               if ($meses=="November") $meses="Noviembre";
                                               if ($meses=="December") $meses="Diciembre";
                                               $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                              echo "<option value='$mes'>$meses</option>"; 
+                                              echo "<option value='$meses'>$meses</option>"; 
                                           } 
                                       ?> 
                                 </select>

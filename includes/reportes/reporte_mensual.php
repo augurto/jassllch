@@ -14,7 +14,7 @@ $nro_mes=$_GET['mes_pago'];
 $connection=mysqli_connect($host_name,$username,$password,$database);
 $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159_jass");
 //Consulta la tabla productos solicitando todos los productos
-$resultado = $mysqli->query("SELECT * FROM pagos where mes_actual_pago='".$nro_mes."'");
+$resultado = $mysqli->query("SELECT * FROM pagos where pago_mes='".$nro_mes."'");
 
 
 
