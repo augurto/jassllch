@@ -18,11 +18,11 @@ $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159
 //Consulta la tabla productos solicitando todos los productos
 $resultado = $mysqli->query("SELECT * FROM pagos where pago_mes='".$nro_mes."'");
 /* $suma_resultado = $mysqli->query("SELECT sum(deuda) FROM pagos "); */
-$ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1'");
+$ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1' and pago_mes ='".$nro_mes."' ");
 $rwi=mysqli_fetch_array($ti);
 $tin=$rwi["ti"];
 
-$sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'");
+$sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'  and pago_mes ='".$nro_mes."' ");
 $sole=mysqli_fetch_array($sol);
 $soles=$sole["sol"];
 $resultado_saldo_total=$soles-$tin;
