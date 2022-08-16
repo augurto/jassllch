@@ -48,7 +48,7 @@ $pdf->Ln(10);
 //Creamos las celdas para los titulo de cada columna y le asignamos un fondo gris y el tipo de letra
 $pdf->SetFillColor(232,232,232);
 
-$pdf->SetFont('Arial','B',10);
+$pdf->SetFont('Arial','',10);
 $pdf->Cell(125,6,'USUARIO',1,0,'C',1);
 
 $pdf->Cell(30,6,'NRO BOLETA',1,0,'C',1);
