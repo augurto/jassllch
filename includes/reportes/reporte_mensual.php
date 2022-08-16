@@ -15,6 +15,7 @@ $connection=mysqli_connect($host_name,$username,$password,$database);
 $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159_jass");
 //Consulta la tabla productos solicitando todos los productos
 $resultado = $mysqli->query("SELECT * FROM pagos where pago_mes='".$nro_mes."'");
+$suma_resultado = $mysqli->query("SELECT sum(deuda) FROM pagos ");
 
 
 
@@ -32,7 +33,7 @@ $y_axis_initial = 25;
 $pdf->SetFont('Arial','B',12);
 
 $pdf->Cell(40,6,'',0,0,'C');
-$pdf->Cell(100,6,'REPORTE MENSUAL',1,0,'C');
+$pdf->Cell(100,6,'REPORTE MENSUAL :'.$nro_mes,1,0,'C');
 
 $pdf->Ln(10);
 
@@ -71,7 +72,7 @@ $pdf->Ln(15);
 $pdf->SetFont('Arial','B',12);
 
 
-$pdf->Cell(140,6,'SALDO ACTUAL :',1,0,'C');
+$pdf->Cell(140,6,'SALDO ACTUAL :'.$suma_resultado,1,0,'C');
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
