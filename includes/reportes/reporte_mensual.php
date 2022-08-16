@@ -41,7 +41,7 @@ $y_axis_initial = 25;
 $pdf->SetFont('Arial','B',12);
 
 $pdf->Cell(40,6,'',0,0,'C');
-$pdf->Cell(100,6,'REPORTE MENSUAL :'.$nro_mes,1,0,'C');
+$pdf->Cell(100,6,'REPORTE MENSUAL :'.strtoupper($nro_mes),1,0,'C');
 
 $pdf->Ln(10);
 
@@ -51,8 +51,8 @@ $pdf->SetFillColor(232,232,232);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(125,6,'USUARIO',1,0,'C',1);
 
-$pdf->Cell(30,6,'NRO bOLETA',1,0,'C',1);
-$pdf->Cell(30,6,'MES',1,0,'C',1);
+$pdf->Cell(30,6,'NRO BOLETA',1,0,'C',1);
+$pdf->Cell(30,6,'MONTO',1,0,'C',1);
 
 $pdf->Ln(6);
 
@@ -62,14 +62,15 @@ while($fila = mysqli_fetch_array($resultado))
 {
 
 $titulo = $fila['datos_pago'];
+$variable = $fila['variable_boleta'];
 
 $precio = $fila['id_pagos'];
-$imagen=$fila['mes_actual_pago'];
+$imagen=$fila['deuda'];
 
 $pdf->Cell(125,15,$titulo,1,0,'L',0);
 
 $pdf->Cell(30,15,$precio,1,0,'R',0);
-$pdf->Cell(30,15,$imagen,1,0,'R',0);
+$pdf->Cell(30,15,$variable.'-'.$imagen,1,0,'R',0);
 //Muestro la iamgen dentro de la celda GetX y GetY dan las coordenadas actuales de la fila
 
 /* $pdf->Cell( 30, 15, $pdf->Image($imagen, $pdf->GetX()+5, $pdf->GetY()+3, 20), 1, 0, 'C', false ); */
@@ -80,7 +81,7 @@ $pdf->Ln(15);
 $pdf->SetFont('Arial','B',12);
 
 
-$pdf->Cell(140,6,'EGRESOS : S/ '.$soles.'INGRESOS : S/'.$tin.'SALDO TOTAL : S/'.$resultado_saldo_total,1,0,'C');
+$pdf->Cell(140,6,'EGRESOS : S/ '.$soles.'  INGRESOS : S/'.$tin.'  SALDO TOTAL : S/'.$resultado_saldo_total,1,0,'C');
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
