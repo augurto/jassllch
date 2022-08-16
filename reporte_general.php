@@ -116,7 +116,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                           } 
                                       ?> 
                                 </select>
-                                <button class="btn btn-outline-secondary" type="submit" >Reporte Mensual</button>
+                                <button class="btn btn-outline-secondary" type="submit" >Reporte Mensual.</button>
 
         </div>
         </form>
