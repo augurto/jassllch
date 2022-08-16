@@ -13,10 +13,10 @@ require('../../fpdf/fpdf.php');
 $pdf = new FPDF('L','mm','A4');
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',12);		
-foreach($header as $heading) {
+/* foreach($header as $heading) {
 	foreach($heading as $column_heading)
 		$pdf->Cell(30,12,$column_heading,1);
-}
+} */
 $header = array("Nro", "Concepto","Cant.","Precio","Total");
 foreach($result as $row) {
 	$pdf->SetFont('Arial','',12);	
