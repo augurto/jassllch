@@ -70,7 +70,7 @@ $imagen=$fila['deuda'];
 $pdf->Cell(125,15,$titulo,1,0,'L',0);
 
 $pdf->Cell(30,15,$variable.'-'.$precio,1,0,'R',0);
-$pdf->Cell(30,15,number_format($imagen),1,0,'R',0);
+$pdf->Cell(30,15,number_format($imagen,2),1,0,'R',0);
 //Muestro la iamgen dentro de la celda GetX y GetY dan las coordenadas actuales de la fila
 
 /* $pdf->Cell( 30, 15, $pdf->Image($imagen, $pdf->GetX()+5, $pdf->GetY()+3, 20), 1, 0, 'C', false ); */
@@ -81,7 +81,7 @@ $pdf->Ln(15);
 $pdf->SetFont('Arial','B',12);
 
 
-$pdf->Cell(140,6,'EGRESOS : S/ '.number_format($tin).'  INGRESOS : S/'.number_format($soles).'  SALDO TOTAL : S/'.number_format($resultado_saldo_total),1,0,'C');
+$pdf->Cell(140,6,'EGRESOS : S/ '.number_format($tin,2).'  INGRESOS : S/'.number_format($soles,2).'  SALDO TOTAL : S/'.number_format($resultado_saldo_total,2),1,0,'C');
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
