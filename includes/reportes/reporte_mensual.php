@@ -81,7 +81,7 @@ $pdf->Ln(15);
 $pdf->SetFont('Arial','B',12);
 
 
-$pdf->Cell(145,6,'EGRESOS : S/ '.number_format($tin,2, ".",",").'  INGRESOS : S/'.number_format($soles,2, ".",",").'  SALDO TOTAL : S/'.number_format($resultado_saldo_total,2, ".",","),1,0,'C');
+$pdf->Cell(155,6,'EGRESOS : S/ '.number_format($tin,2, ".",",").'  INGRESOS : S/'.number_format($soles,2, ".",",").'  SALDO TOTAL : S/'.number_format($resultado_saldo_total,2, ".",","),1,0,'C');
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
