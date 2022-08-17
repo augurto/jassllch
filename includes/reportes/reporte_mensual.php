@@ -68,10 +68,10 @@ $variable = $fila['variable_boleta'];
 $precio = $fila['id_pagos'];
 $imagen=$fila['deuda'];
 
-$pdf->Cell(125,15,$titulo,1,0,'L',0);
+$pdf->Cell(125,8,$titulo,1,0,'L',0);
 
-$pdf->Cell(30,15,$variable.'-'.$precio,1,0,'R',0);
-$pdf->Cell(30,15,'S/ '.number_format($imagen,2, ".",","),1,0,'R',0);
+$pdf->Cell(30,8,$variable.'-'.$precio,1,0,'R',0);
+$pdf->Cell(30,8,'S/ '.number_format($imagen,2, ".",","),1,0,'R',0);
 //Muestro la iamgen dentro de la celda GetX y GetY dan las coordenadas actuales de la fila
 
 /* $pdf->Cell( 30, 15, $pdf->Image($imagen, $pdf->GetX()+5, $pdf->GetY()+3, 20), 1, 0, 'C', false ); */
