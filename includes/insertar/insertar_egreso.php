@@ -16,7 +16,7 @@ $mes_actual=$_GET["mes_actual"];
 $year_actual=$_GET["year_actual"];
 date_default_timezone_set("America/Lima");
 $hoy = date("Y-m-d H:i:s");
-
+$nombre_mes=date("F", strtotime($hoy));
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
