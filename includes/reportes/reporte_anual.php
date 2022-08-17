@@ -76,7 +76,7 @@ $pdf->Cell(30,8,'S/ '.number_format($imagen,2, ".",","),1,0,'R',0);
 
 /* $pdf->Cell( 30, 15, $pdf->Image($imagen, $pdf->GetX()+5, $pdf->GetY()+3, 20), 1, 0, 'C', false ); */
 
-$pdf->Ln(15);
+$pdf->Ln(8);
 
 }
 $pdf->SetFont('Arial','B',12);
