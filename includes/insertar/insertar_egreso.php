@@ -18,8 +18,12 @@ date_default_timezone_set("America/Lima");
 $hoy = date("Y-m-d H:i:s");
 $nombre_mes=date("F", strtotime($hoy));
 
-$dateObject = DateTime::createFromFormat('!m', $mes_actual);
-$monthName = $dateObject->format('F'); // March
+setlocale(LC_ALL, 'spanish');
+$monthNum  = 2;
+$dateObj   = DateTime::createFromFormat('!m', $mes_actual);
+$monthName = strftime('%B', $dateObj->getTimestamp());
+
+ 
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
