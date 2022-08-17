@@ -23,9 +23,9 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO pagos (datos_pago,pago_hoy,mes_actual_pago,year_actual_pago,name_user,id_user, deuda,variable_boleta, estado_pago) 
+$sql = "INSERT INTO pagos (datos_pago,pago_hoy,mes_actual_pago,year_actual_pago,name_user,id_user, deuda,variable_boleta,pago_mes, estado_pago) 
 
-VALUES ('$beneficiario','$hoy','$mes_actual','$year_actual','$name_user','$id_user','$monto','EGR','1')";
+VALUES ('$beneficiario','$hoy','$mes_actual','$year_actual','$name_user','$id_user','$monto','EGR','$nombre_mes','1')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
