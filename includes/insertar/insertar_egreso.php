@@ -22,7 +22,7 @@ setlocale(LC_ALL, 'spanish');
 $monthNum  = 2;
 $dateObj   = DateTime::createFromFormat('!m', $mes_actual);
 $monthName = strftime('%B', $dateObj->getTimestamp());
-
+$mayus_mes=ucfirst($monthName);
  
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
@@ -32,7 +32,7 @@ echo "Connected successfully";
  
 $sql = "INSERT INTO pagos (datos_pago,pago_hoy,mes_actual_pago,year_actual_pago,name_user,id_user, deuda,variable_boleta,pago_mes, estado_pago) 
 
-VALUES ('$beneficiario','$hoy','$mes_actual','$year_actual','$name_user','$id_user','$monto','EGR','$monthName','1')";
+VALUES ('$beneficiario','$hoy','$mes_actual','$year_actual','$name_user','$id_user','$monto','EGR','$mayus_mes','1')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
