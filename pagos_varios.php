@@ -97,10 +97,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <option value="Diciembre">Diciembre</option>
       </select>
     </div>
-    <div class="col-md-5">
-      <label for="COD_CODIGO" class="text-left">Agregar Mes a pagar</label>
-      <input type="text" name="COD_CODIGO[]" class="form-control" required>
-    </div>
+    
     <div class="col-md-1">
       <label for="code" class="text-left"></label><br>
       <button type="button" class="btn btn-success" id="btnMore">
@@ -119,7 +116,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <div class="row">
   <div class="col-md-4"></div>
     <div class="col-md-4">
-      <button type="submit" class="btn btn-primary btn-block">Pocesar Información</button>
+      <button type="submit" class="btn btn-primary btn-block">Procesar Pago</button>
     </div>
   <div class="col-md-4"></div>
   <br><br>
@@ -143,9 +140,28 @@ $('#btnMore').click(function(){
   var divInput = '<div class="col-md-5"><label for="code" class="text-left"> Agregar Código </label>';
   var inputCode ='<input type="text" name="COD_CODIGO[]" class="form-control"> </div>';
   i++;
+     +'<div class="col-md-3">'
+        +'<label>Mes</label>'
+        +'<select name="PRODUCTO[]" class="form-control">'
+        +'<option value="Enero">Enero</option>'
+        +'<option value="Febrero">Febrero</option>'
+        +'<option value="Marzo">Marzo</option>'
+        +'<option value="Abril">Abril</option>'
+        +'<option value="Mayo">Mayo</option>'
+        +'<option value="Junio">Junio</option>'
+        +'<option value="Julio">Julio</option>'
+        +'<option value="Agosto">Agosto</option>'
+        +'<option value="Septiembre">Septiembre</option>'
+        +'<option value="Octubre">Octubre</option>'
+        +'<option value="Noviembre">Noviembre</option>'
+        +'<option value="Diciembre">Diciembre</option>'
+        +'</select>'
+    +'</div>'
+           
   //Importante esta variable debe ir debajo del autoincrementable
   var btnDelete ='<button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button>';
   $('#incrementa').append('<div class="row-fluid'+i+'">'+ div + divInput + inputCode+' <div class="col-md-1"><br> '+ btnDelete +' </div> </div> <br><br><br>');
+
 });
 	
 
