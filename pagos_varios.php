@@ -73,8 +73,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       <button class="btn add-btn btn-info">+</button>
     </div>
   </div>
-  <div class="row-fluid">
-    <div class="col-md-6">
+  <div class="col-md-6">
       <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuarios</em>)</label>
       <br>
       <select name="idCliente" class="selectpicker" data-show-subtext="false" data-live-search="true" required>
@@ -85,8 +84,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <?php } ?>
       </select>
     </div>
-    <div class="form-row">
+  <div class="form-row">
     <div class="col-md-3">
+      <label>PRODUCTO</label>
       <label>Mes</label>
       <select name="PRODUCTO[]" class="form-control">
       <option value="Enero">Enero</option>
@@ -103,26 +103,19 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <option value="Diciembre">Diciembre</option>
       </select>
     </div>
-    </div>
-    
-    
+
+  
+</div>
+
+<div class="newData"></div>
+
+  <div class="row text-center mt-5">
+     <div class="col-md-12">
+    <input type="submit" class="btn btn-primary" value="Registrar Pagos"/>
   </div>
-
-  <div class="newData"></div>
-
   </div>
-
-  <br><br>
-  <br><br>
   <br>
-  <div class="row">
-  <div class="col-md-4"></div>
-    <div class="col-md-4">
-      <button type="submit" class="btn btn-primary btn-block">Procesar Pago</button>
-    </div>
-  <div class="col-md-4"></div>
-  <br><br>
-  <br><br>
+
 
 </form>
 
