@@ -42,9 +42,24 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <strong>Crear campos de forma dinamica con JavaScript</strong>
   </h1>
   <hr /><br>
+  <?php
+      include('./config/config.php');
+      $sqlClientes   = ("SELECT * FROM  usuarios_jass");
+      $dataClientes  = mysqli_query($con, $sqlClientes);
+    ?>
 
 <form action="recib.php" method="POST">
-
+<div class="col-md-6">
+      <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuario</em>)</label>
+      <br>
+      <select name="idCliente" class="selectpicker" data-show-subtext="false" data-live-search="true" required>
+        <option value="">Buscar Usuarios ...</option>
+        <?php
+          while ($data = mysqli_fetch_array($dataClientes)) { ?>
+            <option value="<?php echo $data["id_jass"]; ?>"><?php echo ($data["dni_usuario_jass"]).' :'.$data["nombres"].' - '.($data["ap_paterno"]).' - '.($data["ap_materno"]); ?> </option>
+        <?php } ?>
+      </select>
+    </div>
   <div class="row text-right">
     <div class="col-md-12">
       <button class="btn add-btn btn-info">+</button>
