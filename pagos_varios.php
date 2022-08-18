@@ -84,10 +84,16 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <?php } ?>
       </select>
     </div>
+  
+    <div class="row text-right">
+    <div class="col-md-12">
+      <button class="btn add-btn btn-info">+</button>
+    </div>
+  </div>
+
   <div class="form-row">
-    <div class="col-md-6">
+    <div class="col-md-3">
       <label>PRODUCTO</label>
-      <label>Mes</label>
       <select name="PRODUCTO[]" class="form-control">
       <option value="Enero">Enero</option>
         <option value="Febrero">Febrero</option>
@@ -104,39 +110,31 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       </select>
     </div>
 
-  
+    
 </div>
 
 <div class="newData"></div>
 
   <div class="row text-center mt-5">
      <div class="col-md-12">
-    <input type="submit" class="btn btn-primary" value="Registrar Pagos"/>
+    <input type="submit" class="btn btn-primary" value="Registrar"/>
   </div>
   </div>
   <br>
-
-
 </form>
-
-
-  </div>
-
-  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-
-  
-<script type="text/javascript">
+</div>
+ 
+ 
+  <script type="text/javascript">
     $(function () { 
       var i = 1;
       $('.add-btn').click(function (e) {
         e.preventDefault();
           i++;
+
         $('.newData').append('<div id="newRow'+i+'" class="form-row">'
-        +'<div class="col-md-6">'
-        
+        +'<div class="col-md-3">'
+        +'<label>PRODUCTO</label>'
         +'<label>Mes</label>'
         +'<select name="PRODUCTO[]" class="form-control">'
         +'<option value="Enero">Enero</option>'
@@ -171,5 +169,14 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     });
   </script>
 
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+ 
 </body>
 </html>
