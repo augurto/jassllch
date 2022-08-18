@@ -89,7 +89,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
   <div class="form-row">
     <div class="col-md-3">
-      <label>Mes</label>
+      <label>Mes a pagar</label>
       <select name="PRODUCTO[]" class="form-control">
       <option value="Enero">Enero</option>
         <option value="Febrero">Febrero</option>
@@ -159,7 +159,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
             
             +'<a href="#" class="remove-lnk" id="'+i+'">Eliminar "'+i+'"</a>'
             +'</div>'
-            +'<br>'
+           
           );  
       });
  
