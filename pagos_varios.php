@@ -134,9 +134,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       $('.add-btn').click(function (e) {
         e.preventDefault();
           i++;
-
         $('.newData').append('<div id="newRow'+i+'" class="form-row">'
-        +'<div class="col-md-6">'
+        +'<div class="col-md-3">'
+        
         +'<label>Mes</label>'
         +'<select name="PRODUCTO[]" class="form-control">'
         +'<option value="Enero">Enero</option>'
