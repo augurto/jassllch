@@ -68,6 +68,11 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
 
 <form action="./includes/insertar/insertar_pagos_varios.php" method="POST">
+<div class="row text-right">
+    <div class="col-md-12">
+      <button class="btn add-btn btn-info">+</button>
+    </div>
+  </div>
   <div class="row-fluid">
     <div class="col-md-6">
       <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuarios</em>)</label>
@@ -100,12 +105,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     </div>
     </div>
     
-    <div class="col-md-1">
-      <label for="code" class="text-left"></label><br>
-      <button type="button" class="btn btn-success" id="btnMore">
-        <i class="zmdi zmdi-plus zmdi-hc-lg"></i>
-      </button>
-    </div>
+    
   </div>
 
   <div class="newData"></div>
