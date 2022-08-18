@@ -136,9 +136,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 $(function(){
 var i=1;
 $('#btnMore').click(function(){
-  var div ='<div class="col-md-6"></div>';
-  var divInput = '<div class="col-md-5"><label for="code" class="text-left"> Agregar Código </label>';
-  var inputCode ='<input type="text" name="COD_CODIGO[]" class="form-control"> </div>';
+
   i++;
      +'<div class="col-md-3">'
         +'<label>Mes</label>'
