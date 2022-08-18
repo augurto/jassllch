@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Jass</title>
+    <title>Jass...</title>
   </head>
   <body>
   
