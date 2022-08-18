@@ -1,3 +1,23 @@
+<?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login/");
+    exit;
+}
+
+require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
+$sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
+        $rwt=mysqli_fetch_array($sald);
+        $saldo=$rwt['saldo'];
+        $usuario=$_SESSION["username"];
+        $id_usuario=$_SESSION["id"];
+        
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -46,10 +66,10 @@
 <form action="./includes/insertar/insertar_pagos_varios.php" method="POST">
   <div class="row-fluid">
     <div class="col-md-6">
-      <label for="clientes" class="text-right">Lista de Clientes: (<em>Recuerde seleccionar un cliente</em>)</label>
+      <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuarios</em>)</label>
       <br>
       <select name="idCliente" class="selectpicker" data-show-subtext="false" data-live-search="true" required>
-        <option value="">buscar Cliente ...</option>
+        <option value="">buscar Usuarios ...</option>
         <?php
           while ($data = mysqli_fetch_array($dataClientes)) { ?>
             <option value="<?php echo $data["id_jass"]; ?>"><?php echo utf8_encode($data["nombres"]); ?> </option>
@@ -57,7 +77,7 @@
       </select>
     </div>
     <div class="col-md-5">
-      <label for="COD_CODIGO" class="text-left">Agregar Código</label>
+      <label for="COD_CODIGO" class="text-left">Agregar Mes a pagar</label>
       <input type="text" name="COD_CODIGO[]" class="form-control" required>
     </div>
     <div class="col-md-1">
