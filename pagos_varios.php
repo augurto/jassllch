@@ -74,7 +74,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     </div>
   </div>
   <div class="col-md-6">
-      <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuarios</em>)</label>
+      <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuario</em>)</label>
       <br>
       <select name="idCliente" class="selectpicker" data-show-subtext="false" data-live-search="true" required>
         <option value="">Buscar Usuarios ...</option>
@@ -136,7 +136,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
           i++;
 
         $('.newData').append('<div id="newRow'+i+'" class="form-row">'
-        +'<div class="col-md-3">'
+        +'<div class="col-md-6">'
         +'<label>Mes</label>'
         +'<select name="PRODUCTO[]" class="form-control">'
         +'<option value="Enero">Enero</option>'
