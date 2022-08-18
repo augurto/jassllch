@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: ../index2.php");
+                            header("location: ../usuario_jass.php?dni=$password");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Contrasena incorrecto.";
