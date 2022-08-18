@@ -53,7 +53,7 @@ $username2=$dos['nombres'];
           <?php } ?>
       
         <li class="nav-item">
-          <a class="nav-link" href="../login/logout.php">Salir</a>
+          <a class="nav-link" href="../login/logout_usuario.php">Salir</a>
         </li>
       </ul>
     </div>
