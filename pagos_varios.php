@@ -106,7 +106,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
   
 </div>
-
+<br>
 <div class="newData"></div>
 
   <div class="row text-center mt-5">
