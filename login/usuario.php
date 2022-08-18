@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
-              <h3>Iniciar Sesion en  <strong>Jass</strong></h3>
+              <h3>Iniciar Sesion en  <strong>Jass</strong> como Usuario</h3>
               <p class="mb-4">Llantuyhuanca Chaccamarca.</p>
             </div>
             <?php 
