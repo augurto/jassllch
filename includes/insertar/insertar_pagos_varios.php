@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css">
 
 <?php
-require("config.php");
+require("../../config/config.php");
 $idCliente      = $_POST['idCliente'];
 $COD_CODIGO     = $_POST['COD_CODIGO'];
 $COD_ESTADO     ="Activo";
