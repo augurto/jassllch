@@ -132,12 +132,14 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
-<script>
-$(function(){
-var i=1;
-$('#btnMore').click(function(){
+  <script type="text/javascript">
+    $(function () { 
+      var i = 1;
+      $('.add-btn').click(function (e) {
+        e.preventDefault();
+          i++;
 
-  i++;
+        $('.newData').append('<div id="newRow'+i+'" class="form-row">'
      +'<div class="col-md-3">'
         +'<label>Mes</label>'
         +'<select name="PRODUCTO[]" class="form-control">'
@@ -155,7 +157,7 @@ $('#btnMore').click(function(){
         +'<option value="Diciembre">Diciembre</option>'
         +'</select>'
     +'</div>'
-           
+    );  
   //Importante esta variable debe ir debajo del autoincrementable
   var btnDelete ='<button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button>';
   $('#incrementa').append('<div class="row-fluid'+i+'">'+ div + divInput + inputCode+' <div class="col-md-1"><br> '+ btnDelete +' </div> </div> <br><br><br>');
