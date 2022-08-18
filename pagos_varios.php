@@ -115,7 +115,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
   <div class="row text-center mt-5">
      <div class="col-md-12">
-    <input type="submit" class="btn btn-primary" value="Registrar"/>
+    <input type="submit" class="btn btn-primary" value="Registrar Pagos"/>
   </div>
   </div>
   <br>
