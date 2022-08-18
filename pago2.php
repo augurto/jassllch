@@ -55,9 +55,18 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <div class="col-md-3">
       <label>PRODUCTO</label>
       <select name="PRODUCTO[]" class="form-control">
-        <option value="Pan">Pan</option>
-        <option value="Harina">Harina</option>
-        <option value="Pasta">Pasta</option>
+      <option value="Enero">Enero</option>
+        <option value="Febrero">Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="Octubre">Octubre</option>
+        <option value="Noviembre">Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
       </select>
     </div>
 
@@ -86,10 +95,20 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $('.newData').append('<div id="newRow'+i+'" class="form-row">'
         +'<div class="col-md-3">'
         +'<label>PRODUCTO</label>'
+        +'<label>Mes</label>'
         +'<select name="PRODUCTO[]" class="form-control">'
-        +'<option value="Pan">Pan</option>'
-        +'<option value="Harina">Harina</option>'
-        +'<option value="Pasta">Pasta</option>'
+        +'<option value="Enero">Enero</option>'
+        +'<option value="Febrero">Febrero</option>'
+        +'<option value="Marzo">Marzo</option>'
+        +'<option value="Abril">Abril</option>'
+        +'<option value="Mayo">Mayo</option>'
+        +'<option value="Junio">Junio</option>'
+        +'<option value="Julio">Julio</option>'
+        +'<option value="Agosto">Agosto</option>'
+        +'<option value="Septiembre">Septiembre</option>'
+        +'<option value="Octubre">Octubre</option>'
+        +'<option value="Noviembre">Noviembre</option>'
+        +'<option value="Diciembre">Diciembre</option>'
         +'</select>'
         +'</div>'
            
