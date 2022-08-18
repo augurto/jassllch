@@ -127,7 +127,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
-  <script type="text/javascript">
+  
+<script type="text/javascript">
     $(function () { 
       var i = 1;
       $('.add-btn').click(function (e) {
@@ -135,7 +136,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
           i++;
 
         $('.newData').append('<div id="newRow'+i+'" class="form-row">'
-     +'<div class="col-md-3">'
+        +'<div class="col-md-3">'
         +'<label>Mes</label>'
         +'<select name="PRODUCTO[]" class="form-control">'
         +'<option value="Enero">Enero</option>'
@@ -151,22 +152,24 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         +'<option value="Noviembre">Noviembre</option>'
         +'<option value="Diciembre">Diciembre</option>'
         +'</select>'
-    +'</div>'
-    +'<a href="#" class="remove-lnk" id="'+i+'">Eliminar "'+i+'"</a>'
+        +'</div>'
+           
+            
+            +'<a href="#" class="remove-lnk" id="'+i+'">Eliminar "'+i+'"</a>'
             +'</div>'
           );  
       });
-	
+ 
 
-$(document).on('click', '.btn_remove', function(){
-  var button_id = $(this).attr("id"); 
-  console.log(button_id);
-  $('.row-fluid'+button_id+'').remove();
-}); 
+       $(document).on('click', '.remove-lnk', function(e) {
+         e.preventDefault();
 
-
-});
-</script>
+          var id = $(this).attr("id");
+           $('#newRow'+id+'').remove();
+        });
+ 
+    });
+  </script>
 
 </body>
 </html>
