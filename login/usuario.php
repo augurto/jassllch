@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id_jass, nombres, dni_usuarios_jass FROM usuarios_jass WHERE dni_usuarios_jass = ?";
+        $sql = "SELECT id, username, password FROM users WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: ../usuario_jass?dni=$username");
+                            header("location: ../index2.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Contrasena incorrecto.";
@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
-              <h3>Iniciar Sesion en  <strong>Jass</strong> como Usuario</h3>
+              <h3>Iniciar Sesion en  <strong>Jass</strong></h3>
               <p class="mb-4">Llantuyhuanca Chaccamarca.</p>
             </div>
             <?php 
