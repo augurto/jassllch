@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id_jass, nombres, dni_usuario_jass FROM users WHERE username = ?";
+        $sql = "SELECT id_jass, nombres, dni_usuario_jass FROM usuarios_jass WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Jass</title>
+    <title>Jass...</title>
   </head>
   <body>
   
