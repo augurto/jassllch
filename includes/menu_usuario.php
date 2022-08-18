@@ -31,9 +31,7 @@ $username2=$dos['nombres'];
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Pagos</a>
-        </li>
+        
         <!-- <li class="nav-item">
           <a class="nav-link" href="../inventario_general.php">Inventario General</a>
         </li> -->
