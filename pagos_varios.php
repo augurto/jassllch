@@ -68,7 +68,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
 
 <form action="./includes/insertar/insertar_pagos_varios.php" method="POST">
-
+<center>
   <div class="col-md-12">
       <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuario</em>)</label>
       <br>
@@ -80,6 +80,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <?php } ?>
       </select>
     </div>
+    </center>
   <br>
     <div class="row text-right">
     <div class="col-md-12">
@@ -88,7 +89,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   </div>
 
   <div class="form-row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <label>Mes a pagar</label>
       <select name="PRODUCTO[]" class="form-control">
       <option value="Enero">Enero</option>
@@ -137,7 +138,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
           i++;
 
         $('.newData').append('<div id="newRow'+i+'" class="form-row">'
-        +'<div class="col-md-6">'
+        +'<div class="col-md-12">'
        
         +'<label>Mes</label>'
         +'<select name="PRODUCTO[]" class="form-control">'
