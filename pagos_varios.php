@@ -157,12 +157,10 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         +'<option value="Diciembre">Diciembre</option>'
         +'</select>'
     +'</div>'
-    );  
-  //Importante esta variable debe ir debajo del autoincrementable
-  var btnDelete ='<button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button>';
-  $('#incrementa').append('<div class="row-fluid'+i+'">'+ div + divInput + inputCode+' <div class="col-md-1"><br> '+ btnDelete +' </div> </div> <br><br><br>');
-
-});
+    +'<a href="#" class="remove-lnk" id="'+i+'">Eliminar "'+i+'"</a>'
+            +'</div>'
+          );  
+      });
 	
 
 $(document).on('click', '.btn_remove', function(){
