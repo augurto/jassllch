@@ -52,14 +52,14 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 </head>
 <body>
 <?php include 'includes/menu.php';?>
-  <div class="container" style="background-color:#f9f9f9;">
-    <br><br>
-    <div class="row text-center mt-5">
-      <h1><strong>Seleccionar multiples meses de pago</strong></h1>
-      <hr />
-      <br>
-    </div>
 
+<div class="container mt-5" style="background-color: #f9f9f9;">
+  <br>
+  <h1 class="text-center">
+    <strong>Seleccionar multiples meses de pago..</strong>
+  </h1>
+  <hr /><br>
+ 
     <?php
       include('./config/config.php');
       $sqlClientes   = ("SELECT * FROM  usuarios_jass");
