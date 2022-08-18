@@ -48,11 +48,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
           width:450px !important;
       }
-      html, body 
-{ 
- height: 100%;
- overflow: hidden
-}
+
     </style>
 </head>
 <body>
