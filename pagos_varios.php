@@ -76,7 +76,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <option value="">buscar Usuarios ...</option>
         <?php
           while ($data = mysqli_fetch_array($dataClientes)) { ?>
-            <option value="<?php echo $data["id_jass"]; ?>"><?php echo utf8_encode($data["nombres"]); ?> </option>
+            <option value="<?php echo $data["id_jass"]; ?>"><?php echo utf8_encode($data["dni_usuario_jass"]).' :'.utf8_encode($data["nombres"]).utf8_encode($data["ap_paterno"]).utf8_encode($data["ap_materno"]); ?> </option>
         <?php } ?>
       </select>
     </div>
