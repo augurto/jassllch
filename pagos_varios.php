@@ -73,11 +73,28 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       <label for="clientes" class="text-right">Lista de Usuarios: (<em>Recuerde seleccionar un Usuarios</em>)</label>
       <br>
       <select name="idCliente" class="selectpicker" data-show-subtext="false" data-live-search="true" required>
-        <option value="">buscar Usuarios ...</option>
+        <option value="">Buscar Usuarios ...</option>
         <?php
           while ($data = mysqli_fetch_array($dataClientes)) { ?>
             <option value="<?php echo $data["id_jass"]; ?>"><?php echo ($data["dni_usuario_jass"]).' :'.$data["nombres"].' - '.($data["ap_paterno"]).' - '.($data["ap_materno"]); ?> </option>
         <?php } ?>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label>Mes</label>
+      <select name="PRODUCTO[]" class="form-control">
+      <option value="Enero">Enero</option>
+        <option value="Febrero">Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="Octubre">Octubre</option>
+        <option value="Noviembre">Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
       </select>
     </div>
     <div class="col-md-5">
