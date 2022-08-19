@@ -17,6 +17,7 @@ foreach ($link->query('SELECT * from usuarios_jass where id_jass = "'.$idCliente
   $nombres=$row_sql['nombres'];
   $ap_paterno=$row_sql['ap_paterno'];
   $ap_materno=$row_sql['ap_materno'];
+  $datos_usuario=$nombres.' '.$ap_paterno.' '.$ap_materno;
 }
 $COD_CODIGO     = $_POST['COD_CODIGO'];
 $COD_ESTADO     ="Activo";
@@ -34,19 +35,19 @@ if($dataCode >0){
         //echo 'Ya existe el codigo';
         }else{
             $queryInsertCode = ("INSERT INTO pagos(id_jass,dni_usuario_jass,datos_pago,pago_mes,mes_actual_pago,year_actual_pago,name_user,id_user, deuda,variable_boleta,estado_pago,pago_hoy)
-             VALUES ('" .$idCliente. "','" .$dni_usuario_jass. "','" .$nombres. "','" .$PRODUCTO[$i]. "','" .$mes_actual. "','" .$year_actual. "','" .$name_user. "','" .$id_user. "','" .$deuda. "','ING','0','" .$hoy. "')");
+             VALUES ('" .$idCliente. "','" .$dni_usuario_jass. "','" .$datos_usuario. "','" .$PRODUCTO[$i]. "','" .$mes_actual. "','" .$year_actual. "','" .$name_user. "','" .$id_user. "','" .$deuda. "','ING','0','" .$hoy. "')");
             $resultado = mysqli_query($con, $queryInsertCode);
         }
     } 
 echo '<p style="color:#fff;"></p>';
 echo "<script type='text/javascript'>
   Swal.fire(
-  'Felicitaciones!',
+  'Pagos Registrados!',
   'Operación realizada con exito',
   'success'
 ).then((result) => {
       if (result.isConfirmed) {
-        location.href='index.php';
+        location.href='../../usuario_jass.php?dni=$dni_usuario_jass';
       } 
     })
 </script>";
