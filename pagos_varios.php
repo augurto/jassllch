@@ -98,12 +98,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <option value="">Buscar Usuarios ...</option>
         <?php
           while ($data = mysqli_fetch_array($dataClientes)) { 
-            $data["dni_usuario_jass"]=$nombres_casi;
+          
             ?>
             <option value="<?php echo $data["id_jass"]; ?>"><?php echo ($data["dni_usuario_jass"]).' :'.$data["nombres"].' - '.($data["ap_paterno"]).' - '.($data["ap_materno"]); ?> </option>
         <?php } ?>
       </select>
-      <input type="text" class="form-control" id="year_actual" name="year_actual"  value="<?php echo $nombres_casi;?>"  readonly>
+      
     </div>
  
   <br>
