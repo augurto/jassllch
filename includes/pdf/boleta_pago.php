@@ -41,7 +41,7 @@ $pdf->Cell(5,$textypos,"Email de la empresa"); */
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(55);
 $pdf->Cell(5,$textypos,"Usuario:");
-$pdf->SetFont('Arial','',10);    
+$pdf->SetFont('Arial','',9);    
 $pdf->setY(15);$pdf->setX(55);
 $pdf->Cell(5,$textypos,$datos);
 /* $pdf->setY(20);$pdf->setX(75);
