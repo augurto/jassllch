@@ -3,6 +3,7 @@
 
 <?php
 require("../../config/config.php");
+require_once ('../../config/conexion_tabla.php');
 $idCliente      = $_POST['idCliente'];
 $PRODUCTO       = $_POST['PRODUCTO'];
 $hoy            = $_POST['hoy'];
