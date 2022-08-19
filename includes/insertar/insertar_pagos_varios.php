@@ -17,12 +17,12 @@ $COD_ESTADO     ="Activo";
 $CANT_USO       =0;
 
 
-$dataCode = count($COD_CODIGO);
+$dataCode = count($PRODUCTO);
 if($dataCode >0){
     for ($i=0; $i <$dataCode; $i++) { 
 
     //Verifico si existe el codigo
-    $sqlCode  = ("SELECT *  FROM tbl_codigo WHERE COD_CODIGO='$COD_CODIGO[$i]' ");
+    $sqlCode  = ("SELECT *  FROM pagos WHERE deuda='4' ");
     $queryCode  	= mysqli_query($con, $sqlCode);
     if(mysqli_num_rows($queryCode)>0){
         //echo 'Ya existe el codigo';
