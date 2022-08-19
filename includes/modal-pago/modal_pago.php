@@ -52,7 +52,7 @@
                         //Si se produce un error no hacemos nada
                         catch(e) {}
                         }
-                        </script>
+                    </script>
 
                     <form action="../../includes/process/nuevo_pago.php" name="calculadora">
                         <div class="modal-body">

@@ -137,18 +137,13 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <div class="row text-center mt-5">
      <div class="col-md-12">
         <br>
-                        <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
                                 <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
-                                        
-                        </div>   
-                        <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
                                 <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" readonly >
                                 <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
                                 <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
-                                        
-                        </div> 
+
         <input type="text" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
         <input type="text" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
                        <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
