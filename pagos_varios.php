@@ -14,7 +14,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
-        $usuario=$_SESSION["username"];
+        $usuario_2=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
         
 ?>
@@ -125,7 +125,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <input type="text" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
                        <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
         <input type="text" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
-        <input type="text" class="form-control" id="name_user" name="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>"  readonly>
+        <input type="text" class="form-control" id="name_user" name="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario_2;?>"  readonly>
         <input type="text" class="form-control" id="id_user" name="id_user" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>"  readonly>
     <input type="submit" class="btn btn-primary" value="Registrar Pagos"/>
   </div>
