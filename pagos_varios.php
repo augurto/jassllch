@@ -66,7 +66,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       $sqlClientes   = ("SELECT * FROM  usuarios_jass");
       $dataClientes  = mysqli_query($con, $sqlClientes);
     ?>
-
+    <?php 
+                        $mes_actual =date("m");
+                        $year_actual =date("Y");
+                        date_default_timezone_set("America/Lima");
+                        $hoy = date("Y-m-d H:i:s");     
+      ?>
 
 <form action="./includes/insertar/insertar_pagos_varios.php" method="POST">
 
@@ -116,6 +121,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <div class="row text-center mt-5">
      <div class="col-md-12">
         <br>
+        <input type="text" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
+        <input type="text" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
+                       <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
+        <input type="text" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
+        <input type="text" class="form-control" id="name_user" name="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario;?>"  readonly>
+        <input type="text" class="form-control" id="id_user" name="id_user" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>"  readonly>
     <input type="submit" class="btn btn-primary" value="Registrar Pagos"/>
   </div>
   </div>
