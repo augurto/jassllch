@@ -32,7 +32,7 @@ $username2=$dos['username'];
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Pagos</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="../inventario_general.php">Inventario General</a>

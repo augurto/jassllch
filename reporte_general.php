@@ -16,6 +16,11 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $saldo=$rwt['saldo'];
         $usuario=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
+
+$uno=mysqli_query($con,"SELECT * FROM users where id='".$id_usuario."'");
+$dos=mysqli_fetch_array($uno);
+$tipo_user=$dos['tipo_user'];
+
         
 ?>
 <!DOCTYPE html>
@@ -73,8 +78,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/menu.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
-
-    <?php include 'includes/graficas/graficas_inicio.php'; ?>
+    <?php if ($tipo_user==0) {?>
+    <?php include 'includes/graficas/graficas_inicio.php'; }?>
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
