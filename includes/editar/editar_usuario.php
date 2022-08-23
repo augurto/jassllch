@@ -2,15 +2,15 @@
 <script >
                                       $(document).on("click", "#btnmodal0",function () {
                                         
-                                              var idjass =$(this).data('idjass');
+                                              var idjass2 =$(this).data('idjass2');
                                               var nombres =$(this).data('nombres');
                                               var paterno =$(this).data('ape');
                                               var materno =$(this).data('ape_mat');
                                               var estado_civil =$(this).data('estado_civil');
-                                              var dnijass =$(this).data('dnijass');
+                                              var jass_dni =$(this).data('jass_dni');
                                              
 
-                                        $("#idjass").val(idjass);
+                                        $("#idjass2").val(idjass2);
                                         $("#nombres").val(nombres);
 
                                         
@@ -18,7 +18,7 @@
                                         $("#materno").val(materno);
                                         $("#datos").val(nombres+" "+paterno+" "+materno);
                                         $("#estado_civil").val(estado_civil);
-                                        $("#dnijass").val(dnijass);
+                                        $("#jass_dni").val(jass_dni);
                           
                                       })
 
@@ -47,12 +47,12 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Cod Usuario</span> -->
-                        <input type="text" class="form-control" id="idjass" name="idjass" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" id="idjass2" name="idjass2" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
                         
-                        <input type="text" class="form-control" id="dnijass" name="dnijass" aria-label="DNI" aria-describedby="basic-addon1"  >
+                        <input type="text" class="form-control" id="jass_dni" name="jass_dni" aria-label="DNI" aria-describedby="basic-addon1"  >
                         </div>
                      
                         <?php 
