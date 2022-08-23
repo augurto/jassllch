@@ -63,7 +63,7 @@ $pdf->Cell(5,$textypos,"Email del cliente"); */
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(135);
 
-$pdf->Cell(5,$textypos,"BOLETA NRO : ".$max_pago);
+$pdf->Cell(5,$textypos,"BOLETA NRO : ING ".($max_pago-$cantidad).' al ING'.$max_pago);
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"Fecha : ".$fecha_pago);
