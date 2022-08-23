@@ -78,8 +78,8 @@
                                 <input type="text" class="form-control" id="materno" name="materno" aria-label="DNI" aria-describedby="basic-addon1"  >
                                         
                         </div>  
-                        <div class="input-group mb-3">
-                       <!--  <span class="input-group-text" id="basic-addon1">Estado Civil</span>
+                        <!-- <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Estado Civil</span>
                         
                         <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
                             <option selected>Clic para ver</option>
