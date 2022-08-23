@@ -41,7 +41,7 @@ if($dataCode >0){
                 'error'
               ).then((result) => {
                     if (result.isConfirmed) {
-                      location.href='../../pagos_varios.php';
+                      window.close();
                     } 
                   })
               </script>";
