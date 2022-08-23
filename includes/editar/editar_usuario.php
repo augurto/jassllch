@@ -79,7 +79,7 @@
                                         
                         </div>  
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Estado Civil</span>
+                       <!--  <span class="input-group-text" id="basic-addon1">Estado Civil</span>
                         
                         <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
                             <option selected>Clic para ver</option>
@@ -90,7 +90,7 @@
                             <option value="Divorciado/a">Divorciado/a</option>
                             <option value="Otro">Otro</option>
                         </select>
-                        </div>  
+                        </div>   -->
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Hoy</span> -->
                         <input type="hidden" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
