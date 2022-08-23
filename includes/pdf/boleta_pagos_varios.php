@@ -62,14 +62,12 @@ $pdf->Cell(5,$textypos,"Email del cliente"); */
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(135);
-if ($cantidad=1) {
+if ($cantidad==1) {
     # code...
     $pdf->Cell(5,$textypos,"BOLETA NRO : ING-".$max_pago);
-}else {
-    # code...
-    $pdf->Cell(5,$textypos,"BOLETA NRO : ING-".($max_pago-$cantidad+1).' al ING-'.$max_pago);
+}else{
+$pdf->Cell(5,$textypos,"BOLETA NRO : ING-".($max_pago-$cantidad+1).' al ING-'.$max_pago);
 }
-
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"Fecha : ".$fecha_pago);
