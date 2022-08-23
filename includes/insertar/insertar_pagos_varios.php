@@ -11,6 +11,7 @@ $mes_actual     = $_POST['mes_actual'];
 $year_actual    = $_POST['year_actual'];
 $name_user      = $_POST['name_user'];
 $id_user        = $_POST['id_user'];
+$max_pago        = $_POST['max_pago'];
 $deuda=5;
 foreach ($link->query('SELECT * from usuarios_jass where id_jass = "'.$idCliente.'"') as $row_sql){ // aca se hace la consulta e iterarla con each. 
   $dni_usuario_jass=$row_sql['dni_usuario_jass'];
@@ -57,7 +58,7 @@ if($dataCode >0){
                 'success'
               ).then((result) => {
                     if (result.isConfirmed) {
-                      location.href='../pdf/boleta_pagos_varios.php?dni=$dni_usuario_jass&cantidad=$dataCode&datos=$datos_usuario&fecha_pago=$hoy';
+                      location.href='../pdf/boleta_pagos_varios.php?dni=$dni_usuario_jass&max_num=$max_pago&cantidad=$dataCode&datos=$datos_usuario&fecha_pago=$hoy';
                     } 
                   })
               </script>";

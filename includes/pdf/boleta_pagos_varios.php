@@ -19,6 +19,8 @@ $monto_usuario=$_GET['monto_usuario'];
 $monto_predeterminado=5;
 $vuelto=$_GET['vuelto'];
 $estado=$_GET['estado'];
+$max_num=$_GET['max_num'];
+$cant_nueva=$max_pago-$max_num;
 
 
 $pdf = new FPDF('L','mm','A5');
@@ -64,9 +66,9 @@ $pdf->SetFont('Arial','B',10);
 $pdf->setY(10);$pdf->setX(135);
 if ($cantidad==1) {
     # code...
-    $pdf->Cell(5,$textypos,"BOLETA NRO : ING-".$max_pago);
+    $pdf->Cell(5,$textypos,"BOLETA NRO : ING-".$cant_nueva);
 }else{
-$pdf->Cell(5,$textypos,"BOLETA NRO : ING-".($max_pago-$cantidad+1).' al ING-'.$max_pago);
+$pdf->Cell(5,$textypos,"BOLETA NRO : ING-".($cant_nueva-$cantidad+1).' al ING-'.$cant_nueva);
 }
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(135);
