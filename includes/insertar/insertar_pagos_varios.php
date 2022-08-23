@@ -57,7 +57,7 @@ if($dataCode >0){
                 'success'
               ).then((result) => {
                     if (result.isConfirmed) {
-                      location.href='../pdf/boleta_pagos_varios.php?dni=$dni_usuario_jass&cantidad=$i';
+                      location.href='../pdf/boleta_pagos_varios.php?dni=$dni_usuario_jass&cantidad=$dataCode';
                     } 
                   })
               </script>";
