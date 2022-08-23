@@ -112,7 +112,7 @@
                             
                             
                             ?></td>
-                            <td><?php echo $deuda ?></td>
+                            <td><?php echo 'S/ '.$deuda ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Ingreso';
