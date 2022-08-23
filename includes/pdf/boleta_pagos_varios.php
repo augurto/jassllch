@@ -10,6 +10,7 @@ $usuario_atencion=$_GET['usuario_atencion'];
 $pago_mes=$_GET['pago_mes'];
 $monto_mes=$_GET['monto_mes'];
 $monto_usuario=$_GET['monto_usuario'];
+$monto_predeterminado=5;
 $vuelto=$_GET['vuelto'];
 $estado=$_GET['estado'];
 
@@ -76,7 +77,7 @@ $header = array("Nro", "Concepto","Cant.","Precio","Total");
 //// Arrar de Productos
 $products = array(
     
-	array("01", $estado,$cantidad,$monto_usuario,0),
+	array("01", "Pago Varios Meses",$cantidad,$monto_predeterminado,$cantidad*$monto_predeterminado),
 	/* array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
 	array("0001", "Producto 3",5,80,0), 
