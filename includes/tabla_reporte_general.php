@@ -112,7 +112,7 @@
                             
                             
                             ?></td>
-                            <td><?php echo 'S/ '.$deuda ?></td>
+                            <td><?php echo 'S/ '.number_format($deuda, 2, ".",",") ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Ingreso';

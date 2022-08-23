@@ -57,7 +57,7 @@
                             <td><?php echo $pago_hoy ?></td>
                             <td><?php echo $name_user ?></td>
                             <td><?php echo $pago_mes ?></td>
-                            <td><?php echo 'S/ '.$deuda ?></td>
+                            <td><?php echo 'S/ '.number_format($deuda, 2, ".",",")?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Pagado';
