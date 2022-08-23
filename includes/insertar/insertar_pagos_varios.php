@@ -32,19 +32,8 @@ if($dataCode >0){
     $sqlCode  = ("SELECT *  FROM pagos WHERE pago_mes='$PRODUCTO[$i]' AND year_actual_pago= '".$year_actual."'");
     $queryCode  	= mysqli_query($con, $sqlCode);
     if(mysqli_num_rows($queryCode)>0){
-      echo '<p style="color:#fff;"></p>';
-echo "<script type='text/javascript'>
-  Swal.fire(
-  'Pago no Registrado!',
-  'El mes que esta registrando ya tiene una deuda cancelada',
-  'success'
-).then((result) => {
-      if (result.isConfirmed) {
-        location.href='../../pagos_varios.php';
-      } 
-    })
-</script>";
-        //echo 'Ya existe el codigo';
+      
+        echo 'Ya existe pago en algun mes seleccionado';
         }else{
             $queryInsertCode = ("INSERT INTO pagos(id_jass,dni_usuario_jass,datos_pago,pago_mes,mes_actual_pago,year_actual_pago,name_user,id_user, deuda,variable_boleta,estado_pago,pago_hoy)
              VALUES ('" .$idCliente. "','" .$dni_usuario_jass. "','" .$datos_usuario. "','" .$PRODUCTO[$i]. "','" .$mes_actual. "','" .$year_actual. "','" .$name_user. "','" .$id_user. "','" .$deuda. "','ING','0','" .$hoy. "')");
