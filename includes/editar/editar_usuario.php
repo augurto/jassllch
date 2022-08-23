@@ -1,6 +1,6 @@
 
 <script >
-                                      $(document).on("click", "#btnmodal",function () {
+                                      $(document).on("click", "#btnmodal0",function () {
                                         
                                               var idjass =$(this).data('idjass');
                                               var nombre =$(this).data('nombre');
@@ -41,21 +41,7 @@
                     echo $var_PHP   // muestra el resultado 
 
                     ?></label>
-                    <script>
-                        //Función que realiza la suma
-                        function Suma() {
-                        var monto_pago = document.calculadora.monto_pago.value;
-                        var deuda = document.calculadora.deuda.value;
-                        try{
-                            //Calculamos el número escrito:
-                            monto_pago = (isNaN(parseFloat(monto_pago)))? 0 : parseFloat(monto_pago);
-                            deuda = (isNaN(parseFloat(deuda)))? 0 : parseFloat(deuda);
-                            document.calculadora.vuelto.value = monto_pago-deuda;
-                        }
-                        //Si se produce un error no hacemos nada
-                        catch(e) {}
-                        }
-                    </script>
+              
 
                     <form action="../../includes/process/nuevo_pago.php" name="calculadora">
                         <div class="modal-body">
@@ -76,16 +62,20 @@
                         $hoy = date("Y-m-d H:i:s");     
                         ?>
                       
-                        <div class="input-group mb-3">
+                      <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Nombres</label>
-                                <input type="text" class="form-control" id="nombre" autofocus name="nombre" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
+                                <input type="text" class="form-control" id="nombre" autofocus name="nombre" aria-label="DNI" aria-describedby="basic-addon1"   required >
+                                        
+                        </div> 
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Apellido Paterno</label>
+                                <input type="text" class="form-control" id="paterno" autofocus name="paterno" aria-label="DNI" aria-describedby="basic-addon1"   required >
                                         
                         </div>   
                         <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Apellido Paterno</label>
-                                <input type="text" class="form-control" id="paterno" name="paterno"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" readonly >
+                                
                                 <label class="input-group-text" for="inputGroupSelect01">Apellido Materno</label>
-                                <input type="text" class="form-control" id="materno" name="materno" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                                <input type="text" class="form-control" id="materno" name="materno" aria-label="DNI" aria-describedby="basic-addon1"  >
                                         
                         </div>  
                         <div class="input-group mb-3">
