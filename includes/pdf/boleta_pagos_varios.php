@@ -66,9 +66,9 @@ $pdf->SetFont('Arial','B',10);
 $pdf->setY(10);$pdf->setX(135);
 if ($cantidad==1) {
     # code...
-    $pdf->Cell(5,$textypos,"BOLETA NRO : ING-".$cant_nueva);
+    $pdf->Cell(5,$textypos,"BOLETA NRO : ING-".$max_pago);
 }else{
-$pdf->Cell(5,$textypos,"BOLETA NRO : ING-".($cant_nueva-$cantidad+1).' al ING-'.$cant_nueva);
+$pdf->Cell(5,$textypos,"BOLETA NRO : ING-".($max_pago-$cant_nueva+1).' al ING-'.$max_pago);
 }
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(135);
