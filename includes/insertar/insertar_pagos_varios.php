@@ -38,7 +38,7 @@ if($dataCode >0){
         Swal.fire(
         'Error!',
         'Operacion cancelada',
-        'success'
+        'error'
       ).then((result) => {
             if (result.isConfirmed) {
               location.href='../../pagos_varios.php','_blank'; 
