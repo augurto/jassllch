@@ -29,7 +29,7 @@
                         $nombre=$row['nombres'];
                         $ap_paterno=$row['ap_paterno'];
                         $ap_materno=$row['ap_materno'];
-                        
+                        $estado_civil=$row['estado_civil'];
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
@@ -61,9 +61,9 @@
                                 echo 'Retirado';
                             }?></td>
                             <td>
-                                       <!--   <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-idjass="<?php echo $codigo; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
+                                         <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $ap_paterno;?>" data-ape_mat="<?php echo $ap_materno;?>" data-estado="<?php echo $estado_civil;  ?>" data-dni="<?php echo $dni_jass;  ?>" >
                                         <i class="fa fa-edit"></i>
-                                        </button> -->
+                                        </button>
                          
                                          <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dnijass="<?php echo $dni_jass;  ?>" >
                                          <i class="fa fa-plus"></i>
