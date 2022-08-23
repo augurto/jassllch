@@ -29,7 +29,7 @@ if($dataCode >0){
     for ($i=0; $i <$dataCode; $i++) { 
 
     //Verifico si existe el codigo
-    $sqlCode  = ("SELECT *  FROM pagos WHERE deuda='4' ");
+    $sqlCode  = ("SELECT *  FROM pagos WHERE pago_mes='".$PRODUCTO."' AND year_actual_pago= '".$year_actual."'");
     $queryCode  	= mysqli_query($con, $sqlCode);
     if(mysqli_num_rows($queryCode)>0){
         //echo 'Ya existe el codigo';
