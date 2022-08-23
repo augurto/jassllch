@@ -61,7 +61,7 @@
                                 echo 'Retirado';
                             }?></td>
                             <td>
-                                         <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $ap_paterno;?>" data-ape_mat="<?php echo $ap_materno;?>" data-estado="<?php echo $estado_civil;  ?>" data-dni="<?php echo $dni_jass;  ?>" >
+                                         <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-idjass="<?php echo $id_jass; ?>" data-nombres="<?php echo $nombre; ?>" data-ape="<?php echo $ap_paterno;?>" data-ape_mat="<?php echo $ap_materno;?>" data-estado_civil="<?php echo $estado_civil;  ?>" data-dnijass="<?php echo $dni_jass;  ?>" >
                                         <i class="fa fa-edit"></i>
                                         </button>
                          

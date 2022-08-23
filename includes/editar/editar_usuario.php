@@ -3,22 +3,22 @@
                                       $(document).on("click", "#btnmodal0",function () {
                                         
                                               var idjass =$(this).data('idjass');
-                                              var nombre =$(this).data('nombre');
+                                              var nombres =$(this).data('nombres');
                                               var paterno =$(this).data('ape');
                                               var materno =$(this).data('ape_mat');
-                                              var estado =$(this).data('estado');
-                                              var dni =$(this).data('dni');
+                                              var estado_civil =$(this).data('estado_civil');
+                                              var dnijass =$(this).data('dnijass');
                                              
 
                                         $("#idjass").val(idjass);
-                                        $("#nombre").val(nombre);
+                                        $("#nombres").val(nombres);
 
                                         
                                         $("#paterno").val(paterno);
                                         $("#materno").val(materno);
-                                        $("#datos").val(nombre+" "+paterno+" "+materno);
-                                        $("#estado").val(estado);
-                                        $("#dni").val(dni);
+                                        $("#datos").val(nombres+" "+paterno+" "+materno);
+                                        $("#estado_civil").val(estado_civil);
+                                        $("#dnijass").val(dnijass);
                           
                                       })
 
@@ -29,7 +29,7 @@
         <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Pago</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -47,12 +47,12 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Cod Usuario</span> -->
-                        <input type="hidden" class="form-control" id="idjass" name="idjass" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" id="idjass" name="idjass" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
                         
-                        <input type="text" class="form-control" id="dni" name="dni" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                        <input type="text" class="form-control" id="dnijass" name="dnijass" aria-label="DNI" aria-describedby="basic-addon1"  >
                         </div>
                      
                         <?php 
@@ -64,7 +64,7 @@
                       
                       <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Nombres</label>
-                                <input type="text" class="form-control" id="nombre" autofocus name="nombre" aria-label="DNI" aria-describedby="basic-addon1"   required >
+                                <input type="text" class="form-control" id="nombres" autofocus name="nombres" aria-label="nombres" aria-describedby="basic-addon1"   required >
                                         
                         </div> 
                         <div class="input-group mb-3">
@@ -81,7 +81,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Estado Civil</span>
                         
-                        <select class="form-select" aria-label="Default select example" name="estado" id="estado">
+                        <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
                             <option selected>Clic para ver</option>
                             <option value="Casado/a">Casado/a</option>
                             <option value="Soltero/a">Soltero/a</option>
