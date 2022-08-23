@@ -1,6 +1,12 @@
 <?php
 require('../../fpdf/fpdf.php');
+require("../../config/config.php");
+require_once ('../../config/conexion_tabla.php');
 
+foreach ($link->query('SELECT MAX(id_pagos) as max_pago FROM `pagos` LIMIT 1') as $row_sql){ // aca se hace la consulta e iterarla con each. 
+    $max_pago=$row_sql['max_pago'];
+   
+  }
 $id_pago=$_GET['id_pago'];
 $valor1=$_GET['dni'];
 $datos=$_GET['datos'];
@@ -57,7 +63,7 @@ $pdf->Cell(5,$textypos,"Email del cliente"); */
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(135);
 
-$pdf->Cell(5,$textypos,"BOLETA NRO : ".$id_pago);
+$pdf->Cell(5,$textypos,"BOLETA NRO : ".$max_pago);
 $pdf->SetFont('Arial','',10);    
 $pdf->setY(15);$pdf->setX(135);
 $pdf->Cell(5,$textypos,"Fecha : ".$fecha_pago);
