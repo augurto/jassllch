@@ -36,12 +36,12 @@ if($dataCode >0){
       echo '<p style="color:#fff;"></p>';
               echo "<script type='text/javascript'>
                 Swal.fire(
-                'Pagos Registrados!',
-                'Operación realizada con exito',
+                'Error al realizar el pago!',
+                'Uno de los meses ya esta cancelado',
                 'error'
               ).then((result) => {
                     if (result.isConfirmed) {
-                      location.href='../pdf/pagos_varios.php';
+                      location.href='../../pagos_varios.php';
                     } 
                   })
               </script>";
