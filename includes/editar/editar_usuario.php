@@ -43,7 +43,7 @@
                     ?></label>
               
 
-                    <form action="../../includes/process/nuevo_pago.php" name="calculadora">
+                    <form action="../../includes/process/update_usuario.php" name="calculadora">
                         <div class="modal-body">
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Cod Usuario</span> -->
