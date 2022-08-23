@@ -47,7 +47,7 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Cod Usuario</span> -->
-                        <input type="text" class="form-control" id="idjass2" name="idjass2" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="hidden" class="form-control" id="idjass2" name="idjass2" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
