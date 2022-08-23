@@ -64,7 +64,7 @@ $pdf->Cell(5,$textypos,"Email del cliente"); */
 // Agregamos los datos del cliente
 $pdf->SetFont('Arial','B',10);    
 $pdf->setY(10);$pdf->setX(135);
-if ($cantidad==1) {
+if ($cant_nueva==1) {
     # code...
     $pdf->Cell(5,$textypos,"BOLETA NRO : ING-".$max_pago);
 }else{
@@ -89,7 +89,7 @@ $header = array("Nro", "Concepto","Cant.","Precio","Total");
 //// Arrar de Productos
 $products = array(
     
-	array("01", "Pago Varios Meses",$cantidad,$monto_predeterminado,$cantidad*$monto_predeterminado),
+	array("01", "Pago Varios Meses",$cant_nueva,$monto_predeterminado,$cant_nueva*$monto_predeterminado),
 	/* array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
 	array("0001", "Producto 3",5,80,0), 
