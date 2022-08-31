@@ -80,6 +80,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
+    <div class="container">
     <div class="row">
     <div class="col-sm-12 text-center">
                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
@@ -89,7 +90,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                       <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
                       </button> -->
         </div>
-        
+    </div>
     </div>
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
@@ -107,6 +108,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     </div>
 </div>
 </form>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  <span class="input-group-text">DNI</span>
+  <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Enviar</button>
+</div>
     <!-- Fin del contenido de la tabla -->
 
   
