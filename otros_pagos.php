@@ -80,7 +80,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
-    <div class="container">
+    
     <div class="row">
     <div class="col-sm-12 text-center">
                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
@@ -91,7 +91,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                       </button> -->
         </div>
     </div>
-    </div>
+  
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
     <?php include 'includes/parts/agregar_variante_tipo.php' ?>
@@ -100,7 +100,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin Boton agregar proyecto -->
     <br>
     <!-- Contenido de la tabla -->
+    <div class="container">
     <form action="otros_pagos.php?dni=$_GET['dni']" method="get">
+
     <div class="row">
     <div class="input-group mb-3">
   <input type="number" class="form-control" id="dni" name="dni" placeholder="Buscar por DNI" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -112,8 +114,21 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <input type="text" class="form-control" placeholder="Username" aria-label="Username">
   <span class="input-group-text">DNI</span>
   <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+  
+</div>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  <span class="input-group-text">DNI</span>
+  <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+ 
+</div>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  <span class="input-group-text">DNI</span>
+  <input type="text" class="form-control" placeholder="Server" aria-label="Server">
   <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Enviar</button>
 </div>
+    </div>
     <!-- Fin del contenido de la tabla -->
 
   
