@@ -137,10 +137,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <option value="Diciembre">Diciembre</option>
       </select>
       <br>
-      <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  >
+      
     </div>
-
-    
+    <div class="col-md-4">
+      <label>Seleccione Año </label>
+    <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  >
+    </div>
 </div>
 
 <div class="newData"></div>
