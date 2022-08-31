@@ -99,7 +99,13 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin Boton agregar proyecto -->
     <br>
     <!-- Contenido de la tabla -->
-    <?php include 'includes/usuarios_jass.php'; ?>
+    <form action="" method="get">
+    <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Buscar por DNI" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+  
+</div>
+</form>
     <!-- Fin del contenido de la tabla -->
 
   
