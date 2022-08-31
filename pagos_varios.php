@@ -151,15 +151,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
         <input type="hidden" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
         <input type="hidden" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
-                       <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
-        
+                        <span class="input-group-text" id="basic-addon1">Año</span>
+                        <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  >
         <input type="hidden" class="form-control" id="name_user" name="name_user"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $usuario_2;?>"  readonly>
         <input type="hidden" class="form-control" id="id_user" name="id_user" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $id_usuario;?>"  readonly>
         <input type="hidden" class="form-control" id="max_pago" name="max_pago" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $max_pago;?>"  readonly>
-        <div class="col-md-4">
-      <label>Seleccione Año... </label>
-    <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  >
-    </div>
+        
     <input type="submit" class="btn btn-primary" value="Registrar Pagos"/>
   </div>
   </div>
