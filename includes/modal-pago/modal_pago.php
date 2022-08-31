@@ -134,7 +134,7 @@
                        <!--  <span class="input-group-text" id="basic-addon1">Mes</span> -->
                         
                         <input type="hidden" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
-                       <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
+                        <span class="input-group-text" id="basic-addon1">Año</span>
                         <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  >
                         
                         </div>
