@@ -100,10 +100,11 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <br>
     <!-- Contenido de la tabla -->
     <form action="otros_pagos.php?dni=$_GET['dni']" method="get">
+    <div class="row">
     <div class="input-group mb-3">
-  <input type="text" class="form-control" id="dni" name="dni" placeholder="Buscar por DNI" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-  
+  <input type="number" class="form-control" id="dni" name="dni" placeholder="Buscar por DNI" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+    </div>
 </div>
 </form>
     <!-- Fin del contenido de la tabla -->
