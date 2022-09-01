@@ -140,6 +140,11 @@
                                          
                                         </button> -->
                                         <i class="fa fa-file" aria-hidden="true"></i>
+                                        
+                                        </a>
+                                        <a href="../includes/pdf/boleta_pago.php?dni=<?php echo $dni_jass; ?>">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        
                                         </a>
                             </td>
                         </tr>
