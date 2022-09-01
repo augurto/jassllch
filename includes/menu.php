@@ -50,7 +50,7 @@ $username2=$dos['username'];
           <li><a class="dropdown-item" href="../reporte_grafica.php" >Reporte de Proyectos </a></li>
           <li><a class="dropdown-item" href="../reporte_rendimiento.php">Reporte rendimiento </a></li>
           <li><a class="dropdown-item" href="../reporte_usuario.php?usuario=<?php echo $usuario;?>" >Reporte de Usuarios </a></li> -->
-            <li><a class="dropdown-item" href="#">Grupos</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Grupos</a></li> -->
             
           </ul>
         </li>
