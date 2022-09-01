@@ -117,13 +117,15 @@ $monthName = strftime('%B', $dateObj->getTimestamp());
     <br>
     <!-- Contenido de la tabla -->
     <div class="container">
-    <form action="otros_pagos.php?dni=$_GET['dni']" method="get">
+    
 
     <div class="row">
+    <form action="otros_pagos.php?dni=$_GET['dni']" method="get">
     <div class="input-group mb-3">
   <input type="number" class="form-control" id="dni" name="dni" placeholder="Buscar por DNI" aria-label="Recipient's username" aria-describedby="button-addon2">
   <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
     </div>
+    </form>
     <?php if (empty($dni_usuario_jass)) { ?>
         <div class="alert alert-warning" role="alert">
         No existe un usuario con ese DNI
@@ -173,7 +175,7 @@ $monthName = strftime('%B', $dateObj->getTimestamp());
     <?php }?>
         
 </div>
-</form>
+
 
     </div>
     <!-- Fin del contenido de la tabla -->
