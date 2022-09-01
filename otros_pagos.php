@@ -126,37 +126,41 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <div class="alert alert-warning" role="alert">
         No existe un usuario con ese DNI
         </div>
+    <?php } else { ?>
+        <form action="">
+        <div class="input-group mb-3">
+            <span class="input-group-text">DNI </span>
+            <input type="text" class="form-control" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username">
+            <span class="input-group-text">Nombres</span>
+            <input type="text" class="form-control" value="<?php echo $nombres ; ?>" aria-label="Server">
+            
+            </div>
+            <div class="input-group mb-3">
+            <span class="input-group-text">Ap Paterno</span>
+            <input type="text" class="form-control" value="<?php echo $ap_paterno ; ?>" aria-label="Server">
+            <span class="input-group-text">Ap Materno</span>
+            <input type="text" class="form-control" value="<?php echo $ap_materno ; ?>" aria-label="Server">
+            
+            
+            </div>
+            <div class="input-group mb-3">
+            
+            <span class="input-group-text">Concepto</span>
+            <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
+                                        <option selected>Clic para ver</option>
+                                        <option value="Multa">Multa</option>
+                                        <option value="Padron">Padron</option>
+                                        
+                                        <option value="Otro">Otro</option>
+                                    </select>
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Enviar</button>
+            </div>
+        </form>
     <?php }?>
         
 </div>
 </form>
-<div class="input-group mb-3">
-<span class="input-group-text">DNI </span>
-  <input type="text" class="form-control" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username">
-  <span class="input-group-text">Nombres</span>
-  <input type="text" class="form-control" value="<?php echo $nombres ; ?>" aria-label="Server">
-  
-</div>
-<div class="input-group mb-3">
-<span class="input-group-text">Ap Paterno</span>
-  <input type="text" class="form-control" value="<?php echo $ap_paterno ; ?>" aria-label="Server">
-  <span class="input-group-text">Ap Materno</span>
-  <input type="text" class="form-control" value="<?php echo $ap_materno ; ?>" aria-label="Server">
-  
- 
-</div>
-<div class="input-group mb-3">
-  
-  <span class="input-group-text">Concepto</span>
-  <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
-                            <option selected>Clic para ver</option>
-                            <option value="Multa">Multa</option>
-                            <option value="Padron">Padron</option>
-                            
-                            <option value="Otro">Otro</option>
-                        </select>
-  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Enviar</button>
-</div>
+
     </div>
     <!-- Fin del contenido de la tabla -->
 
