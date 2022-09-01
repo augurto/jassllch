@@ -6,11 +6,15 @@ $password = "JassJass*#17";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
+$mes_actual =date("m");
+$year_actual =date("Y");
+date_default_timezone_set("America/Lima");
+$hoy = date("Y-m-d H:i:s");  
 
 $dni=$_GET["dni"];
-$nombre=$_GET["nombre"];
-$apellido_paterno=$_GET["apellido_paterno"];
-$apellido_materno=$_GET["apellido_materno"];
+$datos=$_GET["datos"];
+$otro_pago=$_GET["otro_pago"];
+$monto=$_GET["monto"];
 $fecha_nacimiento=$_GET["fecha_nacimiento"];
 $natural_lugar=$_GET["natural_lugar"];
 $direccion_actual=$_GET["direccion_actual"];
@@ -27,9 +31,9 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO usuarios_jass (nombres,ap_paterno,ap_materno,fecha_nacimiento, id_natural, direccion_actual,ocupacion,grado_instruccion, estado_civil, dni_usuario_jass, esposa_conviviente, sector_jass, cantidad_miembros, estado_usuario_jass) 
+$sql = "INSERT INTO pagos (dni_usuario_jass,datos_pago,pago_hoy,mes_actual_pago, year_actual_pago,name_user,id_user,deuda,variable_boleta,estado_pago) 
 
-VALUES ('$nombre','$apellido_paterno','$apellido_materno','$fecha_nacimiento','$natural_lugar','$direccion_actual','$ocupacion','$grado_instruccion','$estado_civil','$dni','$esposa_conviviente','$sector','$c_miembros', '0')";
+VALUES ('$dni','$datos','$hoy','$mes_actual','$year_actual','$name_user','$id_user','$monto','ING','0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";

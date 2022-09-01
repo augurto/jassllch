@@ -128,10 +128,10 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         No existe un usuario con ese DNI
         </div>
     <?php } else { ?>
-        <form action="">
+        <form action="includes/insertar/insertar_otros_pagos.php">
         <div class="input-group mb-3">
             <span class="input-group-text">DNI </span>
-            <input type="text" class="form-control" id="dni" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username">
+            <input type="text" class="form-control" id="dni" name="dni" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username" readonly>
             <span class="input-group-text">Nombres</span>
             <input type="text" class="form-control" value="<?php echo $nombres ; ?>" aria-label="Server">
             
@@ -147,7 +147,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
             <div class="input-group mb-3">
             
             <span class="input-group-text">Concepto</span>
-            <input type="hidden" class="form-control" value="<?php echo $datos_pago ; ?>" name="datos" aria-label="Server">
+            <input type="hidden" class="form-control" value="<?php echo $datos_pago ; ?>" name="datos"
+             aria-label="Server">
+             <input type="text" class="form-control" value="<?php echo $usuario ; ?>" name="datos"
+             aria-label="Server">
+             <input type="text" class="form-control" value="<?php echo $id_usuario ; ?>" name="datos"
+             aria-label="Server">
             <select class="form-select" aria-label="Default select example" name="otro_pago" id="otro_pago">
                                         <option selected>Clic para ver</option>
                                         <option value="Multa">Multa</option>
