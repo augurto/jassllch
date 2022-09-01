@@ -129,9 +129,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <input type="text" class="form-control" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username">
   <span class="input-group-text">Nombres</span>
   <input type="text" class="form-control" value="<?php echo $nombres ; ?>" aria-label="Server">
-  <span class="input-group-text">Nombres</span>
+  <span class="input-group-text">Ap Paterno</span>
   <input type="text" class="form-control" value="<?php echo $ap_paterno ; ?>" aria-label="Server">
-  <span class="input-group-text">Nombres</span>
+  <span class="input-group-text">Ap Materno</span>
   <input type="text" class="form-control" value="<?php echo $ap_materno ; ?>" aria-label="Server">
   
 </div>
