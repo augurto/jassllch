@@ -15,8 +15,8 @@ $dni=$_GET["dni"];
 $datos=$_GET["datos"];
 $otro_pago=$_GET["otro_pago"];
 $monto=$_GET["monto"];
-$fecha_nacimiento=$_GET["fecha_nacimiento"];
-$natural_lugar=$_GET["natural_lugar"];
+$usuario=$_GET["usuario"];
+$id_usuario=$_GET["id_usuario"];
 $direccion_actual=$_GET["direccion_actual"];
 $ocupacion=$_GET["ocupacion"];
 $grado_instruccion=$_GET["grado_instruccion"];
@@ -33,7 +33,7 @@ echo "Connected successfully";
  
 $sql = "INSERT INTO pagos (dni_usuario_jass,datos_pago,pago_hoy,mes_actual_pago, year_actual_pago,name_user,id_user,deuda,variable_boleta,estado_pago) 
 
-VALUES ('$dni','$datos','$hoy','$mes_actual','$year_actual','$name_user','$id_user','$monto','ING','0')";
+VALUES ('$dni','$datos','$hoy','$mes_actual','$year_actual','$usuario','$id_usuario','$monto','ING','0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";

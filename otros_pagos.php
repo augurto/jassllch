@@ -10,10 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 
-$mes_actual =date("m");
-$year_actual =date("Y");
-date_default_timezone_set("America/Lima");
-$hoy = date("Y-m-d H:i:s");     
+  
 
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
@@ -23,7 +20,11 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $saldo=$rwt['saldo'];
         $usuario=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
-        
+        setlocale(LC_TIME, 'es_ES');
+$monthNum  = 3;
+$dateObj   = DateTime::createFromFormat('!m', $monthNum);
+$monthName = strftime('%B', $dateObj->getTimestamp());
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -149,10 +150,13 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
             <span class="input-group-text">Concepto</span>
             <input type="hidden" class="form-control" value="<?php echo $datos_pago ; ?>" name="datos"
              aria-label="Server">
-             <input type="text" class="form-control" value="<?php echo $usuario ; ?>" name="datos"
+             <input type="hidden" class="form-control" value="<?php echo $usuario ; ?>" name="usuario"
              aria-label="Server">
-             <input type="text" class="form-control" value="<?php echo $id_usuario ; ?>" name="datos"
+             <input type="hidden" class="form-control" value="<?php echo $id_usuario ; ?>" name="id_usuario"
              aria-label="Server">
+             <input type="text" class="form-control" value="<?php echo $monthName ; ?>" name="id_usuario"
+             aria-label="Server">
+             
             <select class="form-select" aria-label="Default select example" name="otro_pago" id="otro_pago">
                                         <option selected>Clic para ver</option>
                                         <option value="Multa">Multa</option>
