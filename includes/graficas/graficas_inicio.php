@@ -4,7 +4,7 @@
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $te=mysqli_query($con,"SELECT count(*) te FROM pagos where estado_pago='0'");
+      $te=mysqli_query($con,"SELECT sum(deuda) te FROM pagos where concepto_pago is not null");
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
@@ -73,7 +73,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Otros Pagos </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><!-- <?php echo $tes;?> --></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tes;?> </div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
