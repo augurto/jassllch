@@ -104,7 +104,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/parts/agregar_variante_tipo.php' ?>
     <?php
     
-    foreach ($link2->query('SELECT * from usuarios_jass where dni_usuario_jass = "'.$_GET['dni'].'"') as $row_pago){ 
+    foreach ($link->query('SELECT * from usuarios_jass where dni_usuario_jass = "'.$_GET['dni'].'"') as $row_pago){ 
         $dni_usuario_jass=$row_pago['dni_usuario_jass'];
         $nombres=$row_pago['nombres'];
         $ap_paterno=$row_pago['ap_paterno'];
