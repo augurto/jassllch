@@ -36,6 +36,7 @@
                         $monto_pago=$row['monto_pago'];
                         $deuda=$row['deuda'];
                         $vuelto=$row['vuelto'];
+                        $concepto=$row['concepto_pago'];
                         $estado=$row['estado_pago'];
                          if ($estado==0) { ?>
                              
@@ -133,7 +134,7 @@
                                         }else{
                                             echo 'Pago';
                                         }
-                                         ?>&id_pago=<?php echo $id_jass; ?>" target="_blank">
+                                         ?>&id_pago=<?php echo $id_jass; ?>&concepto=<?php echo $id_jass; ?>" target="_blank">
                                          <!-- <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-jass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
                                          <i class="fa fa-print"></i>
                                          
