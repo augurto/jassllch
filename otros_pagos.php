@@ -154,7 +154,7 @@ $monthName = strftime('%B', $dateObj->getTimestamp());
              aria-label="Server">
              <input type="hidden" class="form-control" value="<?php echo $id_usuario ; ?>" name="id_usuario"
              aria-label="Server">
-             <input type="text" class="form-control" value="<?php echo $monthName ; ?>" name="id_usuario"
+             <input type="hidden" class="form-control" value="<?php echo $monthName ; ?>" name="nombre_mes"
              aria-label="Server">
              
             <select class="form-select" aria-label="Default select example" name="otro_pago" id="otro_pago">
