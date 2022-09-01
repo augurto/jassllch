@@ -9,6 +9,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
+
+$mes_actual =date("m");
+$year_actual =date("Y");
+date_default_timezone_set("America/Lima");
+$hoy = date("Y-m-d H:i:s");     
+
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
@@ -95,7 +101,14 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
     <?php include 'includes/parts/agregar_variante_tipo.php' ?>
-
+    <?php
+    $dni_url=$_POST['dni'];
+    foreach ($link->query('SELECT * from usuarios_jass where dni_usuario_jass = "'.$dni_url.'"') as $row){ // aca se hace la consulta e iterarla con each. 
+        $dni_usuario_jass=$row['dni_usuario_jass'];
+        $nombres=$row['nombres'];
+        $ap_paterno=$row['ap_paterno'];
+        $ap_materno=$row['ap_materno'];
+    }?> 
 
     <!-- Fin Boton agregar proyecto -->
     <br>
@@ -111,13 +124,13 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 </div>
 </form>
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  <input type="text" class="form-control" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username">
   <span class="input-group-text">DNI</span>
-  <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+  <input type="text" class="form-control" value="<?php echo $ap_paterno ; ?>" aria-label="Server">
   
 </div>
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  <input type="text" class="form-control" value="<?php echo $ap_materno ; ?>" aria-label="Username">
   <span class="input-group-text">DNI</span>
   <input type="text" class="form-control" placeholder="Server" aria-label="Server">
  
