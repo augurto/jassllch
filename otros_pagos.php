@@ -122,6 +122,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <input type="number" class="form-control" id="dni" name="dni" placeholder="Buscar por DNI" aria-label="Recipient's username" aria-describedby="button-addon2">
   <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
     </div>
+    <?php if (empty($dni_usuario_jass)) { ?>
+        <div class="alert alert-warning" role="alert">
+        No existe un usuario con ese DNI
+        </div>
+    <?php }?>
+        
 </div>
 </form>
 <div class="input-group mb-3">
@@ -140,7 +146,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
  
 </div>
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  
   <span class="input-group-text">Concepto</span>
   <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
                             <option selected>Clic para ver</option>
