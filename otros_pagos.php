@@ -109,6 +109,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $nombres=$row_pago['nombres'];
         $ap_paterno=$row_pago['ap_paterno'];
         $ap_materno=$row_pago['ap_materno'];
+        $datos_pago= $nombres.' '.$ap_paterno.' '.$ap_materno;
     }?> 
 
     <!-- Fin Boton agregar proyecto -->
@@ -130,7 +131,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <form action="">
         <div class="input-group mb-3">
             <span class="input-group-text">DNI </span>
-            <input type="text" class="form-control" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username">
+            <input type="text" class="form-control" id="dni" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username">
             <span class="input-group-text">Nombres</span>
             <input type="text" class="form-control" value="<?php echo $nombres ; ?>" aria-label="Server">
             
@@ -146,7 +147,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
             <div class="input-group mb-3">
             
             <span class="input-group-text">Concepto</span>
-            <select class="form-select" aria-label="Default select example" name="estado_civil" id="estado_civil">
+            <input type="text" class="form-control" value="<?php echo $datos_pago ; ?>" aria-label="Server">
+            <select class="form-select" aria-label="Default select example" name="otro_pago" id="otro_pago">
                                         <option selected>Clic para ver</option>
                                         <option value="Multa">Multa</option>
                                         <option value="Padron">Padron</option>
