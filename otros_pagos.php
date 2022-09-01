@@ -147,7 +147,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
             <div class="input-group mb-3">
             
             <span class="input-group-text">Concepto</span>
-            <input type="text" class="form-control" value="<?php echo $datos_pago ; ?>" aria-label="Server">
+            <input type="hidden" class="form-control" value="<?php echo $datos_pago ; ?>" name="datos" aria-label="Server">
             <select class="form-select" aria-label="Default select example" name="otro_pago" id="otro_pago">
                                         <option selected>Clic para ver</option>
                                         <option value="Multa">Multa</option>
@@ -155,7 +155,10 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                         
                                         <option value="Otro">Otro</option>
                                     </select>
-            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Enviar</button>
+           
+            <span class="input-group-text">Monto</span>
+            <input type="number" class="form-control" placeholder="Ingrese monto " name="monto" aria-label="Server">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Registrar</button>
             </div>
         </form>
     <?php }?>
