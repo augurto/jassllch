@@ -28,7 +28,7 @@ echo "Connected successfully";
  
 $sql = "INSERT INTO pagos (dni_usuario_jass,datos_pago,pago_hoy,mes_actual_pago, year_actual_pago,name_user,id_user,deuda,variable_boleta,pago_mes,estado_pago, concepto_pago) 
 
-VALUES ('$dni','$datos','$hoy','$mes_actual','$year_actual','$usuario','$id_usuario','$monto','ING','$nombre_mes','0')";
+VALUES ('$dni','$datos','$hoy','$mes_actual','$year_actual','$usuario','$id_usuario','$monto','ING','$nombre_mes','0','$otro_pago')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../otros_pagos.php'";
