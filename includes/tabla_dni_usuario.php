@@ -36,6 +36,7 @@
                         $monto_pago=$row['monto_pago'];
                         $deuda=$row['deuda'];
                         $vuelto=$row['vuelto'];
+                        $concepto=$row['concepto_pago'];
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
