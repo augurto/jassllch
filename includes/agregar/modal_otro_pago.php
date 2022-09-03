@@ -15,7 +15,7 @@
                                         $("#dos").val(dos);
                                         $("#tres").val(tres);
                                         $("#cuatro").val(cuatro);
-                                        $("#datos").val(dos+" "+tres+" "+cuatro);
+                                        $("#datos_completos").val(dos+" "+tres+" "+cuatro);
                                        
                           
                                       })
@@ -69,7 +69,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Usuario</span>
                         
-                        <input type="text" class="form-control" id="datos" name="datos" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                        <input type="text" class="form-control" id="datos_completos" name="datos_completos" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
