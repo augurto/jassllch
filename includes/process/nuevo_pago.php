@@ -64,11 +64,11 @@ if (mysqli_query($conn, $sql)) {
 VALUES ('$jass','$dni', '$datos', '$hoy2','$mes_pago', '$year_actual', '$name_user', '$id_user', '$monto_pago', '$deuda', '$vuelto', '$mes_actual_reporte','ING', '0', '$mayus_mes_inicio', '', 'Pago de Agua mes : ', '1')";
 if (mysqli_query($conn2, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "location='../../../usuario_jass.php?dni=$dni'";
+      echo "location='../../../usuario_jass.php?dni=$dni&mensaje=2'";
     echo "</script>";
 } else {
       echo"<script language ='JavaScript'>";
-      echo "location='../../../usuario_jass.php?dni=$dni&mensaje=1'";
+      echo "location='../../../usuario_jass.php?dni=$dni&mensaje=3'";
     echo "</script>";
 }
 }
