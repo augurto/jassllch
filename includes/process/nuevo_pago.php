@@ -13,6 +13,7 @@ $dni=$_GET["dnijass"];
 $datos=$_GET["datos"];
 $hoy=$_GET["hoy"];
 $mes_actual=$_GET["mes_pago"];
+$ulti_mes_pago=$_GET["ulti_mes_pago"];
 $cantidadmes=$_GET["cantidadmes"];
 $year_actual=$_GET["year_actual"];
 $name_user=$_GET["name_user"];
@@ -27,7 +28,7 @@ $hoy2 = date("Y-m-d H:i:s");
 
 setlocale(LC_ALL, 'spanish');
 $monthNum  = 2;
-$dateObj   = DateTime::createFromFormat('!m', $mes_fin);
+$dateObj   = DateTime::createFromFormat('!m', $ulti_mes_pago);
 $monthName = strftime('%B', $dateObj->getTimestamp());
 $mayus_mes=ucfirst($monthName);
 $dateObj2   = DateTime::createFromFormat('!m', $mes_actual);

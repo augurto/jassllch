@@ -123,6 +123,27 @@
                                 </select> -->
                         </div> 
                         <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">1er mes de pago</span>
+                        
+                        
+                        <select class="form-select"  name="ulti_mes_pago" id="ulti_mes_pago" required>
+                        
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                        </select>
+                                        
+                        </div> 
+                        <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Cantidad de meses a pagar</label>
                                 <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" value="1" min="1" max="12" required >
                                         
