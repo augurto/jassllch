@@ -56,7 +56,7 @@ if (mysqli_query($conn, $sql)) {
 }
 }else {
   echo"<script language ='JavaScript'>";
-      echo "location='../../../usuario_jass.php?dni=$dni&mensaje=2'";
+      echo "location='../../../index.php?mensaje=2'";
     echo "</script>";
 }
 mysqli_close($conn);
