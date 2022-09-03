@@ -143,11 +143,11 @@
                         </select>
                                         
                         </div> 
-                        <div class="input-group mb-3">
+                       <!--  <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Cantidad de meses a pagar</label>
                                 <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" value="1" min="1" max="12" required >
                                         
-                        </div> 
+                        </div>  -->
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Año </label>
                                 <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  min="2018" required >
