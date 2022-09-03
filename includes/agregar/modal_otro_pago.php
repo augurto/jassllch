@@ -3,19 +3,20 @@
                                         
                                               var unno =$(this).data('unno');
                                               var dnijass3 =$(this).data('dnijass3');
-                                              var paterno =$(this).data('paterno')
-                                              var materno =$(this).data('materno');
-                                              var dnijass =$(this).data('dnijass');
+                                              var dos =$(this).data('dos')
+                                              var tres =$(this).data('tres');
+                                              var cuatro =$(this).data('cuatro');
                                              
 
                                         $("#unno").val(unno);
                                         $("#dnijass3").val(dnijass3);
 
                                         
-                                        $("#paterno").val(paterno);
-                                        $("#materno").val(materno);
-                                        $("#datos").val(nombre+" "+paterno+" "+materno);
-                                        $("#dnijass").val(dnijass);
+                                        $("#dos").val(dos);
+                                        $("#tres").val(tres);
+                                        $("#cuatro").val(cuatro);
+                                        $("#datos").val(dos+" "+tres+" "+cuatro);
+                                       
                           
                                       })
 
@@ -61,12 +62,17 @@
                         <input type="hidden" class="form-control" id="idjass" name="idjass" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">DNI</span>
+                        <span class="input-group-text" id="basic-addon1">Codigo</span>
                         
                         <input type="text" class="form-control" id="unno" name="unno" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Datos</span>
+                        <span class="input-group-text" id="basic-addon1">Usuario</span>
+                        
+                        <input type="text" class="form-control" id="datos" name="datos" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                        </div>
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">DNI</span>
                         <input type="text" class="form-control" id="dnijass3" name="dnijass3" aria-label="Username" aria-describedby="basic-addon1"  readonly>
                         
                         <?php 
@@ -77,21 +83,24 @@
                         ?>
                         </div>
                         <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
-                                <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
-                                        
-                        </div>   
-                        <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
-                                <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" readonly >
-                                <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
-                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
-                                        
-                        </div>  
-                        <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Pago del Mes</span>
+                        <span class="input-group-text" id="basic-addon1">Concepto</span>
                         
-                        <!-- 
+                            <select class="form-select" aria-label="Default select example" name="estado" id="estado">
+                            <option selected>Seleciona Concepto</option>
+                            <option value="Multa">Multa</option>
+                            <option value="Padron">Padron</option>
+                            <option value="Cuota Familiar">Cuota Familiar</option>
+                            <option value="Conexion de Agua" selected>Conexion de Agua</option>
+                            <option value="Conexion de Desague">Conexion de Desague</option>
+                            </select>
+                        
+                     
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Mes</span>
+                        
+                            <!-- 
                             <select class="form-select" aria-label="Default select example" name="estado" id="estado">
                             <option selected>Seleciona Estado</option>
                             <option value="0">Pendiente</option>
