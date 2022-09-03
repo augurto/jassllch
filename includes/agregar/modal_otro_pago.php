@@ -1,8 +1,8 @@
 
 <script >
-                                      $(document).on("click", "#btnmodal1",function () {
+                                      $(document).on("click", "#btnmodal3",function () {
                                         
-                                              var idjass3 =$(this).data('idjass3');
+                                              var idjasss =$(this).data('idjasss');
                                               var nombres2 =$(this).data('nombres2');
                                               var paterno2 =$(this).data('ape2');
                                               var materno2 =$(this).data('ape_mat2');
@@ -10,7 +10,7 @@
                                               var jass_dni2 =$(this).data('jass_dni2');
                                              
 
-                                        $("#idjass3").val(idjass3);
+                                        $("#idjasss").val(idjasss);
                                         $("#nombres2").val(nombres2);
 
                                         
@@ -25,7 +25,7 @@
                                     </script>
 
 <!-- Modal -->
-    <div class="modal fade" id="ModalEdit1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ModalEdit3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -47,7 +47,7 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Cod Usuario</span> -->
-                        <input type="hidden" class="form-control" id="idjass2" name="idjass2" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="hidden" class="form-control" id="idjasss" name="idjasss" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
