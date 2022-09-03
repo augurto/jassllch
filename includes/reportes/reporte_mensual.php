@@ -22,7 +22,7 @@ $ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1' an
 $rwi=mysqli_fetch_array($ti);
 $tin=$rwi["ti"];
 
-$sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'  and pago_mes ='".$nro_mes."' ");
+$sol=mysqli_query($con,"SELECT sum(deuda*cantidad_mes) sol FROM pagos  where estado_pago='0'  and pago_mes ='".$nro_mes."' ");
 $sole=mysqli_fetch_array($sol);
 $soles=$sole["sol"];
 $resultado_saldo_total=$soles-$tin;
