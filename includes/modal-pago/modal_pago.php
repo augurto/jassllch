@@ -118,6 +118,11 @@
                                 <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" value="1" required >
                                         
                         </div> 
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Año </label>
+                                <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  required >
+                                        
+                        </div> 
                         <!-- <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
                                 <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
@@ -144,8 +149,8 @@
                        <!--  <span class="input-group-text" id="basic-addon1">Mes</span> -->
                         
                         <input type="hidden" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
-                        <span class="input-group-text" id="basic-addon1">Año</span>
-                        <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
+                      <!--   <span class="input-group-text" id="basic-addon1">Año</span> -->
+                      <!--   <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly> -->
                         
                         </div>
                         <div class="input-group mb-3">
