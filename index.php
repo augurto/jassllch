@@ -90,18 +90,18 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                       <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
                       <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
                       </button> -->
-                   
-               
-
-        </div>
-                 <?php
+                      <?php
                       if ($_GET['mensaje']==2) { ?>
                         <br>
 
                         <div class="alert alert-primary" role="alert">
                            !ERROR! La cantidad de meses excede el año seleccionado, intente de nuevo
                           </div>
-                <?php  } ?> 
+                       <?php  } ?> 
+               
+
+        </div>
+        
     </div>
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
