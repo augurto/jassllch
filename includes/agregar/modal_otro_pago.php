@@ -55,7 +55,7 @@
                         }
                     </script>
 
-                    <form action="../../includes/process/nuevo_pago.php" name="calculadora">
+                    <form action="../../includes/insertar/insertar_otros_pagos.php" name="calculadora">
                         <div class="modal-body">
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Cod Usuario</span> -->
@@ -71,6 +71,7 @@
                         
                         <input type="text" class="form-control" id="datos_completos" name="datos_completos" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
+                        
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
                         <input type="text" class="form-control" id="dnijass3" name="dnijass3" aria-label="Username" aria-describedby="basic-addon1"  readonly>
@@ -96,17 +97,15 @@
                         
                      
                         </div>
-                        
                         <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Monto</span>
+                        
+                        <input type="number" class="form-control" id="monto" name="monto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                        </div>
+                       <!--  <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Mes</span>
                         
-                            <!-- 
-                            <select class="form-select" aria-label="Default select example" name="estado" id="estado">
-                            <option selected>Seleciona Estado</option>
-                            <option value="0">Pendiente</option>
-                            <option value="1" selected>Terminado</option>
-                            <option value="2">Inactivo</option>
-                            </select> -->
+                         
                             <select name="mes_pago" id="mes_pago" class="form-select" required>
                                 <?php
                                     $mes=date("n"); 
@@ -131,7 +130,7 @@
                                     } 
                                 ?> 
                                 </select>
-                        </div>  
+                        </div>   -->
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Hoy</span> -->
                         <input type="hidden" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >

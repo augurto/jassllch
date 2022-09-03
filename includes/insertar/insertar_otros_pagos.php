@@ -10,10 +10,10 @@ $mes_actual =date("m");
 $year_actual =date("Y");
 date_default_timezone_set("America/Lima");
 $hoy = date("Y-m-d H:i:s");  
-
-$dni=$_GET["dni"];
-$datos=$_GET["datos"];
-$otro_pago=$_GET["otro_pago"];
+$id_jass=$_GET["unno"];
+$dni=$_GET["dnijass3"];
+$datos=$_GET["datos_completos"];
+$otro_pago=$_GET["estado"];
 $monto=$_GET["monto"];
 $usuario=$_GET["usuario"];
 $id_usuario=$_GET["id_usuario"];
