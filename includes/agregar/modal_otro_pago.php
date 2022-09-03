@@ -2,14 +2,14 @@
                                       $(document).on("click", "#btnmodall",function () {
                                         
                                               var unno =$(this).data('unno');
-                                              var nombre =$(this).data('nombre');
+                                              var dnijass3 =$(this).data('dnijass3');
                                               var paterno =$(this).data('paterno')
                                               var materno =$(this).data('materno');
                                               var dnijass =$(this).data('dnijass');
                                              
 
                                         $("#unno").val(unno);
-                                        $("#nombre").val(nombre);
+                                        $("#dnijass3").val(dnijass3);
 
                                         
                                         $("#paterno").val(paterno);
@@ -67,7 +67,7 @@
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Datos</span>
-                        <input type="text" class="form-control" id="datos" name="datos" aria-label="Username" aria-describedby="basic-addon1"  readonly>
+                        <input type="text" class="form-control" id="dnijass3" name="dnijass3" aria-label="Username" aria-describedby="basic-addon1"  readonly>
                         
                         <?php 
                         $mes_actual =date("m");
