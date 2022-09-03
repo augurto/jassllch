@@ -76,15 +76,31 @@ $pdf->setY(40);$pdf->setX(135);
 //// Array de Cabecera
 $header = array("Nro", "Concepto","Cant.","Precio","Total");
 //// Arrar de Productos
+if ($cantidad_mes>1) {
 $products = array(
+   
+        
     
-	array("01", $concepto.$inicio_mes.' : '.$fin_mes,$cantidad_mes,$monto_usuario,0),
+	array("01", $concepto.$inicio_mes.' - '.$fin_mes,$cantidad_mes,$monto_usuario,0),
 	/* array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
 	array("0001", "Producto 3",5,80,0), 
     array("0001", "Producto 3",4,30,0),
 	array("0001", "Producto 3",7,80,0), */
 );
+}else {
+    $products = array(
+   
+        
+    
+        array("01", $concepto.$inicio_mes,$cantidad_mes,$monto_usuario,0),
+        /* array("0024", "Producto 2",5,80,0),
+        array("0001", "Producto 3",1,40,0),
+        array("0001", "Producto 3",5,80,0), 
+        array("0001", "Producto 3",4,30,0),
+        array("0001", "Producto 3",7,80,0), */
+    );
+}
     // Column widths
     $w = array(20, 95, 20, 25, 25);
     // Header

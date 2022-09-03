@@ -115,10 +115,10 @@
                         </div> 
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Cantidad de meses a pagar</label>
-                                <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
+                                <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" value="1" required >
                                         
                         </div> 
-                        <div class="input-group mb-3">
+                        <!-- <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
                                 <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
                                         
@@ -131,7 +131,7 @@
                                 <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
                                 <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                                         
-                        </div>  
+                        </div>   -->
                          
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Hoy</span> -->
