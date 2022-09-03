@@ -60,8 +60,8 @@
                             <td><?php echo 'ING-'.$id_jass; ?></td>
                             <td><?php echo $pago_hoy ?></td>
                             <td><?php echo $name_user ?></td>
-                            <td><?php echo $pago_mes ?></td>
-                            <td><?php echo 'S/ '.number_format($deuda, 2, ".",",")?></td>
+                            <td><?php echo $mes_inicio.' - '.$mes_fin ?></td>
+                            <td><?php echo 'S/ '.number_format($deuda*$cantidad_mes, 2, ".",",")?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Pagado';
