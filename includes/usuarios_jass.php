@@ -70,7 +70,7 @@
                                          
                                         </button>
 
-                                        <button type="button" id="btnmodal3" class="btn btn-warning" data-toggle="modal" data-target="#ModalEdit3" data-uno="<?php echo $id_jass; ?>" data-dos="<?php echo $nombre; ?>" data-tres="<?php echo $ap_paterno;?>" data-materno2="<?php echo $ap_materno;  ?>" data-dnijass3="<?php echo $dni_jass;  ?>" >
+                                        <button type="button" id="btnmodall" class="btn btn-warning" data-toggle="modal" data-target="#ModalEditt" data-uno="<?php echo $id_jass; ?>" data-dos="<?php echo $nombre; ?>" data-tres="<?php echo $ap_paterno;?>" data-materno2="<?php echo $ap_materno;  ?>" data-dnijass3="<?php echo $dni_jass;  ?>" >
                                          <i class="fa fa-plus"></i>
                                          
                                         </button>
