@@ -1,14 +1,14 @@
 <script >
                                       $(document).on("click", "#btnmodall",function () {
                                         
-                                              var uno =$(this).data('uno');
+                                              var unno =$(this).data('unno');
                                               var nombre =$(this).data('nombre');
                                               var paterno =$(this).data('paterno')
                                               var materno =$(this).data('materno');
                                               var dnijass =$(this).data('dnijass');
                                              
 
-                                        $("#idjass").val(idjass);
+                                        $("#unno").val(unno);
                                         $("#nombre").val(nombre);
 
                                         
@@ -63,7 +63,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
                         
-                        <input type="text" class="form-control" id="uno" name="uno" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                        <input type="text" class="form-control" id="unno" name="unno" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Datos</span>
