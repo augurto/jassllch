@@ -114,15 +114,16 @@
                                 </select>
                         </div> 
                         <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Cantidad de meses a pagar</label>
+                                <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
+                                        
+                        </div> 
+                        <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
                                 <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
                                         
                         </div> 
-                        <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Cantidad</label>
-                                <input type="text" class="form-control" id="cantidadmes" autofocus name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
-                                        
-                        </div>   
+                          
                         
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
