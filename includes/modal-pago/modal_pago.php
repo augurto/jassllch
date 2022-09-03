@@ -127,7 +127,7 @@
                         
                         
                         <select class="form-select"  name="ulti_mes_pago" id="ulti_mes_pago" required>
-                        <option >Seleccione Ultimo mes</option>
+                        <option value="0"></option>
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
