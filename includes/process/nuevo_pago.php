@@ -62,7 +62,7 @@ if (mysqli_query($conn, $sql)) {
   $sql2 = "INSERT INTO pagos (id_jass, dni_usuario_jass, datos_pago, pago_hoy, mes_actual_pago,year_actual_pago,name_user,id_user, monto_pago, deuda, vuelto, pago_mes,variable_boleta, estado_pago,mes_inicio, mes_fin,concepto_pago,cantidad_mes) 
 
 VALUES ('$jass','$dni', '$datos', '$hoy2','$mes_pago', '$year_actual', '$name_user', '$id_user', '$monto_pago', '$deuda', '$vuelto', '$mes_actual_reporte','ING', '0', '$mayus_mes_inicio', '', 'Pago de Agua mes : ', '1')";
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($conn, $sql2)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../usuario_jass.php?dni=$dni&mensaje=2'";
     echo "</script>";
