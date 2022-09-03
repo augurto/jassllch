@@ -162,7 +162,7 @@
                          -->
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
-                                <input type="number" min="3" max="5" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" readonly >
+                                <input type="number" min="3" max="5" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" >
                                 <!-- <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
                                 <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly > -->
                                         
