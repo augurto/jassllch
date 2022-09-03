@@ -43,13 +43,11 @@
                         function Suma() {
                         var monto_pago = document.calculadora.monto_pago.value;
                         var deuda = document.calculadora.deuda.value;
-                        var cantidad_mes = document.calculadora.cantidad_mes.value;
                         try{
                             //Calculamos el número escrito:
                             monto_pago = (isNaN(parseFloat(monto_pago)))? 0 : parseFloat(monto_pago);
-                            cantidad_mes = (isNaN(parseFloat(cantidad_mes)))? 0 : parseFloat(cantidad_mes);
                             deuda = (isNaN(parseFloat(deuda)))? 0 : parseFloat(deuda);
-                            document.calculadora.vuelto.value = monto_pago-cantidad_mes*deuda;
+                            document.calculadora.vuelto.value = monto_pago-deuda;
                         }
                         //Si se produce un error no hacemos nada
                         catch(e) {}
@@ -78,6 +76,19 @@
                         $hoy = date("Y-m-d H:i:s");     
                         ?>
                         </div>
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
+                                <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
+                                        
+                        </div>   
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
+                                <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" readonly >
+                                <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
+                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                                        
+                        </div>  
+                        <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Pago del Mes</span>
                         
                         <!-- 
@@ -113,25 +124,6 @@
                                 </select>
                         </div>  
                         <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Cantidad de Meses a Pagar</label>
-                                <input type="number" class="form-control" id="cantidad_mes" value="1" name="cantidad_mes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
-                                        
-                        </div>   
-                        <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
-                                <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
-                                        
-                        </div>   
-                        <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
-                                <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" readonly >
-                                <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
-                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
-                                        
-                        </div>  
-                        <div class="input-group mb-3">
-                        
-                        <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Hoy</span> -->
                         <input type="hidden" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
                                                
@@ -142,8 +134,8 @@
                        <!--  <span class="input-group-text" id="basic-addon1">Mes</span> -->
                         
                         <input type="hidden" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
-                        <span class="input-group-text" id="basic-addon1">Año</span>
-                        <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  >
+                       <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
+                        <input type="hidden" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
                         
                         </div>
                         <div class="input-group mb-3">
