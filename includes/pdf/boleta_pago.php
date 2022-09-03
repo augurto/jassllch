@@ -12,6 +12,8 @@ $monto_usuario=$_GET['monto_usuario'];
 $vuelto=$_GET['vuelto'];
 $estado=$_GET['estado'];
 $concepto=$_GET['concepto'];
+$incio_mes=$_GET['incio_mes'];
+$fin_mes=$_GET['fin_mes'];
 
 $pdf = new FPDF('L','mm','A5');
 $pdf->AddPage();
@@ -75,7 +77,7 @@ $header = array("Nro", "Concepto","Cant.","Precio","Total");
 //// Arrar de Productos
 $products = array(
     
-	array("01", $estado.' '.$concepto,1,$monto_usuario,0),
+	array("01", $incio_mes.' : '.$fin_mes.' '.$concepto,1,$monto_usuario,0),
 	/* array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
 	array("0001", "Producto 3",5,80,0), 
