@@ -68,6 +68,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/modal-pago/modal_pago.php'; ?>
     <?php include 'includes/modal-pago/modal_egreso.php'; ?>
     <?php include 'includes/editar/editar_usuario.php'; ?>
+    <?php include 'includes/agregar/modal_otro_pago.php'; ?>
     
     <!-- fin de procesos de modal -->
 
