@@ -26,12 +26,12 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO pagos (id_jass,dni_usuario_jass,datos_pago,pago_hoy,mes_actual_pago, year_actual_pago,name_user,id_user,deuda,variable_boleta,pago_mes,estado_pago, concepto_pago) 
+$sql = "INSERT INTO pagos (id_jass,dni_usuario_jass,datos_pago,pago_hoy,mes_actual_pago, year_actual_pago,name_user,id_user,deuda,variable_boleta,pago_mes,estado_pago, concepto_pago, cantidad_mes) 
 
-VALUES ('$id_jass','$dni','$datos','$hoy','$mes_actual','$year_actual','$usuario','$id_usuario','$monto','ING','$nombre_mes','0','$otro_pago')";
+VALUES ('$id_jass','$dni','$datos','$hoy','$mes_actual','$year_actual','$usuario','$id_usuario','$monto','ING','$nombre_mes','0','$otro_pago','1')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "location='../../../index.php'";
+      echo "location='../../../usuario_jass.php?dni=$dni'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
