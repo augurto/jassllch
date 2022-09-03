@@ -2,9 +2,9 @@
 <script >
                                       $(document).on("click", "#btnmodal3",function () {
                                         
-                                              var idjasss =$(this).data('idjasss');
-                                              var nombres2 =$(this).data('nombres2');
-                                              var paterno2 =$(this).data('ape2');
+                                              var uno =$(this).data('uno');
+                                              var dos =$(this).data('dos');
+                                              var tres =$(this).data('tres');
                                               var materno2 =$(this).data('ape_mat2');
                                               var estado_civil2 =$(this).data('estado_civil2');
                                               var jass_dni2 =$(this).data('jass_dni2');
