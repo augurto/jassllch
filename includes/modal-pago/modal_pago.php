@@ -79,16 +79,25 @@
                         ?>
                         </div>
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Pago del Mes</span>
+                        <span class="input-group-text" id="basic-addon1">1er mes de pago</span>
                         
-                        <!-- 
-                            <select class="form-select" aria-label="Default select example" name="estado" id="estado">
-                            <option selected>Seleciona Estado</option>
-                            <option value="0">Pendiente</option>
-                            <option value="1" selected>Terminado</option>
-                            <option value="2">Inactivo</option>
-                            </select> -->
-                            <select name="mes_pago" id="mes_pago" class="form-select" required>
+                        
+                            <select class="form-select" aria-label="Default select example" name="mes_pago" id="mes_pago">
+                            <option selected>Seleciona Mes</option>
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                            </select>
+                            <!-- <select name="mes_pago" id="mes_pago" class="form-select" required>
                                 <?php
                                     $mes=date("n"); 
                                     $rango=11; 
@@ -111,7 +120,7 @@
                                         echo "<option value='$mes'>$i</option>"; 
                                     } 
                                 ?> 
-                                </select>
+                                </select> -->
                         </div> 
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Cantidad de meses a pagar</label>
