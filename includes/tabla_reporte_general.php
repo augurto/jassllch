@@ -37,6 +37,7 @@
                         $deuda=$row['deuda'];
                         $vuelto=$row['vuelto'];
                         $concepto=$row['concepto_pago'];
+                        $cantidad_mes=$row['cantidad_mes'];
                         $estado=$row['estado_pago'];
                          if ($estado==0) { ?>
                              
@@ -113,7 +114,7 @@
                             
                             
                             ?></td>
-                            <td><?php echo 'S/ '.number_format($deuda, 2, ".",",") ?></td>
+                            <td><?php echo 'S/ '.number_format($deuda*$cantidad_mes, 2, ".",",") ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Ingreso';
