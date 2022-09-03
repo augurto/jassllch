@@ -10,15 +10,15 @@
                                               var jass_dni2 =$(this).data('jass_dni2');
                                              
 
-                                        $("#idjass2").val(idjass3);
-                                        $("#nombres").val(nombres2);
+                                        $("#idjass3").val(idjass3);
+                                        $("#nombres2").val(nombres2);
 
                                         
-                                        $("#paterno").val(paterno2);
-                                        $("#materno").val(materno2);
-                                        $("#datos").val(nombres+" "+paterno+" "+materno);
-                                        $("#estado_civil").val(estado_civil2);
-                                        $("#jass_dni").val(jass_dni2);
+                                        $("#paterno2").val(paterno2);
+                                        $("#materno2").val(materno2);
+                                        $("#datos2").val(nombres+" "+paterno+" "+materno);
+                                        $("#estado_civil2").val(estado_civil2);
+                                        $("#jass_dni2").val(jass_dni2);
                           
                                       })
 
@@ -52,7 +52,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
                         
-                        <input type="text" class="form-control" id="jass_dni" name="jass_dni" aria-label="DNI" aria-describedby="basic-addon1"  >
+                        <input type="text" class="form-control" id="jass_dni2" name="jass_dni" aria-label="DNI" aria-describedby="basic-addon1"  >
                         </div>
                      
                         <?php 
@@ -64,18 +64,18 @@
                       
                       <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Nombres</label>
-                                <input type="text" class="form-control" id="nombres" autofocus name="nombres" aria-label="nombres" aria-describedby="basic-addon1"   required >
+                                <input type="text" class="form-control" id="nombres" autofocus name="nombres2" aria-label="nombres" aria-describedby="basic-addon1"   required >
                                         
                         </div> 
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Apellido Paterno</label>
-                                <input type="text" class="form-control" id="paterno" autofocus name="paterno" aria-label="DNI" aria-describedby="basic-addon1"   required >
+                                <input type="text" class="form-control" id="paterno" autofocus name="paterno2" aria-label="DNI" aria-describedby="basic-addon1"   required >
                                         
                         </div>   
                         <div class="input-group mb-3">
                                 
                                 <label class="input-group-text" for="inputGroupSelect01">Apellido Materno</label>
-                                <input type="text" class="form-control" id="materno" name="materno" aria-label="DNI" aria-describedby="basic-addon1"  >
+                                <input type="text" class="form-control" id="materno" name="materno2" aria-label="DNI" aria-describedby="basic-addon1"  >
                                         
                         </div>  
                         <!-- <div class="input-group mb-3">
