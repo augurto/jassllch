@@ -12,7 +12,14 @@ $host_name = "localhost";
 $database = "u415020159_jass"; // Change your database nae
 $username = "u415020159_jass";          // Your database user id 
 $password = "JassJass*#17";    
+date_default_timezone_set("America/Lima");
 $nro_mes=$_GET['mes_pago'];
+$mes_actual =date("m");
+$year_actual =date("Y");
+$dia_actual =date("d");
+$mmm=date("H:i:s");
+
+$hoy = date("Y-m-d H:i:s");  
 
 $connection=mysqli_connect($host_name,$username,$password,$database);
 $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159_jass");
@@ -88,6 +95,6 @@ $pdf->Cell(155,6,'EGRESOS : S/ '.number_format($tin,2, ".",",").'  INGRESOS : S/
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
-$pdf->Output('reporte.pdf','I');
+$pdf->Output('Reporte'.$mes_actual.'-'.$dia_actual.'-'.$mmm.'.pdf','I');
 
 ?>
