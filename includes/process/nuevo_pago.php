@@ -35,7 +35,7 @@ $dateObj2   = DateTime::createFromFormat('!m', $mes_actual);
 $monthName2 = strftime('%B', $dateObj2->getTimestamp());
 $mayus_mes_inicio=ucfirst($monthName2);
 $dateObj3   = DateTime::createFromFormat('!m', $mes_pago);
-$monthName2 = strftime('%B', $dateObj3->getTimestamp());
+$monthName3 = strftime('%B', $dateObj3->getTimestamp());
 $mes_actual_reporte=ucfirst($monthName3);
 $sum_mes=$mes_actual+$mes_fin;
 if (!$conn) {
