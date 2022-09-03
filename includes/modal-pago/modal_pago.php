@@ -82,7 +82,7 @@
                         <span class="input-group-text" id="basic-addon1">1er mes de pago</span>
                         
                         
-                            <select class="form-select" aria-label="Default select example" name="mes_pago" id="mes_pago">
+                            <select class="form-select" aria-label="Default select example" name="mes_pago" id="mes_pago" required>
                             <option selected>Seleciona Mes</option>
                             <option value="1">Enero</option>
                             <option value="2">Febrero</option>
@@ -124,12 +124,12 @@
                         </div> 
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Cantidad de meses a pagar</label>
-                                <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" value="1" required >
+                                <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" value="1" min="1" max="12" required >
                                         
                         </div> 
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Año </label>
-                                <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  required >
+                                <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  min="2018" required >
                                         
                         </div> 
                         <!-- <div class="input-group mb-3">
