@@ -70,7 +70,7 @@ $precio = $fila['id_pagos'];
 $imagen=$fila['deuda'];
 $cantidad_mes=$fila['cantidad_mes'];
 $cantidad_total=$imagen*$cantidad_mes;
-$pdf->Cell(125,8,$titulo,1,0,'L',0);
+$pdf->Cell(125,8,utf8_decode($titulo),1,0,'L',0);
 
 $pdf->Cell(30,8,$variable.'-'.$precio,1,0,'R',0);
 $pdf->Cell(30,8,'S/ '.number_format($cantidad_total,2, ".",","),1,0,'R',0);
