@@ -69,6 +69,11 @@
                                          <i class="fa fa-plus"></i>
                                          
                                         </button>
+
+                                        <button type="button" id="btnmodal" class="btn btn-warning" data-toggle="modal" data-target="#ModalEdit1" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dnijass="<?php echo $dni_jass;  ?>" >
+                                        <i class="fa-thin fa-money-bill"></i>
+                                         
+                                        </button>
                             </td>
                         </tr>
                         <?php
