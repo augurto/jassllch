@@ -25,7 +25,7 @@
                         <?php 
                            $count=1;
                            $dni_url=$_GET['dni'];
-                        foreach ($link->query('SELECT * from pagos where dni_usuario_jass = "'.$dni_url.'"') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from pagos where dni_usuario_jass = "'.$dni_url.'" ORDER BY pago_hoy DESC ') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_jass=$row['id_pagos'];
                         $dni_jass=$row['dni_usuario_jass'];
