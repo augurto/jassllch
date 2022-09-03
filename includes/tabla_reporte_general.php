@@ -38,6 +38,8 @@
                         $vuelto=$row['vuelto'];
                         $concepto=$row['concepto_pago'];
                         $cantidad_mes=$row['cantidad_mes'];
+                        $mes_inicio=$row['mes_inicio'];
+                        $mes_fin=$row['mes_fin'];
                         $estado=$row['estado_pago'];
                          if ($estado==0) { ?>
                              
@@ -135,7 +137,7 @@
                                         }else{
                                             echo 'Pago';
                                         }
-                                         ?>&id_pago=<?php echo $id_jass; ?>&concepto=<?php echo $concepto; ?>" target="_blank">
+                                         ?>&id_pago=<?php echo $id_jass; ?>&concepto=<?php echo $concepto; ?>&cantidad_meses=<?php echo $cantidad_mes; ?>&inicio_mes=<?php echo $mes_inicio; ?>&fin_mes=<?php echo $mes_fin; ?>" target="_blank">
                                          <!-- <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-jass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
                                          <i class="fa fa-print"></i>
                                          
