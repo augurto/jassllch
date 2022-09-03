@@ -108,7 +108,7 @@
                                         if ($meses=="November") $meses="Noviembre";
                                         if ($meses=="December") $meses="Diciembre";
                                         $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                        echo "<option value='$mes'>$mes</option>"; 
+                                        echo "<option value='$mes'>$i</option>"; 
                                     } 
                                 ?> 
                                 </select>
