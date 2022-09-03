@@ -123,7 +123,7 @@
                                 </select> -->
                         </div> 
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">1er mes de pago</span>
+                        <span class="input-group-text" id="basic-addon1">Ultimo mes de pago</span>
                         
                         
                         <select class="form-select"  name="ulti_mes_pago" id="ulti_mes_pago" required>
@@ -149,6 +149,13 @@
                                         
                         </div>   -->
                         <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
+                                <input type="number" min="3" max="5" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" >
+                                <!-- <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
+                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly > -->
+                                        
+                        </div> 
+                        <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Año </label>
                                 <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  min="2018" required >
                                         
@@ -160,13 +167,7 @@
                         </div> 
                           
                          -->
-                        <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
-                                <input type="number" min="3" max="5" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" >
-                                <!-- <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
-                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly > -->
-                                        
-                        </div>  
+                         
                          
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Hoy</span> -->
