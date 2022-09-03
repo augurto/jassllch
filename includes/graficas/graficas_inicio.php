@@ -8,11 +8,11 @@
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1'");
+      $ti=mysqli_query($con,"SELECT sum(deuda*cantidad_mes) ti FROM pagos  where estado_pago='1'");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
-      $sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'");
+      $sol=mysqli_query($con,"SELECT sum(deuda*cantidad_mes) sol FROM pagos  where estado_pago='0'");
       $sole=mysqli_fetch_array($sol);
       $soles=$sole["sol"];
 
