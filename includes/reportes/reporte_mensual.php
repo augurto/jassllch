@@ -13,6 +13,7 @@ $database = "u415020159_jass"; // Change your database nae
 $username = "u415020159_jass";          // Your database user id 
 $password = "JassJass*#17";    
 $nro_mes=$_GET['mes_pago'];
+
 $connection=mysqli_connect($host_name,$username,$password,$database);
 $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159_jass");
 //Consulta la tabla productos solicitando todos los productos
@@ -67,11 +68,12 @@ $variable = $fila['variable_boleta'];
 
 $precio = $fila['id_pagos'];
 $imagen=$fila['deuda'];
-
+$cantidad_mes=$fila['cantidad_mes'];
+$cantidad_total=$imagen*$cantidad_mes;
 $pdf->Cell(125,8,$titulo,1,0,'L',0);
 
 $pdf->Cell(30,8,$variable.'-'.$precio,1,0,'R',0);
-$pdf->Cell(30,8,'S/ '.number_format($imagen,2, ".",","),1,0,'R',0);
+$pdf->Cell(30,8,'S/ '.number_format($cantidad_total,2, ".",","),1,0,'R',0);
 //Muestro la iamgen dentro de la celda GetX y GetY dan las coordenadas actuales de la fila
 
 /* $pdf->Cell( 30, 15, $pdf->Image($imagen, $pdf->GetX()+5, $pdf->GetY()+3, 20), 1, 0, 'C', false ); */
