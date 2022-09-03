@@ -100,7 +100,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Monto</span>
                         
-                        <input type="number" class="form-control" id="monto" name="monto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                        <input type="number" class="form-control" id="monto" name="monto" aria-label="DNI" aria-describedby="basic-addon1"  >
                         </div>
                        <!--  <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Mes</span>
