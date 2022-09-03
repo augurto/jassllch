@@ -43,7 +43,7 @@ if (!$conn) {
 }
  
 echo "Connected successfully";
-if ($sum_mes>1) {
+if ($cantidadmes>1) {
   
 
 $sql = "INSERT INTO pagos (id_jass, dni_usuario_jass, datos_pago, pago_hoy, mes_actual_pago,year_actual_pago,name_user,id_user, monto_pago, deuda, vuelto, pago_mes,variable_boleta, estado_pago,mes_inicio, mes_fin,concepto_pago,cantidad_mes) 
