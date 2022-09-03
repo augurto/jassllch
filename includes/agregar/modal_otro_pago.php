@@ -1,6 +1,6 @@
 
 <script >
-                                      $(document).on("click", "#btnmodal0",function () {
+                                      $(document).on("click", "#btnmodal1",function () {
                                         
                                               var idjass3 =$(this).data('idjass3');
                                               var nombres2 =$(this).data('nombres2');
