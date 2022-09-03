@@ -83,7 +83,7 @@
                         
                         
                             <select class="form-select" aria-label="Default select example" name="mes_pago" id="mes_pago" required>
-                            <option selected>Seleciona Mes</option>
+                            <option >Seleciona Mes</option>
                             <option value="1">Enero</option>
                             <option value="2">Febrero</option>
                             <option value="3">Marzo</option>
