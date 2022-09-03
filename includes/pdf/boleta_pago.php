@@ -78,7 +78,7 @@ $header = array("Nro", "Concepto","Cant.","Precio","Total");
 //// Arrar de Productos
 $products = array(
     
-	array("01", $concepto.$inicio_mes.' : '.$fin_mes,$cantidad_mes,$cantidad_mes*$monto_usuario,0),
+	array("01", $concepto.$inicio_mes.' : '.$fin_mes,$cantidad_mes,$monto_usuario,0),
 	/* array("0024", "Producto 2",5,80,0),
 	array("0001", "Producto 3",1,40,0),
 	array("0001", "Producto 3",5,80,0), 
