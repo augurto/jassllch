@@ -15,9 +15,9 @@ $dni=$_GET["dnijass3"];
 $datos=$_GET["datos_completos"];
 $otro_pago=$_GET["estado"];
 $monto=$_GET["monto"];
-$usuario=$_GET["usuario"];
-$id_usuario=$_GET["id_usuario"];
-$nombre_mes_otro=$_GET["nombre_mes"];
+$usuario=$_GET["name_user"];
+$id_usuario=$_GET["id_user"];
+$nombre_mes_otro=$_GET["mes_actual"];
 
 $nombre_mes=ucfirst($nombre_mes_otro);
 if (!$conn) {
@@ -26,12 +26,12 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO pagos (dni_usuario_jass,datos_pago,pago_hoy,mes_actual_pago, year_actual_pago,name_user,id_user,deuda,variable_boleta,pago_mes,estado_pago, concepto_pago) 
+$sql = "INSERT INTO pagos (id_jass,dni_usuario_jass,datos_pago,pago_hoy,mes_actual_pago, year_actual_pago,name_user,id_user,deuda,variable_boleta,pago_mes,estado_pago, concepto_pago) 
 
-VALUES ('$dni','$datos','$hoy','$mes_actual','$year_actual','$usuario','$id_usuario','$monto','ING','$nombre_mes','0','$otro_pago')";
+VALUES ('$id_jass','$dni','$datos','$hoy','$mes_actual','$year_actual','$usuario','$id_usuario','$monto','ING','$nombre_mes','0','$otro_pago')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "location='../../../otros_pagos.php'";
+      echo "location='../../../index.php'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
