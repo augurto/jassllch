@@ -21,7 +21,7 @@ $monto_pago=$_GET["monto_pago"];
 $deuda=$_GET["deuda"];
 $vuelto=$_GET["vuelto"];
 $mes_pago=$_GET["mes_pago"];
-$mes_fin=$mes_actual+$cantidadmes-1;
+$mes_fin=($mes_actual+$cantidadmes)-1;
 date_default_timezone_set("America/Lima");
 $hoy2 = date("Y-m-d H:i:s");
 
