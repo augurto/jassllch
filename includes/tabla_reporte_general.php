@@ -142,10 +142,10 @@
                                         <i class="fa fa-file" aria-hidden="true"></i>
                                         
                                         </a>
-                                        <a href="../otros_pagos.php?dni=<?php echo $dni_jass; ?>">
+                                        <!-- <a href="../otros_pagos.php?dni=<?php echo $dni_jass; ?>">
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                         
-                                        </a>
+                                        </a> -->
                             </td>
                         </tr>
                         <?php
