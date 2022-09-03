@@ -52,7 +52,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
                         
-                        <input type="text" class="form-control" id="jass_dni2" name="jass_dni" aria-label="DNI" aria-describedby="basic-addon1"  >
+                        <input type="text" class="form-control" id="uno" name="uno" aria-label="DNI" aria-describedby="basic-addon1"  >
                         </div>
                      
                         <?php 
@@ -64,12 +64,12 @@
                       
                       <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Nombres</label>
-                                <input type="text" class="form-control" id="nombres" autofocus name="nombres2" aria-label="nombres" aria-describedby="basic-addon1"   required >
+                                <input type="text" class="form-control" id="dos" autofocus name="dos" aria-label="nombres" aria-describedby="basic-addon1"   required >
                                         
                         </div> 
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Apellido Paterno</label>
-                                <input type="text" class="form-control" id="paterno" autofocus name="paterno2" aria-label="DNI" aria-describedby="basic-addon1"   required >
+                                <input type="text" class="form-control" id="tres" autofocus name="tres" aria-label="DNI" aria-describedby="basic-addon1"   required >
                                         
                         </div>   
                         <div class="input-group mb-3">
