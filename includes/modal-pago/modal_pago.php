@@ -82,8 +82,8 @@
                         <span class="input-group-text" id="basic-addon1">1er mes de pago</span>
                         
                         
-                            <select class="form-select" aria-label="Default select example" name="mes_pago" id="mes_pago" required>
-                            <
+                            <select class="form-select"  name="mes_pago" id="mes_pago" required>
+                            
                             <option value="1">Enero</option>
                             <option value="2">Febrero</option>
                             <option value="3">Marzo</option>

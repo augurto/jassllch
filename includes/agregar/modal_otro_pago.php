@@ -62,9 +62,9 @@
                         <input type="hidden" class="form-control" id="idjass" name="idjass" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Codigo</span>
+                        <!-- <span class="input-group-text" id="basic-addon1">Codigo</span> -->
                         
-                        <input type="text" class="form-control" id="unno" name="unno" aria-label="DNI" aria-describedby="basic-addon1" readonly >
+                        <input type="hidden" class="form-control" id="unno" name="unno" aria-label="DNI" aria-describedby="basic-addon1" readonly >
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Usuario</span>
@@ -100,7 +100,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Monto</span>
                         
-                        <input type="number" class="form-control" id="monto" name="monto" aria-label="DNI" aria-describedby="basic-addon1"  >
+                        <input type="number" class="form-control" id="monto" name="monto" min="0" aria-label="DNI" aria-describedby="basic-addon1"  >
                         </div>
                        <!--  <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Mes</span>
@@ -143,7 +143,7 @@
                         
                         <input type="hidden" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
                         <span class="input-group-text" id="basic-addon1">Año</span>
-                        <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  >
+                        <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" min="2016" value="<?php echo $year_actual;?>"  >
                         
                         </div>
                         <div class="input-group mb-3">
