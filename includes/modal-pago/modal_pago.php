@@ -43,6 +43,7 @@
                         function Suma() {
                         var monto_pago = document.calculadora.monto_pago.value;
                         var deuda = document.calculadora.deuda.value;
+                        var cantidad_mes = document.calculadora.cantidad_mes.value;
                         try{
                             //Calculamos el número escrito:
                             monto_pago = (isNaN(parseFloat(monto_pago)))? 0 : parseFloat(monto_pago);
