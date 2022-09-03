@@ -71,7 +71,7 @@
                                         </button>
 
                                         <button type="button" id="btnmodal" class="btn btn-warning" data-toggle="modal" data-target="#ModalEdit1" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dnijass="<?php echo $dni_jass;  ?>" >
-                                        <i class="fa fa-money" aria-hidden="true"></i>
+                                         <i class="fa fa-empire"></i>
                                          
                                         </button>
                             </td>
