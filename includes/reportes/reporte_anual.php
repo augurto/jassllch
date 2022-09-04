@@ -13,10 +13,6 @@ $database = "u415020159_jass"; // Change your database nae
 $username = "u415020159_jass";          // Your database user id 
 $password = "JassJass*#17";    
 $nro_mes=$_GET['year'];
-date_default_timezone_set("America/Lima");
-$nro_mes=$_GET['mes_pago'];
-
-$mmm=date("H:i:s");
 $connection=mysqli_connect($host_name,$username,$password,$database);
 $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159_jass");
 //Consulta la tabla productos solicitando todos los productos
@@ -92,6 +88,6 @@ $pdf->Cell(155,6,'EGRESOS : S/ '.number_format($tin,2, ".",",").'  INGRESOS : S/
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
-$pdf->Output('Reporte '.$nro_mes.' | '.$mmm.'.pdf','I');
+$pdf->Output('Reporte '.$nro_mes.'.pdf','I');
 
 ?>
