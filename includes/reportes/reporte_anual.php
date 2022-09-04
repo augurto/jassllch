@@ -88,6 +88,6 @@ $pdf->Cell(155,6,'EGRESOS : S/ '.number_format($tin,2, ".",",").'  INGRESOS : S/
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
-$pdf->Output();
+$pdf->Output('Reporte '.$nro_mes.' | '.$mmm.'.pdf','I');
 
 ?>
