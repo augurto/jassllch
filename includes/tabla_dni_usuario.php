@@ -88,6 +88,7 @@
                                          
                                         </button>
                                         </a>
+                                        <a href="includes/insertar/actualizar_eliminar.php?id_pago=<?php echo $id_jass; ?>&dni_pago=<?php echo $dni_jass; ?>"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php
