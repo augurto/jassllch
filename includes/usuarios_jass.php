@@ -22,7 +22,7 @@
                              
                         <?php 
                            $count=1;
-                        foreach ($link->query('SELECT * from usuarios_jass') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from usuarios_jass where estado_usuario_jass = 0') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_jass=$row['id_jass'];
                         $dni_jass=$row['dni_usuario_jass'];
