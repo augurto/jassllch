@@ -36,6 +36,10 @@
                         $monto_pago=$row['monto_pago'];
                         $deuda=$row['deuda'];
                         $vuelto=$row['vuelto'];
+                        $concepto=$row['concepto_pago'];
+                        $cantidad_mes=$row['cantidad_mes'];
+                        $mes_inicio=$row['mes_inicio'];
+                        $mes_fin=$row['mes_fin'];
                         $estado=$row['estado_pago'];
                          if ($estado==0) { ?>
                              
@@ -112,7 +116,7 @@
                             
                             
                             ?></td>
-                            <td><?php echo 'S/ '.number_format($deuda, 2, ".",",") ?></td>
+                            <td><?php echo 'S/ '.number_format($deuda*$cantidad_mes, 2, ".",",") ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Ingreso';
@@ -127,19 +131,24 @@
                                          <!-- <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-id_jass="<?php echo $codigo; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
                                         <i class="fa fa-edit"></i>
                                         </button> -->
-                                        <a href="../includes/pdf/boleta_pago.php?dni=<?php echo $dni_jass; ?>&datos=<?php echo $nombre; ?>&fecha_pago=<?php echo $pago_hoy; ?>&usuario_atencion=<?php echo $name_user; ?>&pago_mes=<?php echo $pago_mes; ?>&monto_mes=<?php echo $monto_pago; ?>&monto_usuario=<?php echo $deuda; ?>&vuelto=<?php echo $vuelto; ?>&estado=<?php 
+                                        <a href="../includes/pdf/boleta_pago2.php?dni=<?php echo $dni_jass; ?>&datos=<?php echo $nombre; ?>&fecha_pago=<?php echo $pago_hoy; ?>&usuario_atencion=<?php echo $name_user; ?>&pago_mes=<?php echo $pago_mes; ?>&monto_mes=<?php echo $monto_pago; ?>&monto_usuario=<?php echo $deuda; ?>&vuelto=<?php echo $vuelto; ?>&estado=<?php 
                                         if ($estado==0) {
                                             echo 'Agua';
                                         }else{
                                             echo 'Pago';
                                         }
-                                         ?>&id_pago=<?php echo $id_jass; ?>" target="_blank">
+                                         ?>&id_pago=<?php echo $id_jass; ?>&concepto=<?php echo $concepto; ?>&cantidad_mes=<?php echo $cantidad_mes; ?>&inicio_mes=<?php echo $mes_inicio; ?>&fin_mes=<?php echo $mes_fin; ?>" target="_blank">
                                          <!-- <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-jass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
                                          <i class="fa fa-print"></i>
                                          
                                         </button> -->
                                         <i class="fa fa-file" aria-hidden="true"></i>
+                                        
                                         </a>
+                                        <!-- <a href="../otros_pagos.php?dni=<?php echo $dni_jass; ?>">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        
+                                        </a> -->
                             </td>
                         </tr>
                         <?php

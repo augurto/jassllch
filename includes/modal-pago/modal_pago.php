@@ -43,11 +43,13 @@
                         function Suma() {
                         var monto_pago = document.calculadora.monto_pago.value;
                         var deuda = document.calculadora.deuda.value;
+                        var cantidadmes = document.calculadora.cantidadmes.value;
                         try{
                             //Calculamos el número escrito:
-                            monto_pago = (isNaN(parseFloat(monto_pago)))? 0 : parseFloat(monto_pago);
-                            deuda = (isNaN(parseFloat(deuda)))? 0 : parseFloat(deuda);
-                            document.calculadora.vuelto.value = monto_pago-deuda;
+                            monto_pago = (isNaN(parseInt(monto_pago)))? 0 : parseInt(monto_pago);
+                            deuda = (isNaN(parseInt(deuda)))? 0 : parseInt(deuda);
+                            cantidadmes = (isNaN(parseInt(cantidadmes)))? 0 : parseInt(cantidadmes);
+                            document.calculadora.vuelto.value = monto_pago-(deuda*cantidadmes);
                         }
                         //Si se produce un error no hacemos nada
                         catch(e) {}
@@ -77,28 +79,25 @@
                         ?>
                         </div>
                         <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
-                                <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
-                                        
-                        </div>   
-                        <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
-                                <input type="text" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" readonly >
-                                <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
-                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly >
-                                        
-                        </div>  
-                        <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Pago del Mes</span>
+                        <span class="input-group-text" id="basic-addon1">1er mes de pago</span>
                         
-                        <!-- 
-                            <select class="form-select" aria-label="Default select example" name="estado" id="estado">
-                            <option selected>Seleciona Estado</option>
-                            <option value="0">Pendiente</option>
-                            <option value="1" selected>Terminado</option>
-                            <option value="2">Inactivo</option>
-                            </select> -->
-                            <select name="mes_pago" id="mes_pago" class="form-select" required>
+                        
+                            <select class="form-select"  name="mes_pago" id="mes_pago" required>
+                            
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                            </select>
+                            <!-- <select name="mes_pago" id="mes_pago" class="form-select" required>
                                 <?php
                                     $mes=date("n"); 
                                     $rango=11; 
@@ -118,11 +117,58 @@
                                         if ($meses=="November") $meses="Noviembre";
                                         if ($meses=="December") $meses="Diciembre";
                                         $ano=date('Y', mktime(0, 0, 0, $i, 1, date("Y") ) );
-                                        echo "<option value='$meses'>$meses</option>"; 
+                                        echo "<option value='$mes'>$i</option>"; 
                                     } 
                                 ?> 
-                                </select>
-                        </div>  
+                                </select> -->
+                        </div> 
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Ultimo mes de pago</span>
+                        
+                        
+                        <select class="form-select"  name="ulti_mes_pago" id="ulti_mes_pago" required>
+                        <option value="0"></option>
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                        </select>
+                                        
+                        </div> 
+                       <!--  <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Cantidad de meses a pagar</label>
+                                <input type="number" class="form-control" id="cantidadmes"  name="cantidadmes" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" value="1" min="1" max="12" required >
+                                        
+                        </div>   -->
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Monto a Pagar</label>
+                                <input type="number" min="3" max="5" class="form-control" id="deuda" name="deuda"  aria-label="DNI" aria-describedby="basic-addon1" value="5"  onKeyUp="Suma()" >
+                                <!-- <label class="input-group-text" for="inputGroupSelect01">Vuelto</label>
+                                <input type="text" class="form-control" id="vuelto" name="vuelto" aria-label="DNI" aria-describedby="basic-addon1" readonly > -->
+                                        
+                        </div> 
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Año </label>
+                                <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  min="2018" required >
+                                        
+                        </div> 
+                        <!-- <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Con cuanto paga</label>
+                                <input type="text" class="form-control" id="monto_pago" autofocus name="monto_pago" aria-label="DNI" aria-describedby="basic-addon1"  onKeyUp="Suma()" required >
+                                        
+                        </div> 
+                          
+                         -->
+                         
+                         
                         <div class="input-group mb-3">
                        <!--  <span class="input-group-text" id="basic-addon1">Hoy</span> -->
                         <input type="hidden" class="form-control" id="hoy" name="hoy"  aria-label="hoy" aria-describedby="basic-addon1" value="<?php echo $hoy;?>"  readonly >
@@ -134,8 +180,8 @@
                        <!--  <span class="input-group-text" id="basic-addon1">Mes</span> -->
                         
                         <input type="hidden" class="form-control" id="mes_actual" name="mes_actual" aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $mes_actual;?>" readonly >
-                       <!--  <span class="input-group-text" id="basic-addon1">Año</span> -->
-                        <input type="hidden" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly>
+                      <!--   <span class="input-group-text" id="basic-addon1">Año</span> -->
+                      <!--   <input type="number" class="form-control" id="year_actual" name="year_actual"  aria-label="DNI" aria-describedby="basic-addon1" value="<?php echo $year_actual;?>"  readonly> -->
                         
                         </div>
                         <div class="input-group mb-3">

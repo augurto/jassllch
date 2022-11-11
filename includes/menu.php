@@ -41,16 +41,16 @@ $username2=$dos['username'];
           <a class="nav-link" href="../datos_personales.php">Actualizar Datos</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Reportes.
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" href="../reporte_entregable.php" >Entregables </a></li>
-          <li><a class="dropdown-item" href="../reporte_entregable0.php" >Entregables vacios </a></li>
+          <li><a class="dropdown-item" href="../reporte_general.php" >Reporte General </a></li>
+          <!-- <li><a class="dropdown-item" href="../reporte_entregable0.php" >Entregables vacios </a></li>
           <li><a class="dropdown-item" href="../reporte_grafica.php" >Reporte de Proyectos </a></li>
           <li><a class="dropdown-item" href="../reporte_rendimiento.php">Reporte rendimiento </a></li>
-          <li><a class="dropdown-item" href="../reporte_usuario.php?usuario=<?php echo $usuario;?>" >Reporte de Usuarios </a></li>
-            <li><a class="dropdown-item" href="#">Grupos</a></li>
+          <li><a class="dropdown-item" href="../reporte_usuario.php?usuario=<?php echo $usuario;?>" >Reporte de Usuarios </a></li> -->
+            <!-- <li><a class="dropdown-item" href="#">Grupos</a></li> -->
             
           </ul>
         </li>

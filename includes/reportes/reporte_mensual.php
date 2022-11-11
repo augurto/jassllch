@@ -12,7 +12,15 @@ $host_name = "localhost";
 $database = "u415020159_jass"; // Change your database nae
 $username = "u415020159_jass";          // Your database user id 
 $password = "JassJass*#17";    
+date_default_timezone_set("America/Lima");
 $nro_mes=$_GET['mes_pago'];
+$mes_actual =date("m");
+$year_actual =date("Y");
+$dia_actual =date("d");
+$mmm=date("H:i:s");
+
+$hoy = date("Y-m-d H:i:s");  
+
 $connection=mysqli_connect($host_name,$username,$password,$database);
 $mysqli = new mysqli("localhost", "u415020159_jass", "JassJass*#17", "u415020159_jass");
 //Consulta la tabla productos solicitando todos los productos
@@ -22,7 +30,7 @@ $ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1' an
 $rwi=mysqli_fetch_array($ti);
 $tin=$rwi["ti"];
 
-$sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'  and pago_mes ='".$nro_mes."' ");
+$sol=mysqli_query($con,"SELECT sum(deuda*cantidad_mes) sol FROM pagos  where estado_pago='0'  and pago_mes ='".$nro_mes."' ");
 $sole=mysqli_fetch_array($sol);
 $soles=$sole["sol"];
 $resultado_saldo_total=$soles-$tin;
@@ -67,11 +75,12 @@ $variable = $fila['variable_boleta'];
 
 $precio = $fila['id_pagos'];
 $imagen=$fila['deuda'];
-
-$pdf->Cell(125,8,$titulo,1,0,'L',0);
+$cantidad_mes=$fila['cantidad_mes'];
+$cantidad_total=$imagen*$cantidad_mes;
+$pdf->Cell(125,8,utf8_decode($titulo),1,0,'L',0);
 
 $pdf->Cell(30,8,$variable.'-'.$precio,1,0,'R',0);
-$pdf->Cell(30,8,'S/ '.number_format($imagen,2, ".",","),1,0,'R',0);
+$pdf->Cell(30,8,'S/ '.number_format($cantidad_total,2, ".",","),1,0,'R',0);
 //Muestro la iamgen dentro de la celda GetX y GetY dan las coordenadas actuales de la fila
 
 /* $pdf->Cell( 30, 15, $pdf->Image($imagen, $pdf->GetX()+5, $pdf->GetY()+3, 20), 1, 0, 'C', false ); */
@@ -86,6 +95,6 @@ $pdf->Cell(155,6,'EGRESOS : S/ '.number_format($tin,2, ".",",").'  INGRESOS : S/
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
-$pdf->Output();
+$pdf->Output('Reporte '.$mes_actual.'-'.$dia_actual.' | '.$mmm.'.pdf','I');
 
 ?>

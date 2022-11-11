@@ -22,7 +22,7 @@ $ti=mysqli_query($con,"SELECT sum(deuda) ti FROM pagos  where estado_pago='1'");
 $rwi=mysqli_fetch_array($ti);
 $tin=$rwi["ti"];
 
-$sol=mysqli_query($con,"SELECT sum(deuda) sol FROM pagos  where estado_pago='0'");
+$sol=mysqli_query($con,"SELECT sum(deuda*cantidad_mes) sol FROM pagos  where estado_pago='0'");
 $sole=mysqli_fetch_array($sol);
 $soles=$sole["sol"];
 $resultado_saldo_total=$soles-$tin;
@@ -67,11 +67,13 @@ $variable = $fila['variable_boleta'];
 
 $precio = $fila['id_pagos'];
 $imagen=$fila['deuda'];
+$cantidad_mes=$fila['cantidad_mes'];
+$cantidad_total=$imagen*$cantidad_mes;
 
-$pdf->Cell(125,8,$titulo,1,0,'L',0);
+$pdf->Cell(125,8,utf8_decode($titulo),1,0,'L',0);
 
 $pdf->Cell(30,8,$variable.'-'.$precio,1,0,'R',0);
-$pdf->Cell(30,8,'S/ '.number_format($imagen,2, ".",","),1,0,'R',0);
+$pdf->Cell(30,8,'S/ '.number_format($cantidad_total,2, ".",","),1,0,'R',0);
 //Muestro la iamgen dentro de la celda GetX y GetY dan las coordenadas actuales de la fila
 
 /* $pdf->Cell( 30, 15, $pdf->Image($imagen, $pdf->GetX()+5, $pdf->GetY()+3, 20), 1, 0, 'C', false ); */
@@ -86,6 +88,6 @@ $pdf->Cell(155,6,'EGRESOS : S/ '.number_format($tin,2, ".",",").'  INGRESOS : S/
 mysqli_close($enlace);
 
 //Mostramos el documento pdf
-$pdf->Output();
+$pdf->Output('Reporte '.$nro_mes.'.pdf','I');
 
 ?>

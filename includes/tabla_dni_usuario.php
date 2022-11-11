@@ -25,7 +25,7 @@
                         <?php 
                            $count=1;
                            $dni_url=$_GET['dni'];
-                        foreach ($link->query('SELECT * from pagos where dni_usuario_jass = "'.$dni_url.'"') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from pagos where dni_usuario_jass = "'.$dni_url.'" ORDER BY pago_hoy DESC ') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_jass=$row['id_pagos'];
                         $dni_jass=$row['dni_usuario_jass'];
@@ -36,6 +36,10 @@
                         $monto_pago=$row['monto_pago'];
                         $deuda=$row['deuda'];
                         $vuelto=$row['vuelto'];
+                        $concepto=$row['concepto_pago'];
+                        $mes_fin=$row['mes_fin'];
+                        $mes_inicio=$row['mes_inicio'];
+                        $cantidad_mes=$row['cantidad_mes'];
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
@@ -56,8 +60,8 @@
                             <td><?php echo 'ING-'.$id_jass; ?></td>
                             <td><?php echo $pago_hoy ?></td>
                             <td><?php echo $name_user ?></td>
-                            <td><?php echo $pago_mes ?></td>
-                            <td><?php echo 'S/ '.number_format($deuda, 2, ".",",")?></td>
+                            <td><?php echo $mes_inicio.' - '.$mes_fin ?></td>
+                            <td><?php echo 'S/ '.number_format($deuda*$cantidad_mes, 2, ".",",")?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Pagado';
@@ -78,7 +82,7 @@
                                         }else{
                                             echo 'Pago';
                                         }
-                                         ?>&id_pago=<?php echo "ING-".$id_jass; ?>" target="_blank">
+                                         ?>&id_pago=<?php echo "ING-".$id_jass; ?>&concepto=<?php echo $concepto; ?>&cantidad_mes=<?php echo $cantidad_mes; ?>&inicio_mes=<?php echo $mes_inicio; ?>&fin_mes=<?php echo $mes_fin; ?>"  target="_blank">
                                          <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-jass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno;?>" data-materno="<?php echo $ap_materno;  ?>" data-dni="<?php echo $dni;  ?>" >
                                          <i class="fa fa-print"></i>
                                          

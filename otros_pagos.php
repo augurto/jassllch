@@ -9,14 +9,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
+
+  
+
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
+require_once ('./config/conexion_tabla.php');
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
         $usuario=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
-        
+        setlocale(LC_TIME, 'es_ES');
+$monthNum  = 3;
+$dateObj   = DateTime::createFromFormat('!m', $monthNum);
+$monthName = strftime('%B', $dateObj->getTimestamp());
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -54,7 +62,6 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>Jass</title>
 </head>
@@ -69,7 +76,6 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/modal-pago/modal_pago.php'; ?>
     <?php include 'includes/modal-pago/modal_egreso.php'; ?>
     <?php include 'includes/editar/editar_usuario.php'; ?>
-    <?php include 'includes/agregar/modal_otro_pago.php'; ?>
     
     <!-- fin de procesos de modal -->
 
@@ -82,6 +88,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin de graficas -->
 
     <!-- Boton agregar proyecto -->
+    
     <div class="row">
     <div class="col-sm-12 text-center">
                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
@@ -90,28 +97,87 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                       <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
                       <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
                       </button> -->
-                      <?php
-                      if ($_GET['mensaje']==2) { ?>
-                        <br>
-
-                        <div class="alert alert-primary" role="alert">
-                           !ERROR! La cantidad de meses excede el año seleccionado, intente de nuevo
-                          </div>
-                       <?php  } ?> 
-               
-
         </div>
-        
     </div>
+  
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
     <?php include 'includes/parts/agregar_variante_tipo.php' ?>
-
+    <?php
+    
+    foreach ($link->query('SELECT * from usuarios_jass where dni_usuario_jass = "'.$_GET['dni'].'"') as $row_pago){ 
+        $dni_usuario_jass=$row_pago['dni_usuario_jass'];
+        $nombres=$row_pago['nombres'];
+        $ap_paterno=$row_pago['ap_paterno'];
+        $ap_materno=$row_pago['ap_materno'];
+        $datos_pago= $nombres.' '.$ap_paterno.' '.$ap_materno;
+    }?> 
 
     <!-- Fin Boton agregar proyecto -->
     <br>
     <!-- Contenido de la tabla -->
-    <?php include 'includes/usuarios_jass.php'; ?>
+    <div class="container">
+    
+
+    <div class="row">
+    <form action="otros_pagos.php?dni=$_GET['dni']" method="get">
+    <div class="input-group mb-3">
+  <input type="number" class="form-control" id="dni" name="dni" placeholder="Buscar por DNI" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+    </div>
+    </form>
+    <?php if (empty($dni_usuario_jass)) { ?>
+        <div class="alert alert-warning" role="alert">
+        No existe un usuario con ese DNI
+        </div>
+    <?php } else { ?>
+        <form action="includes/insertar/insertar_otros_pagos.php">
+        <div class="input-group mb-3">
+            <span class="input-group-text">DNI </span>
+            <input type="text" class="form-control" id="dni" name="dni" value="<?php echo $dni_usuario_jass ; ?>" aria-label="Username" readonly>
+            <span class="input-group-text">Nombres</span>
+            <input type="text" class="form-control" value="<?php echo $nombres ; ?>" aria-label="Server">
+            
+            </div>
+            <div class="input-group mb-3">
+            <span class="input-group-text">Ap Paterno</span>
+            <input type="text" class="form-control" value="<?php echo $ap_paterno ; ?>" aria-label="Server">
+            <span class="input-group-text">Ap Materno</span>
+            <input type="text" class="form-control" value="<?php echo $ap_materno ; ?>" aria-label="Server">
+            
+            
+            </div>
+            <div class="input-group mb-3">
+            
+            <span class="input-group-text">Concepto</span>
+            <input type="hidden" class="form-control" value="<?php echo $datos_pago ; ?>" name="datos"
+             aria-label="Server">
+             <input type="hidden" class="form-control" value="<?php echo $usuario ; ?>" name="usuario"
+             aria-label="Server">
+             <input type="hidden" class="form-control" value="<?php echo $id_usuario ; ?>" name="id_usuario"
+             aria-label="Server">
+             <input type="hidden" class="form-control" value="<?php echo $monthName ; ?>" name="nombre_mes"
+             aria-label="Server">
+             
+            <select class="form-select" aria-label="Default select example" name="otro_pago" id="otro_pago">
+                                        <option selected>Clic para ver</option>
+                                        <option value="Multa">Multa</option>
+                                        <option value="Padron">Padron</option>
+                                        
+                                        <option value="Otro">Otro</option>
+                                    </select>
+           
+            <span class="input-group-text">Monto</span>
+            <input type="number" class="form-control" placeholder="Ingrese monto " name="monto" aria-label="Server">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Registrar</button>
+            </div>
+        </form>
+    <?php }?>
+        
+</div>
+
+
+    </div>
     <!-- Fin del contenido de la tabla -->
 
   
