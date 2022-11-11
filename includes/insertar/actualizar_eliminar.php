@@ -16,7 +16,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "UPDATE  usuarios_jass set  estado_usuario_jass = 1 where id = '".$id."'";
+$sql = "UPDATE  usuarios_jass set  estado_usuario_jass = 1 where id_jass = '".$id."'";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../index.php'";
