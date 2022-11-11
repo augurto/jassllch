@@ -75,7 +75,7 @@
                                          
                                         </button>
                                         
-                                        <a href="insertar/actualizar_eliminar.php?id=<?php echo $id_jass; ?>"><i class="fa fa-trash"></i></a>
+                                        <a href="includes/insertar/actualizar_eliminar.php?id=<?php echo $id_jass; ?>"><i class="fa fa-trash"></i></a>
                                         
                             </td>
                         </tr>
