@@ -51,7 +51,10 @@
                              <?php  }elseif ($estado==2) { ?>
                              <tr style="background-color: #FFE4E1 !important;">
                        
-                             <?php } else{?>
+                             <?php }elseif ($estado==9) { ?>
+                             <tr style="background-color: #FAA5A5 !important;">
+                       
+                             <?php }  else{?>
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                             
@@ -126,6 +129,9 @@
                             } elseif ($estado==2) {
                                 # code...
                                 echo 'Otro';
+                            } elseif ($estado==9) {
+                                # code...
+                                echo 'Eliminado';
                             }?></td>
                             <td>        
                                          <!-- <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-id_jass="<?php echo $codigo; ?>" data-nombre="<?php echo $nombre; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
