@@ -89,7 +89,7 @@
             
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
-              <button type="button"  data-toggle="modal" data-target="#ingresos">
+              <button type="button"  data-toggle="modal" class="btn btn-light" id="boton_proyecto"  data-target="#ingresos">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">

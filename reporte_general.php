@@ -72,6 +72,7 @@ $tipo_user=$dos['tipo_user'];
     <?php include 'includes/agregar/nuevo_usuario.php'; ?>
     <?php include 'includes/modal-pago/modal_pago.php'; ?>
     <?php include 'includes/modal-pago/modal_egreso.php'; ?>
+    <?php include 'includes/agregar/ingresos_extra.php'; ?>
     
     <!-- fin de procesos de modal -->
 
