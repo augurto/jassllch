@@ -89,7 +89,7 @@
             
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
-              <a href="#ingresos">
+              <button type="button"  data-toggle="modal" data-target="#ingresos">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -101,17 +101,10 @@
                     </div>
                   </div>
                 </div>
-                </a>
+                </button>
               </div>
             </div>
             
-
-            <script>
-  document.getElementById('open-modal').addEventListener('click', function() {
-    document.getElementById('ingresos').style.display = "block";
-  });
-</script>
-
             <!-- Earnings (Monthly) Card Example -->
             <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-info shadow h-100 py-2">
