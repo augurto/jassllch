@@ -1,7 +1,7 @@
 <?Php
 $host_name = "localhost";
-$database = "u415020159_jass"; // Change your database nae
-$username = "u415020159_jass";          // Your database user id 
+$database = "u291982824_jass"; // Change your database nae
+$username = "u291982824_jass";          // Your database user id 
 $password = "JassJass*#17";          // Your password
 
 //////// Do not Edit below /////////
