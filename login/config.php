@@ -3,7 +3,7 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'u291982824_agua');
-define('DB_PASSWORD', 'JassJass*#17');
+define('DB_PASSWORD', '21.17.Audra');
 define('DB_NAME', 'u291982824_agua');
  
 /* Attempt to connect to MySQL database */

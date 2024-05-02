@@ -2,7 +2,7 @@
 $host_name = "localhost";
 $database = "u291982824_agua"; // Change your database nae
 $username = "u291982824_agua";          // Your database user id 
-$password = "JassJass*#17";          // Your password
+$password = "21.17.Audra";          // Your password
 
 //////// Do not Edit below /////////
 //error_reporting(0);// With this no error reporting will be there
