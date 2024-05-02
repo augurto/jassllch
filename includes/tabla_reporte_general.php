@@ -17,7 +17,7 @@
                                     <th>Pago mes</th>
                                     <th>Monto</th>
                                     <th>Estado</th>
-                                    <th>Accion</th>
+                                    <th>Accion..</th>
                                     
                                 </tr>
                                 </thead>
