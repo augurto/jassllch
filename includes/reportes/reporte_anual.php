@@ -9,12 +9,12 @@ require('../../fpdf/fpdf.php');
 
 //Conecto a la base de datos
 $host_name = "localhost";
-$database = "u291982824_jass"; // Change your database nae
-$username = "u291982824_jass";          // Your database user id 
+$database = "u291982824_agua"; // Change your database nae
+$username = "u291982824_agua";          // Your database user id 
 $password = "JassJass*#17";    
 $nro_mes=$_GET['year'];
 $connection=mysqli_connect($host_name,$username,$password,$database);
-$mysqli = new mysqli("localhost", "u291982824_jass", "JassJass*#17", "u291982824_jass");
+$mysqli = new mysqli("localhost", "u291982824_agua", "JassJass*#17", "u291982824_agua");
 //Consulta la tabla productos solicitando todos los productos
 $resultado = $mysqli->query("SELECT * FROM pagos where year_actual_pago='".$nro_mes."'");
 /* $suma_resultado = $mysqli->query("SELECT sum(deuda) FROM pagos "); */

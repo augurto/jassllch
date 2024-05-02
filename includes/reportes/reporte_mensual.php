@@ -9,8 +9,8 @@ require('../../fpdf/fpdf.php');
 
 //Conecto a la base de datos
 $host_name = "localhost";
-$database = "u291982824_jass"; // Change your database nae
-$username = "u291982824_jass";          // Your database user id 
+$database = "u291982824_agua"; // Change your database nae
+$username = "u291982824_agua";          // Your database user id 
 $password = "JassJass*#17";    
 date_default_timezone_set("America/Lima");
 $nro_mes=$_GET['mes_pago'];
@@ -22,7 +22,7 @@ $mmm=date("H:i:s");
 $hoy = date("Y-m-d H:i:s");  
 
 $connection=mysqli_connect($host_name,$username,$password,$database);
-$mysqli = new mysqli("localhost", "u291982824_jass", "JassJass*#17", "u291982824_jass");
+$mysqli = new mysqli("localhost", "u291982824_agua", "JassJass*#17", "u291982824_agua");
 //Consulta la tabla productos solicitando todos los productos
 $resultado = $mysqli->query("SELECT * FROM pagos where pago_mes='".$nro_mes."'");
 /* $suma_resultado = $mysqli->query("SELECT sum(deuda) FROM pagos "); */
