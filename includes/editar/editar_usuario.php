@@ -52,7 +52,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">DNI</span>
                         
-                        <input type="text" class="form-control" id="jass_dni" name="jass_dni" aria-label="DNI" aria-describedby="basic-addon1"  >
+                        <input type="text" class="form-control" id="jass_dni" name="jass_dni" aria-label="DNI" aria-describedby="basic-addon1"  readonly>
                         </div>
                      
                         <?php 
