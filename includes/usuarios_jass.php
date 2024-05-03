@@ -14,6 +14,7 @@
                                     <th>A. Paterno</th>
                                     <th>A. Materno</th>
                                     <th>DNI</th>
+                                    <th>Sector</th>
                                    <!--  <th>Estado</th> -->
                                     <th>Accion</th>
                                     
@@ -31,6 +32,7 @@
                         $ap_materno=$row['ap_materno'];
                         $estado_civil=$row['estado_civil'];
                         $estado=$row['estado'];
+                        $sector=$row['sector_jass'];
                          if ($estado==0) { ?>
                              
                              <tr style="background-color: #F0FFFF !important;">
@@ -50,6 +52,7 @@
                             <td><?php echo $ap_paterno ?></td>
                             <td><?php echo $ap_materno ?></td>
                             <td><?php echo $dni_jass ?></td>
+                            <td><?php echo $sector ?></td>
                           <!--   <td><?php if ($estado==0) {
                              
                                 echo 'Activo';
