@@ -30,7 +30,7 @@
         var materno = $(this).data('ape_mat');
         var estado_civil = $(this).data('estado_civil');
         var jass_dni = $(this).data('jass_dni');
-        var sector = $(this).data('sector');
+        var sector_jass = $(this).data('sector_jass');
         var cantidad = $(this).data('cantidad');
         var natural = $(this).data('natural');
 
@@ -41,7 +41,7 @@
         $("#materno").val(materno);
         $("#estado_civil").val(estado_civil);
         $("#jass_dni").val(jass_dni);
-        $("#sector").val(sector);
+        $("#sector_jass").val(sector_jass);
         $("#cantidad_miembros").val(cantidad);
         $("#natural_de").val(natural);
 
@@ -109,7 +109,7 @@
                     <!-- Agregar más campos aquí -->
                     <div class="input-group mb-3">
                         <span class="input-group-text">Sector</span>
-                        <input type="text" class="form-control" id="sector" name="sector">
+                        <input type="text" class="form-control" id="sector_jass" name="sector_jass">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">Cantidad de Miembros</span>

@@ -34,7 +34,7 @@
                         $ap_materno = $row['ap_materno'];
                         $estado_civil = $row['estado_civil'];
                         $estado = $row['estado'];
-                        $sector = $row['sector_jass'];
+                        $sector_jass = $row['sector_jass'];
                         $natural_de = $row['natural_de'];
                         $cantidad_miembros = $row['cantidad_miembros'];
                         if ($estado == 0) { ?>
@@ -56,7 +56,7 @@
                             <td><?php echo $ap_paterno ?></td>
                             <td><?php echo $ap_materno ?></td>
                             <td><?php echo $dni_jass ?></td>
-                            <td><?php echo $sector ?></td>
+                            <td><?php echo $sector_jass ?></td>
                             <td><?php echo $cantidad_miembros ?></td>
                             <td><?php echo $natural_de ?></td>
                             <!--   <td><?php if ($estado == 0) {
@@ -74,7 +74,7 @@
                                         <i class="fa fa-edit"></i>
                                         </button> -->
 
-                                <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-idjass2="<?php echo $id_jass; ?>" data-nombres="<?php echo $nombre; ?>" data-ape="<?php echo $ap_paterno; ?>" data-ape_mat="<?php echo $ap_materno; ?>" data-estado_civil="<?php echo $estado_civil; ?>" data-jass_dni="<?php echo $dni_jass; ?>" data-sector="<?php echo $sector; ?>" data-cantidad="<?php echo $cantidad_miembros; ?>" data-natural="<?php echo $natural_de; ?>">
+                                <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-idjass2="<?php echo $id_jass; ?>" data-nombres="<?php echo $nombre; ?>" data-ape="<?php echo $ap_paterno; ?>" data-ape_mat="<?php echo $ap_materno; ?>" data-estado_civil="<?php echo $estado_civil; ?>" data-jass_dni="<?php echo $dni_jass; ?>" data-sector_jass="<?php echo $sector_jass; ?>" data-cantidad="<?php echo $cantidad_miembros; ?>" data-natural="<?php echo $natural_de; ?>">
                                     <i class="fa fa-edit"></i> Editar
                                 </button>
 
