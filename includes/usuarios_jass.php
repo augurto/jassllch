@@ -74,20 +74,9 @@
                                         <i class="fa fa-edit"></i>
                                         </button> -->
 
-                                        <button type="button" id="btnmodal0" class="btn btn-primary"
-                                                data-toggle="modal" data-target="#ModalEdit0"
-                                                data-idjass2="<?php echo $id_jass; ?>"
-                                                data-nombres="<?php echo $nombre; ?>"
-                                                data-ape="<?php echo $ap_paterno; ?>"
-                                                data-ape_mat="<?php echo $ap_materno; ?>"
-                                                data-estado_civil="<?php echo $estado_civil; ?>"
-                                                data-jass_dni="<?php echo $dni_jass; ?>"
-                                                data-sector="<?php echo $sector; ?>"
-                                                data-cantidad="<?php echo $cantidad_miembros; ?>"
-                                                data-natural="<?php echo $natural_de; ?>">
-                                            <i class="fa fa-edit"></i> Editar
-                                        </button>
-
+                                <button type="button" id="btnmodal0" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit0" data-idjass2="<?php echo $id_jass; ?>" data-nombres="<?php echo $nombre; ?>" data-ape="<?php echo $ap_paterno; ?>" data-ape_mat="<?php echo $ap_materno; ?>" data-estado_civil="<?php echo $estado_civil; ?>" data-jass_dni="<?php echo $dni_jass; ?>" data-sector="<?php echo $sector; ?>" data-cantidad="<?php echo $cantidad_miembros; ?>" data-natural="<?php echo $natural_de; ?>">
+                                    <i class="fa fa-edit"></i> Editar
+                                </button>
 
 
                                 <button type="button" id="btnmodal" class="btn btn-dark" data-toggle="modal" data-target="#ModalEdit" data-idjass="<?php echo $id_jass; ?>" data-nombre="<?php echo $nombre; ?>" data-paterno="<?php echo $ap_paterno; ?>" data-materno="<?php echo $ap_materno;  ?>" data-dnijass="<?php echo $dni_jass;  ?>">

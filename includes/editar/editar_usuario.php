@@ -24,24 +24,30 @@
 
 <script>
     $(document).on("click", "#btnmodal0", function() {
-    var idjass2 = $(this).data('idjass2');
-    var nombres = $(this).data('nombres');
-    var paterno = $(this).data('ape');
-    var materno = $(this).data('ape_mat');
-    var estado_civil = $(this).data('estado_civil');
-    var jass_dni = $(this).data('jass_dni');
-    var sector = $(this).data('sector'); // Capturar el valor de data-sector
+        var idjass2 = $(this).data('idjass2');
+        var nombres = $(this).data('nombres');
+        var paterno = $(this).data('ape');
+        var materno = $(this).data('ape_mat');
+        var estado_civil = $(this).data('estado_civil');
+        var jass_dni = $(this).data('jass_dni');
+        var sector = $(this).data('sector');
+        var cantidad = $(this).data('cantidad');
+        var natural = $(this).data('natural');
 
-    // Asignar valores a los campos del formulario en el modal
-    $("#idjass2").val(idjass2);
-    $("#nombres").val(nombres);
-    $("#paterno").val(paterno);
-    $("#materno").val(materno);
-    $("#estado_civil").val(estado_civil);
-    $("#jass_dni").val(jass_dni);
-    $("#sector").val(sector); // Asignar valor a campo sector en el modal
-});
+        // Asignar valores a los campos del formulario en el modal
+        $("#idjass2").val(idjass2);
+        $("#nombres").val(nombres);
+        $("#paterno").val(paterno);
+        $("#materno").val(materno);
+        $("#estado_civil").val(estado_civil);
+        $("#jass_dni").val(jass_dni);
+        $("#sector").val(sector);
+        $("#cantidad_miembros").val(cantidad);
+        $("#natural_de").val(natural);
 
+        // Opcional: Puedes mostrar los datos en un campo adicional
+        $("#datos").val(nombres + " " + paterno + " " + materno);
+    });
 </script>
 
 
@@ -105,8 +111,6 @@
                         <span class="input-group-text">Sector</span>
                         <input type="text" class="form-control" id="sector" name="sector">
                     </div>
-                    
-
                     <div class="input-group mb-3">
                         <span class="input-group-text">Cantidad de Miembros</span>
                         <input type="text" class="form-control" id="cantidad_miembros" name="cantidad_miembros">
@@ -164,11 +168,3 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).on("click", "#btnmodal0", function() {
-    var sector = $(this).data('sector');
-    console.log('Valor de sector:', sector); // Verifica el valor en la consola del navegador
-    // Resto del código para asignar el valor al campo en el modal...
-});
-
-</script>
