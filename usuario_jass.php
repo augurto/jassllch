@@ -91,9 +91,10 @@ $id_usuario = $_SESSION["id"];
   </div>
   <div class="row">
     <div class="col-sm-12 text-center">
-    <button type="button" class="btn btn-primary" id="boton_proyecto">
+
+    <a href="#" class="btn btn-primary" id="boton_proyecto">
     <i class="fa fa-plus" aria-hidden="true"></i> Editar Usuario
-</button>
+</a>
 
 <script>
     // Función para obtener el valor del parámetro 'dni' de la URL actual
@@ -102,20 +103,21 @@ $id_usuario = $_SESSION["id"];
         return urlParams.get(nombreParametro);
     }
 
-    // Asigna un evento de clic al botón
-    document.getElementById("boton_proyecto").addEventListener("click", function() {
+    // Asigna un evento de clic al enlace (<a>)
+    document.getElementById("boton_proyecto").addEventListener("click", function(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
         // Obtén el valor del parámetro 'dni' de la URL actual
         const dni = obtenerValorParametro('dni');
-        console.log('Valor de "dni" en la URL:', dni);
 
         // Construye la URL de destino con el parámetro 'dni' incluido
         const nuevaURL = `editar_usuario_completo.php?dni=${dni}`;
-        console.log('Nueva URL de redirección:', nuevaURL);
 
-        // Redirecciona a la nueva URL al hacer clic en el botón
+        // Redirecciona a la nueva URL al hacer clic en el enlace
         window.location.href = nuevaURL;
     });
 </script>
+
 
 
     </div>
