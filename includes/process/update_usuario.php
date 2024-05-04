@@ -4,23 +4,23 @@ $database = "u291982824_agua";
 $username = "u291982824_agua";
 $password = "21.17.Audra";
 
-// Crear conexión
+// Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 
-// Verificar conexión
+// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Obtener los datos del formulario enviado por POST
-$idjass2 = $_POST["idjass2"];
-$jass_dni = $_POST["jass_dni"];
-$nombres = $_POST["nombres"];
-$paterno = $_POST["paterno"];
-$materno = $_POST["materno"];
-$sector = $_POST["sector_jass"]; // Nuevo campo Sector
-$cantidad_miembros = $_POST["cantidad_miembros"]; // Nuevo campo Cantidad de Miembros
-$natural_de = $_POST["natural_de"]; // Nuevo campo Natural de
+// Obtener los datos del método GET
+$idjass2 = $_GET["idjass2"];
+$jass_dni = $_GET["jass_dni"];
+$nombres = $_GET["nombres"];
+$paterno = $_GET["paterno"];
+$materno = $_GET["materno"];
+$sector = $_GET["sector_jass"]; // Nuevo campo Sector
+$cantidad_miembros = $_GET["cantidad_miembros"]; // Nuevo campo Cantidad de Miembros
+$natural_de = $_GET["natural_de"]; // Nuevo campo Natural de
 
 // Construir la consulta de actualización
 $sql = "UPDATE usuarios_jass SET 
