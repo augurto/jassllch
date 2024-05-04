@@ -1,7 +1,7 @@
 
         <!--Ejemplo tabla con DataTables-->
         <?php require_once ('./config/conexion_tabla.php') ?>
-        <div class="container">
+        <div class="container-fluid ">
         <div class="row">
                 <div class="col-lg-12">
                     <div class="table-responsive">        
