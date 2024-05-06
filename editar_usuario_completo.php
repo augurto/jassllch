@@ -188,12 +188,86 @@ if (isset($_GET['dni'])) {
                 <input type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo $fecha_nacimiento; ?>">
             </div>
 
+            <div class="form-group">
+                <label for="id_natural">ID Natural:</label>
+                <input type="text" class="form-control" id="id_natural" name="id_natural" value="<?php echo $id_natural; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="natural_de">Natural de:</label>
+                <input type="text" class="form-control" id="natural_de" name="natural_de" value="<?php echo $natural_de; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="direccion_actual">Dirección Actual:</label>
+                <input type="text" class="form-control" id="direccion_actual" name="direccion_actual" value="<?php echo $direccion_actual; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="distrito">Distrito:</label>
+                <input type="text" class="form-control" id="distrito" name="distrito" value="<?php echo $distrito; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="provincia">Provincia:</label>
+                <input type="text" class="form-control" id="provincia" name="provincia" value="<?php echo $provincia; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <input type="text" class="form-control" id="departamento" name="departamento" value="<?php echo $departamento; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="ocupacion">Ocupación:</label>
+                <input type="text" class="form-control" id="ocupacion" name="ocupacion" value="<?php echo $ocupacion; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="grado_instruccion">Grado de Instrucción:</label>
+                <input type="text" class="form-control" id="grado_instruccion" name="grado_instruccion" value="<?php echo $grado_instruccion; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="estado_civil">Estado Civil:</label>
+                <input type="text" class="form-control" id="estado_civil" name="estado_civil" value="<?php echo $estado_civil; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="dni_usuario_jass">DNI Usuario:</label>
+                <input type="text" class="form-control" id="dni_usuario_jass" name="dni_usuario_jass" value="<?php echo $dni_usuario_jass; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="esposa_conviviente">Esposa/Conviviente:</label>
+                <input type="text" class="form-control" id="esposa_conviviente" name="esposa_conviviente" value="<?php echo $esposa_conviviente; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="sector_jass">Sector:</label>
+                <input type="text" class="form-control" id="sector_jass" name="sector_jass" value="<?php echo $sector_jass; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="cantidad_miembros">Cantidad de Miembros:</label>
+                <input type="text" class="form-control" id="cantidad_miembros" name="cantidad_miembros" value="<?php echo $cantidad_miembros; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_uno">Fecha Uno:</label>
+                <input type="text" class="form-control" id="fecha_uno" name="fecha_uno" value="<?php echo $fecha_uno; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="estado_usuario_jass">Estado Usuario:</label>
+                <input type="text" class="form-control" id="estado_usuario_jass" name="estado_usuario_jass" value="<?php echo $estado_usuario_jass; ?>">
+            </div>
+
             <!-- Agregar más campos aquí según sea necesario -->
 
             <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
         </form>
     </div>
-
   <!-- Fin del contenido de la tabla -->
 
 
