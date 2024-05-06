@@ -17,6 +17,52 @@ $saldo = $rwt['saldo'];
 $usuario = $_SESSION["username"];
 $id_usuario = $_SESSION["id"];
 
+
+
+
+// Verificar si se pasó el parámetro 'dni' en la URL
+if (isset($_GET['dni'])) {
+    // Obtener el valor de 'dni' y asegurarse de que sea un número entero
+    $dni = intval($_GET['dni']);
+
+    // Establecer conexión a la base de datos
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+    // Verificar la conexión
+    if (!$conn) {
+        die("Error de conexión: " . mysqli_connect_error());
+    }
+
+    // Preparar la consulta SQL para obtener los datos del usuario por 'dni'
+    $sql = "SELECT * FROM usuarios_jass WHERE dni_usuario_jass = $dni";
+
+    // Ejecutar la consulta
+    $result = mysqli_query($conn, $sql);
+
+    // Verificar si se encontraron resultados
+    if (mysqli_num_rows($result) > 0) {
+        // Obtener la primera fila de resultados como un array asociativo
+        $row = mysqli_fetch_assoc($result);
+
+        // Asignar los valores a variables para usar en el formulario
+        $id_jass = $row['id_jass'];
+        $nombres = $row['nombres'];
+        $ap_paterno = $row['ap_paterno'];
+        $ap_materno = $row['ap_materno'];
+        $fecha_nacimiento = $row['fecha_nacimiento'];
+        // Agrega más campos aquí según sea necesario
+
+        // Cerrar la conexión
+        mysqli_close($conn);
+    } else {
+        echo "No se encontraron registros para el DNI especificado.";
+        exit; // Salir del script si no se encontraron resultados
+    }
+} else {
+    echo "Parámetro 'dni' no especificado en la URL.";
+    exit; // Salir del script si 'dni' no está presente en la URL
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -101,9 +147,7 @@ $id_usuario = $_SESSION["id"];
       }
       ?>
 
-      <a href="editar_usuario_completo.php?dni=<?php echo urlencode($dni); ?>" class="btn btn-primary">
-        <i class="fa fa-plus" aria-hidden="true"></i> Editar Usuario
-      </a>
+      
 
 
 
@@ -117,8 +161,39 @@ $id_usuario = $_SESSION["id"];
   <br>
   <!-- Contenido de la tabla -->
 
+  <div class="container mt-5">
+        <h1 class="mb-4">Editar Usuario</h1>
 
-  
+        <!-- Formulario para editar datos del usuario -->
+        <form action="actualizar_usuario.php" method="POST">
+            <input type="hidden" name="id_jass" value="<?php echo $id_jass; ?>">
+            
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" class="form-control" id="nombres" name="nombres" value="<?php echo $nombres; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="ap_paterno">Apellido Paterno:</label>
+                <input type="text" class="form-control" id="ap_paterno" name="ap_paterno" value="<?php echo $ap_paterno; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="ap_materno">Apellido Materno:</label>
+                <input type="text" class="form-control" id="ap_materno" name="ap_materno" value="<?php echo $ap_materno; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo $fecha_nacimiento; ?>">
+            </div>
+
+            <!-- Agregar más campos aquí según sea necesario -->
+
+            <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
+        </form>
+    </div>
+
   <!-- Fin del contenido de la tabla -->
 
 
