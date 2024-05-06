@@ -50,7 +50,21 @@ if (isset($_GET['dni'])) {
         $ap_paterno = $row['ap_paterno'];
         $ap_materno = $row['ap_materno'];
         $fecha_nacimiento = $row['fecha_nacimiento'];
-        // Agrega más campos aquí según sea necesario
+        $id_natural = $row['id_natural'];
+        $natural_de = $row['natural_de'];
+        $direccion_actual = $row['direccion_actual'];
+        $distrito = $row['distrito'];
+        $provincia = $row['provincia'];
+        $departamento = $row['departamento'];
+        $ocupacion = $row['ocupacion'];
+        $grado_instruccion = $row['grado_instruccion'];
+        $estado_civil = $row['estado_civil'];
+        $dni_usuario_jass = $row['dni_usuario_jass'];
+        $esposa_conviviente = $row['esposa_conviviente'];
+        $sector_jass = $row['sector_jass'];
+        $cantidad_miembros = $row['cantidad_miembros'];
+        $fecha_uno = $row['fecha_uno'];
+        $estado_usuario_jass = $row['estado_usuario_jass'];
 
         // Cerrar la conexión
         mysqli_close($conn);
