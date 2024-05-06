@@ -34,7 +34,7 @@ if (isset($_GET['dni'])) {
     }
 
     // Preparar la consulta SQL para obtener los datos del usuario por 'dni'
-    $sql = "SELECT * FROM usuarios_jass WHERE dni_usuario_jass = $dni";
+    $sql = "SELECT * FROM usuarios_jass WHERE id_jass = $dni";
 
     // Ejecutar la consulta
     $result = mysqli_query($conn, $sql);
