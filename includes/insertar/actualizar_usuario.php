@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Los datos del usuario se actualizaron correctamente.";
 
         // Redireccionar de nuevo a la misma página usando JavaScript
-        echo "<script>window.location.href = '../../editar_usuario_completo.php?id_jass=$id_jass';</script>";
+        echo "<script>window.location.href = '../../editar_usuario_completo.php?dni=$id_jass';</script>";
     } else {
         echo "Error al actualizar los datos del usuario: " . mysqli_error($conn);
     }
