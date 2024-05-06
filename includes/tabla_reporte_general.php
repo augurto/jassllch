@@ -120,7 +120,7 @@
                             
                             
                             ?></td>
-                            <td><?php echo 'S/ '.number_format($deuda*$cantidad_mes, 2, ".",",") ?></td>
+                            <td><?php echo number_format($deuda*$cantidad_mes, 2, ".",",") ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Ingreso';
