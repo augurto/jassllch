@@ -28,6 +28,7 @@
                         foreach ($link->query('SELECT * from pagos order by id_pagos desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_jass=$row['id_pagos'];
+                        $id_jass2=$row['id_jass'];
                         $dni_jass=$row['dni_usuario_jass'];
                         $nombre=$row['datos_pago'];
                         $pago_hoy=$row['pago_hoy'];
@@ -59,7 +60,7 @@
                              <?php }?>   
                             
                             <td><?php echo $count++; ?></td>
-                            <td><a href="../../usuario_jass.php?dni=<?php echo $id_jass; ?>"><?php echo $nombre; ?></a></td>
+                            <td><a href="../../usuario_jass.php?dni=<?php echo $id_jass2; ?>"><?php echo $nombre; ?></a></td>
                            
                             <td><?php if ($estado==0) {
                                 # code...
