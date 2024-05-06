@@ -271,6 +271,7 @@ if (isset($_GET['dni'])) {
             <!-- Agregar más campos aquí según sea necesario -->
 
             <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
+            <br>
         </form>
     </div>
   <!-- Fin del contenido de la tabla -->
