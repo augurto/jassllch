@@ -49,9 +49,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             dni_usuario_jass = '$dni_usuario_jass' 
             WHERE id_jass = $id_jass";
 
+
     // Ejecutar la consulta de actualización
     if (mysqli_query($conn, $sql)) {
         echo "Los datos del usuario se actualizaron correctamente.";
+
+        // Redireccionar de nuevo a la misma página usando JavaScript
+        echo "<script>window.location.href = '../../editar_usuario_completo.php?id_jass=$id_jass';</script>";
     } else {
         echo "Error al actualizar los datos del usuario: " . mysqli_error($conn);
     }
