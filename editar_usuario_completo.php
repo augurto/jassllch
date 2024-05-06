@@ -179,7 +179,7 @@ if (isset($_GET['dni'])) {
         <h1 class="mb-4">Editar Usuario</h1>
 
         <!-- Formulario para editar datos del usuario -->
-        <form action="actualizar_usuario.php" method="POST">
+        <form action="includes/insertar/actualizar_usuario.php" method="POST">
             <input type="hidden" name="id_jass" value="<?php echo $id_jass; ?>">
             
             <div class="form-group">
@@ -202,10 +202,6 @@ if (isset($_GET['dni'])) {
                 <input type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo $fecha_nacimiento; ?>">
             </div>
 
-            <div class="form-group">
-                <label for="id_natural">ID Natural:</label>
-                <input type="text" class="form-control" id="id_natural" name="id_natural" value="<?php echo $id_natural; ?>">
-            </div>
 
             <div class="form-group">
                 <label for="natural_de">Natural de:</label>
@@ -270,11 +266,6 @@ if (isset($_GET['dni'])) {
             <div class="form-group">
                 <label for="fecha_uno">Fecha Uno:</label>
                 <input type="text" class="form-control" id="fecha_uno" name="fecha_uno" value="<?php echo $fecha_uno; ?>">
-            </div>
-
-            <div class="form-group">
-                <label for="estado_usuario_jass">Estado Usuario:</label>
-                <input type="text" class="form-control" id="estado_usuario_jass" name="estado_usuario_jass" value="<?php echo $estado_usuario_jass; ?>">
             </div>
 
             <!-- Agregar más campos aquí según sea necesario -->
