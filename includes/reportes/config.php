@@ -1,8 +1,8 @@
 <?Php
 $host_name = "localhost";
-$database = "u291982824_agua"; // Change your database nae
-$username = "u291982824_agua";          // Your database user id 
-$password = "21.17.Audra";          // Your password
+$database = "u394588994_jass"; // Change your database nae
+$username = "u394588994_jass";          // Your database user id 
+$password = "Jass*#1720";          // Your password
 
 //////// Do not Edit below /////////
 //error_reporting(0);// With this no error reporting will be there

@@ -1,9 +1,9 @@
 <?php
 // Datos de conexión a la base de datos
 define('DB_HOST', 'localhost');
-define('DB_USER', 'u291982824_agua');
-define('DB_PASS', '21.17.Audra');
-define('DB_NAME', 'u291982824_agua');
+define('DB_USER', 'u394588994_jass');
+define('DB_PASS', 'Jass*#1720');
+define('DB_NAME', 'u394588994_jass');
 
 // Crear conexión
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
