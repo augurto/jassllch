@@ -18,7 +18,7 @@
       $monto_decimal=number_format($soles,2) - number_format($tin,2);
       $total_monto=$soles-$tin;
 /* 		$sql="SELECT * FROM  proyecto order by id desc"; */
-		$query = mysqli_query($con, $sql);         
+	/* 	$query = mysqli_query($con, $sql);       */   
 			?>
 <div class="container">
 <div class="row">
